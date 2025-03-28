@@ -3,7 +3,7 @@ import React from 'react';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { Cpu, Users, TrendingUp, Bike, Ship, Mountain2 } from 'lucide-react';
+import { Cpu, Users, TrendingUp, Bike, Ship, Mountain } from 'lucide-react';
 
 interface Skill {
   name: string;
@@ -51,7 +51,7 @@ const SkillsSection: React.FC = () => {
       bgColor: "bg-blue-50"
     },
     {
-      icon: <Mountain2 className="h-12 w-12 text-amber-600" />,
+      icon: <Mountain className="h-12 w-12 text-amber-600" />,
       title: "Hiking Journeys",
       description: "Conquering peaks and discovering breathtaking views.",
       bgColor: "bg-amber-50"
