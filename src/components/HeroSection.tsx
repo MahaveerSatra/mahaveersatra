@@ -20,10 +20,10 @@ const HeroSection: React.FC = () => {
               Hi, I'm <span className="text-liverpool">Mahaveer Satra</span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-700 mb-6">
-              Senior Application Engineer at MathWorks
+              Solutions Consultant
             </h2>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
-              Digital Twins Expert & Solution Consultant. Combining technical expertise with business acumen to deliver innovative solutions in the semiconductor manufacturing industry.
+              Industrial Automation & Semiconductor Manufacturing Expert. Combining technical expertise with business acumen to deliver innovative solutions in the semiconductor manufacturing industry.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button className="bg-liverpool hover:bg-liverpool/90 text-white px-6 py-2 rounded-md">

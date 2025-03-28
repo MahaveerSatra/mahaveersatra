@@ -14,10 +14,10 @@ const FooterSection: React.FC = () => {
               Mahaveer<span className="text-liverpool">.</span>
             </h2>
             <p className="mt-2 text-gray-300">
-              Senior Application Engineer | Control Systems Expert
+              Solutions Consultant | Industrial Automation Expert
             </p>
             <p className="mt-2 text-gray-300 flex items-center">
-              <MapPin className="h-4 w-4 mr-1 text-liverpool" /> Texas
+              <MapPin className="h-4 w-4 mr-1 text-liverpool" /> Plano, Texas
             </p>
           </div>
           

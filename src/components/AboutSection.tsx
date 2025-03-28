@@ -8,20 +8,20 @@ const AboutSection: React.FC = () => {
     {
       icon: <Lightbulb className="h-10 w-10 text-mathworks" />,
       title: "Digital Twins Expert",
-      description: "Specialized in developing advanced digital twin solutions for complex engineering systems in the semiconductor manufacturing industry.",
+      description: "Specialized in developing advanced digital twin solutions for complex engineering systems in the Semiconductor Manufacturing industry.",
     },
     {
-      icon: <Briefcase className="h-10 w-10 text-gray-700" />,
-      title: "Solution Consultant",
-      description: "Experienced solution consultant helping clients optimize their engineering processes and implement innovative technologies.",
+      icon: <Briefcase className="h-10 w-10 text-navy" />,
+      title: "Solutions Consultant",
+      description: "Experienced consultant helping clients optimize their Industrial Automation processes and implement innovative technologies.",
     },
     {
-      icon: <Bike className="h-10 w-10 text-green-600" />,
+      icon: <Bike className="h-10 w-10 text-mathworks" />,
       title: "Outdoor Enthusiast",
       description: "Passionate about cycling, hiking, kayaking and seeking new adventures in the great outdoors.",
     },
     {
-      icon: <Puzzle className="h-10 w-10 text-purple-600" />,
+      icon: <Puzzle className="h-10 w-10 text-navy" />,
       title: "Problem Solver",
       description: "Quick learner with strong analytical skills and a passion for solving complex technical and business challenges.",
     },
@@ -47,7 +47,7 @@ const AboutSection: React.FC = () => {
           </div>
           <div className="lg:w-1/2">
             <p className="text-lg text-gray-700 mb-6">
-              I'm Mahaveer Satra, a Senior Application Engineer at MathWorks. I specialize in digital twin solutions and have a strong background in implementing complex engineering systems for the semiconductor equipment manufacturing industry.
+              I'm Mahaveer Satra, a Solutions Consultant specializing in Industrial Automation and Semiconductor Manufacturing. I have a strong background in implementing complex engineering systems for semiconductor equipment manufacturers.
             </p>
             <p className="text-lg text-gray-700 mb-6">
               With a knack for quickly grasping technical concepts, I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.
@@ -60,7 +60,7 @@ const AboutSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {interestCards.map((card, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-none bg-gray-50 transform hover:scale-105 transition-all">
+            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-gray-100 bg-gray-50 transform hover:scale-105 transition-all">
               <CardContent className="flex flex-col items-center text-center p-6">
                 <div className="rounded-full bg-white p-4 shadow-sm mb-4">
                   {card.icon}
