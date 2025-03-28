@@ -28,10 +28,10 @@ const ExperienceSection: React.FC = () => {
       date: "October 2021 - Present",
       description: [
         "Led the account-level business strategy and planning across key enterprise accounts, including ASML USA and Disney, resulting in ~10% YoY growth and deeper adoption of MathWorks tools.",
-        "Delivered a comprehensive workshop on "AI with Model-Based Design" for MathWorks Torrance, focusing on training machine learning models for virtual sensors, Model-Based Design integration, compression of neural networks and code generation for embedded AI applications.",
+        "Delivered a comprehensive workshop on \"AI with Model-Based Design\" for MathWorks Torrance, focusing on training machine learning models for virtual sensors, Model-Based Design integration, compression of neural networks and code generation for embedded AI applications.",
         "Continuous Collaboration with PLC Coder, Controls and System Identification development, and product marketing teams to support market assessment, feedback in MRP meetings and customer feedback integration.",
         "Developed customer-facing content for advanced process control in pharmaceutical industry, regression modeling, predictive maintenance and resource optimization to drive awareness and adoption.",
-        "Created a "No-Meeting" cross-functional community of practice to connect Industry AE, Academia CSE and Product Managers to enhance our presence in the Semiconductor Equipment Manufacturing Industry.",
+        "Created a \"No-Meeting\" cross-functional community of practice to connect Industry AE, Academia CSE and Product Managers to enhance our presence in the Semiconductor Equipment Manufacturing Industry.",
         "Delivered compelling technical presentations, proofs of concept, and demonstrations to both technical and non-technical stakeholders, resulting in $2M+ sales wins from June 2024-Dec 2024.",
         "Developed thought leadership for Digital Twins through LinkedIn community engagement, with 3k+ followers."
       ],
