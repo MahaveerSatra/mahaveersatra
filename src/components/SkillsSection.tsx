@@ -2,6 +2,7 @@
 import React from 'react';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 
 interface Skill {
   name: string;
@@ -28,6 +29,12 @@ const SkillsSection: React.FC = () => {
   const technicalSkills = skills.filter(skill => skill.category === "technical");
   const softSkills = skills.filter(skill => skill.category === "soft");
 
+  const getProgressColor = (value: number) => {
+    if (value > 85) return "bg-liverpool";
+    if (value > 75) return "bg-mathworks";
+    return "bg-navy";
+  };
+
   return (
     <section id="skills" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
@@ -49,12 +56,7 @@ const SkillsSection: React.FC = () => {
                     <span className="font-medium text-gray-700">{skill.name}</span>
                     <span className="text-gray-600">{skill.value}%</span>
                   </div>
-                  <Progress value={skill.value} className="h-2" 
-                    indicatorClassName={
-                      skill.value > 85 ? "bg-liverpool" : 
-                      skill.value > 75 ? "bg-mathworks" : "bg-navy"
-                    }
-                  />
+                  <Progress value={skill.value} className={cn("h-2", getProgressColor(skill.value))} />
                 </div>
               ))}
             </div>
@@ -69,12 +71,7 @@ const SkillsSection: React.FC = () => {
                     <span className="font-medium text-gray-700">{skill.name}</span>
                     <span className="text-gray-600">{skill.value}%</span>
                   </div>
-                  <Progress value={skill.value} className="h-2" 
-                    indicatorClassName={
-                      skill.value > 85 ? "bg-liverpool" : 
-                      skill.value > 75 ? "bg-mathworks" : "bg-navy"
-                    }
-                  />
+                  <Progress value={skill.value} className={cn("h-2", getProgressColor(skill.value))} />
                 </div>
               ))}
             </div>

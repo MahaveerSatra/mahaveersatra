@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mountain, Football, Briefcase, Cpu } from 'lucide-react';
+import { Mountain, Ball, Briefcase, Cpu } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const AboutSection: React.FC = () => {
@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
       description: "Passionate about exploring hiking trails and experiencing adventures in nature.",
     },
     {
-      icon: <Football className="h-10 w-10 text-liverpool" />,
+      icon: <Ball className="h-10 w-10 text-liverpool" />,
       title: "Liverpool FC Fan",
       description: "Ardent supporter of Liverpool Football Club and enjoy watching and playing soccer.",
     },
