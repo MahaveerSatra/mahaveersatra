@@ -3,7 +3,7 @@ import React from 'react';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { Cpu, Users, TrendingUp, Bike, Ship, Mountain } from 'lucide-react';
+import { Cpu, Users, TrendingUp, Bike, Ship, Mountain, Puzzle } from 'lucide-react';
 
 interface Skill {
   name: string;
@@ -19,6 +19,7 @@ const SkillsSection: React.FC = () => {
     { name: "System Modeling", value: 85, category: "technical" },
     { name: "Data Analysis", value: 80, category: "technical" },
     { name: "Programming", value: 80, category: "technical" },
+    { name: "Problem Solving", value: 92, category: "technical" },
     { name: "Quick Technical Learning", value: 95, category: "technical" },
     { name: "Enterprise Account Growth", value: 90, category: "business" },
     { name: "Relationship Development", value: 95, category: "business" },
@@ -31,9 +32,10 @@ const SkillsSection: React.FC = () => {
   const businessSkills = skills.filter(skill => skill.category === "business");
 
   const getProgressColor = (value: number) => {
-    if (value > 85) return "bg-liverpool";
-    if (value > 75) return "bg-mathworks";
-    return "bg-navy";
+    if (value > 90) return "bg-gradient-to-r from-violet-500 to-purple-500";
+    if (value > 85) return "bg-gradient-to-r from-blue-500 to-cyan-400";
+    if (value > 80) return "bg-gradient-to-r from-emerald-500 to-green-400";
+    return "bg-gradient-to-r from-amber-500 to-yellow-400";
   };
 
   // Adventure cards for visual appeal
@@ -70,9 +72,9 @@ const SkillsSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div>
-            <h3 className="text-2xl font-semibold text-navy mb-6 flex items-center">
-              <Cpu className="mr-2 h-6 w-6" /> Technical Skills
+          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl shadow-md">
+            <h3 className="text-2xl font-semibold text-indigo-800 mb-6 flex items-center">
+              <Cpu className="mr-2 h-6 w-6 text-indigo-600" /> Technical Skills
             </h3>
             <div className="space-y-6">
               {technicalSkills.map((skill, index) => (
@@ -81,15 +83,15 @@ const SkillsSection: React.FC = () => {
                     <span className="font-medium text-gray-700">{skill.name}</span>
                     <span className="text-gray-600">{skill.value}%</span>
                   </div>
-                  <Progress value={skill.value} className={cn("h-2", getProgressColor(skill.value))} />
+                  <Progress value={skill.value} className={cn("h-2 rounded-full", getProgressColor(skill.value))} />
                 </div>
               ))}
             </div>
           </div>
           
-          <div>
-            <h3 className="text-2xl font-semibold text-navy mb-6 flex items-center">
-              <TrendingUp className="mr-2 h-6 w-6" /> Business Skills
+          <div className="bg-gradient-to-br from-rose-50 to-amber-50 p-6 rounded-xl shadow-md">
+            <h3 className="text-2xl font-semibold text-rose-800 mb-6 flex items-center">
+              <TrendingUp className="mr-2 h-6 w-6 text-rose-600" /> Business Skills
             </h3>
             <div className="space-y-6">
               {businessSkills.map((skill, index) => (
@@ -98,7 +100,7 @@ const SkillsSection: React.FC = () => {
                     <span className="font-medium text-gray-700">{skill.name}</span>
                     <span className="text-gray-600">{skill.value}%</span>
                   </div>
-                  <Progress value={skill.value} className={cn("h-2", getProgressColor(skill.value))} />
+                  <Progress value={skill.value} className={cn("h-2 rounded-full", getProgressColor(skill.value))} />
                 </div>
               ))}
             </div>
@@ -110,7 +112,7 @@ const SkillsSection: React.FC = () => {
             <Users className="mr-2 h-6 w-6" /> Professional Expertise
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow bg-gradient-to-br from-white to-blue-50">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-navy mb-3">Digital Twin Expert</h3>
                 <p className="text-gray-700">
@@ -119,7 +121,7 @@ const SkillsSection: React.FC = () => {
               </CardContent>
             </Card>
             
-            <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow bg-gradient-to-br from-white to-purple-50">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-navy mb-3">Solution Consultant</h3>
                 <p className="text-gray-700">
@@ -128,11 +130,11 @@ const SkillsSection: React.FC = () => {
               </CardContent>
             </Card>
             
-            <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+            <Card className="border-none shadow-md hover:shadow-lg transition-shadow bg-gradient-to-br from-white to-green-50">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-navy mb-3">Business Growth Strategist</h3>
+                <h3 className="text-xl font-semibold text-navy mb-3">Problem Solver</h3>
                 <p className="text-gray-700">
-                  Driving enterprise account growth through relationship development and strategic business planning.
+                  Skilled at analyzing complex technical challenges and developing effective solutions through creative thinking and systematic approaches.
                 </p>
               </CardContent>
             </Card>

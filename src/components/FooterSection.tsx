@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Linkedin, FileText, Heart } from 'lucide-react';
+import { Linkedin, FileText, Heart, MapPin } from 'lucide-react';
 
 const FooterSection: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -15,6 +15,9 @@ const FooterSection: React.FC = () => {
             </h2>
             <p className="mt-2 text-gray-300">
               Senior Application Engineer | Control Systems Expert
+            </p>
+            <p className="mt-2 text-gray-300 flex items-center">
+              <MapPin className="h-4 w-4 mr-1 text-liverpool" /> Plano, Texas
             </p>
           </div>
           

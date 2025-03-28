@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mountain, Trophy, Briefcase, Cpu, Lightbulb, Bike, Smile } from 'lucide-react';
+import { Mountain, Trophy, Briefcase, Cpu, Lightbulb, Bike, Puzzle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const AboutSection: React.FC = () => {
@@ -21,9 +21,9 @@ const AboutSection: React.FC = () => {
       description: "Passionate about cycling, hiking, kayaking and seeking new adventures in the great outdoors.",
     },
     {
-      icon: <Smile className="h-10 w-10 text-liverpool" />,
-      title: "Self-Starter & Funny",
-      description: "Quick learner with a knack for humor that helps build strong relationships with clients and teammates.",
+      icon: <Puzzle className="h-10 w-10 text-purple-600" />,
+      title: "Problem Solver",
+      description: "Quick learner with strong analytical skills and a passion for solving complex technical and business challenges.",
     },
   ];
 
@@ -47,7 +47,7 @@ const AboutSection: React.FC = () => {
           </div>
           <div className="lg:w-1/2">
             <p className="text-lg text-gray-700 mb-6">
-              I'm Mahaveer Satra, a Senior Application Engineer at MathWorks based in Plano, Texas. I specialize in digital twin solutions and have a strong background in implementing complex engineering systems for the semiconductor equipment manufacturing industry.
+              I'm Mahaveer Satra, a Senior Application Engineer at MathWorks. I specialize in digital twin solutions and have a strong background in implementing complex engineering systems for the semiconductor equipment manufacturing industry.
             </p>
             <p className="text-lg text-gray-700 mb-6">
               With a knack for quickly grasping technical concepts, I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.

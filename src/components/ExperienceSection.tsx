@@ -24,8 +24,8 @@ const ExperienceSection: React.FC = () => {
     {
       title: "Senior Application Engineer",
       company: "MathWorks",
-      location: "Plano, Texas",
-      date: "2021 - Present",
+      location: "Dallas/Fort Worth Area",
+      date: "July 2021 - Present",
       description: [
         "Leading digital twin solutions development for semiconductor manufacturing clients.",
         "Driving enterprise account growth through strategic relationship development.",
@@ -38,8 +38,8 @@ const ExperienceSection: React.FC = () => {
     {
       title: "Application Engineer",
       company: "MathWorks",
-      location: "Plano, Texas",
-      date: "2017 - 2021",
+      location: "Dallas/Fort Worth Area",
+      date: "August 2017 - July 2021",
       description: [
         "Developed simulation models and digital twin implementations for various engineering applications.",
         "Provided technical support and training to clients in implementing control system solutions.",
@@ -73,20 +73,6 @@ const ExperienceSection: React.FC = () => {
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
             My professional journey in digital twins and solution consulting, from education to current role.
           </p>
-        </div>
-        
-        {/* Current Location Card for visual appeal */}
-        <div className="max-w-md mx-auto mb-12 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl transform hover:scale-105 transition-all">
-          <div className="md:flex">
-            <div className="md:shrink-0 bg-blue-50 flex items-center justify-center p-6">
-              <MapPin className="h-12 w-12 text-mathworks" />
-            </div>
-            <div className="p-8">
-              <div className="uppercase tracking-wide text-sm text-mathworks font-semibold">Currently Based In</div>
-              <h3 className="mt-1 text-xl font-medium text-navy">Plano, Texas</h3>
-              <p className="mt-2 text-gray-500">Working with semiconductor manufacturing clients across the United States</p>
-            </div>
-          </div>
         </div>
 
         <div className="hidden md:block">
