@@ -1,29 +1,29 @@
 
 import React from 'react';
-import { Mountain, Trophy, Briefcase, Cpu } from 'lucide-react';
+import { Mountain, Trophy, Briefcase, Cpu, Lightbulb, Bike, Smile } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const AboutSection: React.FC = () => {
   const interestCards = [
     {
-      icon: <Briefcase className="h-10 w-10 text-mathworks" />,
-      title: "Engineering Professional",
-      description: "Senior Application Engineer at MathWorks with expertise in developing advanced control systems and simulations.",
+      icon: <Lightbulb className="h-10 w-10 text-mathworks" />,
+      title: "Digital Twins Expert",
+      description: "Specialized in developing advanced digital twin solutions for complex engineering systems in the semiconductor manufacturing industry.",
     },
     {
-      icon: <Cpu className="h-10 w-10 text-gray-700" />,
-      title: "Control Systems Expert",
-      description: "Specialized in mechanical engineering with a focus on designing and implementing complex control systems.",
+      icon: <Briefcase className="h-10 w-10 text-gray-700" />,
+      title: "Solution Consultant",
+      description: "Experienced solution consultant helping clients optimize their engineering processes and implement innovative technologies.",
     },
     {
-      icon: <Mountain className="h-10 w-10 text-green-600" />,
-      title: "Hiking Enthusiast",
-      description: "Passionate about exploring hiking trails and experiencing adventures in nature.",
+      icon: <Bike className="h-10 w-10 text-green-600" />,
+      title: "Outdoor Enthusiast",
+      description: "Passionate about cycling, hiking, kayaking and seeking new adventures in the great outdoors.",
     },
     {
-      icon: <Trophy className="h-10 w-10 text-liverpool" />,
-      title: "Liverpool FC Fan",
-      description: "Ardent supporter of Liverpool Football Club and enjoy watching and playing soccer.",
+      icon: <Smile className="h-10 w-10 text-liverpool" />,
+      title: "Self-Starter & Funny",
+      description: "Quick learner with a knack for humor that helps build strong relationships with clients and teammates.",
     },
   ];
 
@@ -35,21 +35,32 @@ const AboutSection: React.FC = () => {
           <div className="h-1 w-20 bg-liverpool mx-auto"></div>
         </div>
 
-        <div className="max-w-4xl mx-auto mb-16">
-          <p className="text-lg text-gray-700 mb-6">
-            I'm Mahaveer Satra, a Senior Application Engineer at MathWorks with a strong background in mechanical engineering and a specialization in control systems. My professional journey has equipped me with expertise in developing simulation solutions and implementing advanced control algorithms.
-          </p>
-          <p className="text-lg text-gray-700 mb-6">
-            Throughout my career, I've worked on diverse projects ranging from industrial automation to complex simulation environments, helping clients solve challenging engineering problems. I'm passionate about leveraging technology to create efficient and innovative solutions.
-          </p>
-          <p className="text-lg text-gray-700">
-            Outside of work, I'm an avid hiker who loves exploring mountain trails and embarking on adventures. I'm also a dedicated soccer enthusiast and a loyal supporter of Liverpool Football Club. These interests help me maintain a balanced lifestyle and provide fresh perspectives that enhance my professional work.
-          </p>
+        <div className="flex flex-col lg:flex-row items-center gap-10 max-w-5xl mx-auto mb-16">
+          <div className="lg:w-1/2">
+            <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500">
+              <img 
+                src="/lovable-uploads/facda059-8389-4f17-9ba5-451ace3f9504.png" 
+                alt="Mahaveer Satra" 
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+          <div className="lg:w-1/2">
+            <p className="text-lg text-gray-700 mb-6">
+              I'm Mahaveer Satra, a Senior Application Engineer at MathWorks based in Plano, Texas. I specialize in digital twin solutions and have a strong background in implementing complex engineering systems for the semiconductor equipment manufacturing industry.
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
+              With a knack for quickly grasping technical concepts, I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.
+            </p>
+            <p className="text-lg text-gray-700">
+              Outside of work, I'm an avid outdoor enthusiast who enjoys cycling, hiking, kayaking, and seeking new adventures. I'm also a dedicated Liverpool FC fan and bring the same passion to both my professional work and personal interests.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {interestCards.map((card, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-none bg-gray-50">
+            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-none bg-gray-50 transform hover:scale-105 transition-all">
               <CardContent className="flex flex-col items-center text-center p-6">
                 <div className="rounded-full bg-white p-4 shadow-sm mb-4">
                   {card.icon}
