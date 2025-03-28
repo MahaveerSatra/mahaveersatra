@@ -17,7 +17,7 @@ const FooterSection: React.FC = () => {
               Senior Application Engineer | Control Systems Expert
             </p>
             <p className="mt-2 text-gray-300 flex items-center">
-              <MapPin className="h-4 w-4 mr-1 text-liverpool" /> Plano, Texas
+              <MapPin className="h-4 w-4 mr-1 text-liverpool" /> Texas
             </p>
           </div>
           

@@ -24,13 +24,16 @@ const ExperienceSection: React.FC = () => {
     {
       title: "Senior Application Engineer",
       company: "MathWorks",
-      location: "Dallas/Fort Worth Area",
-      date: "July 2021 - Present",
+      location: "Texas",
+      date: "October 2021 - Present",
       description: [
-        "Leading digital twin solutions development for semiconductor manufacturing clients.",
-        "Driving enterprise account growth through strategic relationship development.",
-        "Consulting with clients to implement innovative engineering solutions to complex problems.",
-        "Developing business strategies for expanding into new market segments."
+        "Led the account-level business strategy and planning across key enterprise accounts, including ASML USA and Disney, resulting in ~10% YoY growth and deeper adoption of MathWorks tools.",
+        "Delivered a comprehensive workshop on "AI with Model-Based Design" for MathWorks Torrance, focusing on training machine learning models for virtual sensors, Model-Based Design integration, compression of neural networks and code generation for embedded AI applications.",
+        "Continuous Collaboration with PLC Coder, Controls and System Identification development, and product marketing teams to support market assessment, feedback in MRP meetings and customer feedback integration.",
+        "Developed customer-facing content for advanced process control in pharmaceutical industry, regression modeling, predictive maintenance and resource optimization to drive awareness and adoption.",
+        "Created a "No-Meeting" cross-functional community of practice to connect Industry AE, Academia CSE and Product Managers to enhance our presence in the Semiconductor Equipment Manufacturing Industry.",
+        "Delivered compelling technical presentations, proofs of concept, and demonstrations to both technical and non-technical stakeholders, resulting in $2M+ sales wins from June 2024-Dec 2024.",
+        "Developed thought leadership for Digital Twins through LinkedIn community engagement, with 3k+ followers."
       ],
       icon: <Briefcase className="w-full h-full text-white" />,
       iconBackground: "#0076A8" // MathWorks blue
@@ -38,29 +41,63 @@ const ExperienceSection: React.FC = () => {
     {
       title: "Application Engineer",
       company: "MathWorks",
-      location: "Dallas/Fort Worth Area",
-      date: "August 2017 - July 2021",
+      location: "Massachusetts",
+      date: "September 2020 - October 2021",
       description: [
-        "Developed simulation models and digital twin implementations for various engineering applications.",
-        "Provided technical support and training to clients in implementing control system solutions.",
-        "Built strong client relationships in the semiconductor manufacturing industry.",
-        "Contributed to the enhancement of simulation tools and methodologies."
+        "Developed an example to leverage our Graphical Neural Network deep learning workflows for node classification by processing and integrating the QM7-X dataset for chemistry.",
+        "Acted as a technical advisor for aerospace clients, guiding them through the integration of flight management systems with existing infrastructure."
       ],
       icon: <Briefcase className="w-full h-full text-white" />,
       iconBackground: "#0076A8" // MathWorks blue
     },
     {
-      title: "Master's Degree",
-      company: "The Ohio State University",
-      location: "Columbus, Ohio",
-      date: "2015 - 2017",
+      title: "System Modeling & Controls Team Lead",
+      company: "Center for Automotive Research",
+      location: "Ohio",
+      date: "August 2019 - August 2020",
       description: [
-        "Specialization in Mechanical Engineering with focus on Control Systems.",
-        "Research on advanced control methodologies and their practical applications.",
-        "Quickly adapted to new technical concepts and applied them to innovative projects."
+        "Led a multidisciplinary team of 12 engineers in the development, testing and deployment of Equivalent Consumption Minimization Strategy (ECMS) for hybrid electric vehicle.",
+        "Performed HIL testing for validation and verification of controller and V2X algorithms on dSPACE simulator.",
+        "Directed a 5-member system safety work group, ensuring the safe operation of the project vehicle."
+      ],
+      icon: <Briefcase className="w-full h-full text-white" />,
+      iconBackground: "#BB0000" // Ohio State scarlet
+    },
+    {
+      title: "Senior Design Engineer",
+      company: "Larsen and Toubro Defence",
+      location: "Mumbai",
+      date: "July 2016 - July 2018",
+      description: [
+        "Developed military qualified pneumatic launcher, from design conceptualization to the final production release.",
+        "Designed simulations and experiments to validate the firing valve of the launcher and to determine its discharge coefficient."
+      ],
+      icon: <Briefcase className="w-full h-full text-white" />,
+      iconBackground: "#0066CC" // L&T blue
+    },
+    {
+      title: "Master of Science - Mechanical Engineering",
+      company: "Ohio State University",
+      location: "Columbus, Ohio",
+      date: "August 2018 - August 2020",
+      description: [
+        "Specialization in Automotive Systems and Mobility",
+        "GPA: 4.0",
+        "Awarded J.N. Tata Endowment Scholarship for exceptional academic merit and professional experience."
       ],
       icon: <GraduationCap className="w-full h-full text-white" />,
       iconBackground: "#BB0000" // Ohio State scarlet
+    },
+    {
+      title: "Bachelor of Technology - Mechanical Engineering",
+      company: "Veermata Jijabai Technological Institute (VJTI)",
+      location: "Mumbai, India",
+      date: "May 2012 - April 2016",
+      description: [
+        "CPI: 8.85/10"
+      ],
+      icon: <GraduationCap className="w-full h-full text-white" />,
+      iconBackground: "#1F3A93" // VJTI blue
     }
   ];
 

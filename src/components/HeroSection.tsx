@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
               Senior Application Engineer at MathWorks
             </h2>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
-              Digital Twins Expert & Solution Consultant based in Plano, Texas. Combining technical expertise with business acumen to deliver innovative solutions in the semiconductor manufacturing industry.
+              Digital Twins Expert & Solution Consultant. Combining technical expertise with business acumen to deliver innovative solutions in the semiconductor manufacturing industry.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button className="bg-liverpool hover:bg-liverpool/90 text-white px-6 py-2 rounded-md">
