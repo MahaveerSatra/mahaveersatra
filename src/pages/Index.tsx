@@ -14,11 +14,13 @@ const Index: React.FC = () => {
     <div className="min-h-screen bg-white">
       <NavBar />
       <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <SkillsSection />
-      <BlogSection />
-      <ContactSection />
+      <div className="max-w-6xl mx-auto px-4">
+        <AboutSection />
+        <ExperienceSection />
+        <SkillsSection />
+        <BlogSection />
+        <ContactSection />
+      </div>
       <FooterSection />
     </div>
   );
