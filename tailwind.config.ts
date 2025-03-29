@@ -63,11 +63,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Mahaveer's personal branding
-				liverpool: '#C8102E',
-				navy: '#0A1128',
-				earth: '#E6E2DD',
-				mathworks: '#0076A8'
+				// Updated vibrant color palette inspired by Kate Little's site
+				sunshine: '#FFD166', // Warm yellow
+				indigo: '#073B4C', // Deep blue
+				teal: '#06D6A0', // Vibrant teal
+				coral: '#EF476F', // Bright coral
+				azure: '#118AB2', // Bright blue
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -102,6 +103,10 @@ export default {
 				slideInFromRight: {
 					'0%': { transform: 'translateX(100%)', opacity: '0' },
 					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				bounce: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
@@ -109,7 +114,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fadeIn 0.5s ease-out forwards',
 				'slide-in-left': 'slideInFromLeft 0.5s ease-out forwards',
-				'slide-in-right': 'slideInFromRight 0.5s ease-out forwards'
+				'slide-in-right': 'slideInFromRight 0.5s ease-out forwards',
+				'bounce': 'bounce 2s ease-in-out infinite'
 			}
 		}
 	},

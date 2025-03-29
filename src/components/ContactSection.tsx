@@ -21,11 +21,11 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Get In Touch</h2>
-          <div className="h-1 w-20 bg-liverpool mx-auto"></div>
+          <h2 className="vibrant-heading">Get In Touch</h2>
+          <div className="section-divider"></div>
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
             Feel free to contact me for any questions, collaborations, or just to say hello!
           </p>
@@ -34,26 +34,26 @@ const ContactSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2">
             <div className="space-y-6">
-              <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <Card className="border-t-4 border-coral shadow-sm hover:shadow-md transition-all">
                 <CardContent className="p-6 flex items-start">
-                  <Mail className="h-10 w-10 text-liverpool mr-4 flex-shrink-0" />
+                  <Mail className="h-10 w-10 text-coral mr-4 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-semibold text-navy mb-1">Email</h3>
-                    <p className="text-gray-700">contact@mahaveersatra.com</p>
+                    <h3 className="text-lg font-semibold text-indigo mb-1">Email</h3>
+                    <p className="text-gray-700">mahaveersatra@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
               
-              <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <Card className="border-t-4 border-azure shadow-sm hover:shadow-md transition-all">
                 <CardContent className="p-6 flex items-start">
-                  <Linkedin className="h-10 w-10 text-liverpool mr-4 flex-shrink-0" />
+                  <Linkedin className="h-10 w-10 text-azure mr-4 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-semibold text-navy mb-1">LinkedIn</h3>
+                    <h3 className="text-lg font-semibold text-indigo mb-1">LinkedIn</h3>
                     <a 
                       href="https://www.linkedin.com/in/mahaveer-satra" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-700 hover:text-liverpool transition-colors"
+                      className="text-gray-700 hover:text-coral transition-colors"
                     >
                       linkedin.com/in/mahaveer-satra
                     </a>
@@ -61,12 +61,12 @@ const ContactSection: React.FC = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <Card className="border-t-4 border-teal shadow-sm hover:shadow-md transition-all">
                 <CardContent className="p-6 flex items-start">
-                  <MapPin className="h-10 w-10 text-liverpool mr-4 flex-shrink-0" />
+                  <MapPin className="h-10 w-10 text-teal mr-4 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-semibold text-navy mb-1">Location</h3>
-                    <p className="text-gray-700">Boston, Massachusetts</p>
+                    <h3 className="text-lg font-semibold text-indigo mb-1">Location</h3>
+                    <p className="text-gray-700">Plano, Texas</p>
                   </div>
                 </CardContent>
               </Card>
@@ -74,9 +74,9 @@ const ContactSection: React.FC = () => {
           </div>
           
           <div className="lg:col-span-3">
-            <Card className="border-none shadow-lg">
+            <Card className="border-t-4 border-sunshine shadow-md">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold text-navy mb-6">Send Me a Message</h3>
+                <h3 className="text-2xl font-semibold text-indigo mb-6">Send Me a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -87,7 +87,7 @@ const ContactSection: React.FC = () => {
                         id="name" 
                         placeholder="John Doe" 
                         required 
-                        className="w-full"
+                        className="w-full border-sunshine focus:border-sunshine focus:ring-sunshine"
                       />
                     </div>
                     <div>
@@ -99,7 +99,7 @@ const ContactSection: React.FC = () => {
                         type="email" 
                         placeholder="john@example.com" 
                         required 
-                        className="w-full"
+                        className="w-full border-sunshine focus:border-sunshine focus:ring-sunshine"
                       />
                     </div>
                   </div>
@@ -112,7 +112,7 @@ const ContactSection: React.FC = () => {
                       id="subject" 
                       placeholder="How can I help you?" 
                       required 
-                      className="w-full"
+                      className="w-full border-sunshine focus:border-sunshine focus:ring-sunshine"
                     />
                   </div>
                   
@@ -125,13 +125,13 @@ const ContactSection: React.FC = () => {
                       placeholder="Your message here..." 
                       rows={5} 
                       required 
-                      className="w-full"
+                      className="w-full border-sunshine focus:border-sunshine focus:ring-sunshine"
                     />
                   </div>
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-liverpool hover:bg-liverpool/90 text-white flex items-center justify-center"
+                    className="w-full bg-sunshine hover:bg-sunshine/90 text-indigo font-medium flex items-center justify-center rounded-full shadow-sm"
                   >
                     Send Message
                     <Send className="ml-2 h-4 w-4" />
