@@ -63,6 +63,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// Adding missing colors that are used in the classes
+				indigo: '#1E3A8A', // Using primary-blue as indigo
+				navy: '#1E3A8A', // Same as primary-blue for consistency
+				sunshine: '#FBBF24', // Using accent-yellow for sunshine
+				coral: '#F97316', // Using highlight-orange for coral
+				azure: '#1E3A8A', // Using primary-blue as azure
+				teal: '#34D399', // Using secondary-green as teal
+				liverpool: '#F97316', // Using highlight-orange for liverpool
+				mathworks: '#0076A8', // A blue color for MathWorks references
 				// Updated color scheme based on the provided brand colors
 				'primary-blue': '#1E3A8A', // Deep Blue - Primary Color
 				'secondary-green': '#34D399', // Vibrant Green - Secondary Color
