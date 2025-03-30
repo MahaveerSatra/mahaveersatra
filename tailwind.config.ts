@@ -63,12 +63,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Updated vibrant color palette inspired by Kate Little's site
-				sunshine: '#FFD166', // Warm yellow
-				indigo: '#073B4C', // Deep blue
-				teal: '#06D6A0', // Vibrant teal
-				coral: '#EF476F', // Bright coral
-				azure: '#118AB2', // Bright blue
+				// Updated color scheme based on the provided brand colors
+				'primary-blue': '#1E3A8A', // Deep Blue - Primary Color
+				'secondary-green': '#34D399', // Vibrant Green - Secondary Color
+				'accent-yellow': '#FBBF24', // Bright Yellow - Accent Color
+				'neutral-gray': '#D1D5DB', // Soft Gray - Supporting Color
+				'highlight-orange': '#F97316', // Warm Orange - Highlight Color
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
