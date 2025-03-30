@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowDown, CheckCircle } from 'lucide-react';
+import { ArrowDown, CheckCircle, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection: React.FC = () => {
@@ -8,20 +8,15 @@ const HeroSection: React.FC = () => {
     <section className="min-h-screen flex flex-col justify-center py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-8 fade-up">
-            <div className="h-1 w-8 bg-accent-yellow"></div>
-            <span className="text-highlight-orange font-medium">Hello, I'm</span>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary-blue mb-6 tracking-tight fade-up delay-100">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary-blue mb-6 tracking-tight fade-up">
             Mahaveer Satra
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-secondary-green mb-8 font-light fade-up delay-200">
+          <h2 className="text-xl md:text-2xl text-secondary-green mb-8 font-light fade-up delay-100">
             Solutions Consultant — Industrial Automation & Semiconductor Manufacturing Expert
           </h2>
           
-          <div className="flex flex-wrap gap-4 mb-16 fade-up delay-300">
+          <div className="flex flex-wrap gap-4 mb-16 fade-up delay-200">
             <Button className="bg-accent-yellow hover:bg-accent-yellow/90 text-primary-blue font-medium px-6 py-2 rounded-full shadow-sm">
               <a href="#contact">Contact Me</a>
             </Button>
@@ -30,7 +25,24 @@ const HeroSection: React.FC = () => {
             </Button>
           </div>
           
-          <div className="mt-10 w-24 h-1 bg-accent-yellow"></div>
+          {/* Outdoor Activities Gallery */}
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 fade-up delay-300">
+            <img 
+              src="/lovable-uploads/e948e758-6f0c-4ef7-8d11-54a9b859c177.png" 
+              alt="Hiking at Canyon" 
+              className="w-full h-60 object-cover rounded-lg shadow-md hover:shadow-lg transition-all"
+            />
+            <img 
+              src="/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png" 
+              alt="Mountain Hiking" 
+              className="w-full h-60 object-cover rounded-lg shadow-md hover:shadow-lg transition-all"
+            />
+            <img 
+              src="/lovable-uploads/de98bd37-1565-41b6-a54f-2095cc8d7e10.png" 
+              alt="Kayaking Adventure" 
+              className="w-full h-60 object-cover rounded-lg shadow-md hover:shadow-lg transition-all"
+            />
+          </div>
         </div>
       </div>
       
@@ -48,10 +60,16 @@ const HeroSection: React.FC = () => {
           <h4 className="text-2xl md:text-3xl font-medium text-highlight-orange mb-8">
             with Insightful Simulations
           </h4>
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl">
+          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mb-8">
             Streamline your development process with cutting-edge simulation models that enhance analysis, 
             design, and testing, while saving time and cost.
           </p>
+          
+          <Button className="bg-accent-yellow hover:bg-accent-yellow/90 text-primary-blue font-medium px-6 py-2 rounded-full shadow-sm">
+            <a href="#contact" className="flex items-center gap-2">
+              Learn More <ChevronRight className="h-4 w-4" />
+            </a>
+          </Button>
         </div>
       </div>
       

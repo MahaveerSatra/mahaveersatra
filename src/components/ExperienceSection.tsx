@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -24,7 +23,7 @@ const ExperienceSection: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
       title: "Senior Application Engineer",
-      company: "Scientific Software Company",
+      company: "The MathWorks Inc.",
       companyUrl: "https://www.mathworks.com/",
       location: "Texas",
       date: "October 2021 - Present",
@@ -38,7 +37,7 @@ const ExperienceSection: React.FC = () => {
     },
     {
       title: "Application Engineer",
-      company: "Scientific Software Company",
+      company: "The MathWorks Inc.",
       companyUrl: "https://www.mathworks.com/",
       location: "Massachusetts",
       date: "September 2020 - October 2021",
@@ -66,7 +65,7 @@ const ExperienceSection: React.FC = () => {
     },
     {
       title: "Senior Design Engineer",
-      company: "Defense Manufacturing Company",
+      company: "Larsen & Toubro Defence",
       companyUrl: "https://www.larsentoubro.com/",
       location: "Mumbai",
       date: "July 2016 - July 2018",

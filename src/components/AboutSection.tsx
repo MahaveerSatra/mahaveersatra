@@ -36,7 +36,7 @@ const AboutSection: React.FC = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-10 max-w-5xl mx-auto mb-16">
-          <div className="lg:w-1/2">
+          <div className="lg:w-2/5">
             <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500">
               <img 
                 src="/lovable-uploads/facda059-8389-4f17-9ba5-451ace3f9504.png" 
@@ -45,9 +45,9 @@ const AboutSection: React.FC = () => {
               />
             </div>
           </div>
-          <div className="lg:w-1/2">
+          <div className="lg:w-3/5">
             <p className="text-lg text-gray-700 mb-6">
-              I'm Mahaveer Satra, a Solutions Consultant specializing in Industrial Automation and Semiconductor Manufacturing. I have a strong background in implementing complex engineering systems for semiconductor equipment manufacturers.
+              I'm Mahaveer Satra, a Solutions Consultant specializing in Simulation, digital twin and Predictive Maintenance. I have a strong background in implementing complex engineering systems across various semiconductor equipment manufacturers, automotive, aerospace and robotics industry.
             </p>
             <p className="text-lg text-gray-700 mb-6">
               With a knack for quickly grasping technical concepts, I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.
