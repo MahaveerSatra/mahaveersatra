@@ -49,13 +49,13 @@ const Index: React.FC = () => {
         
         <section className="bg-gray-50">
           <div className="max-w-6xl mx-auto px-4">
-            <PersonalGallery />
+            <ContactSection />
           </div>
         </section>
         
         <section className="bg-white">
           <div className="max-w-6xl mx-auto px-4">
-            <ContactSection />
+            <PersonalGallery />
           </div>
         </section>
       </div>

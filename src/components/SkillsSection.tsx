@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { Cpu, TrendingUp, Bike, Ship, Mountain, HeartHandshake } from 'lucide-react';
+import { Cpu, TrendingUp, HeartHandshake } from 'lucide-react';
 
 interface Skill {
   name: string;
@@ -37,28 +38,6 @@ const SkillsSection: React.FC = () => {
       return "bg-amber-600"; // Darker shade of yellow/gold
     }
   };
-
-  // Adventure cards with more professional colors
-  const adventureCards = [
-    {
-      icon: <Bike className="h-12 w-12 text-amber-700" />,
-      title: "Cycling Adventures",
-      description: "Exploring new trails and roads on two wheels.",
-      bgColor: "bg-white"
-    },
-    {
-      icon: <Ship className="h-12 w-12 text-blue-700" />,
-      title: "Kayaking Expeditions",
-      description: "Navigating waterways and enjoying the serenity of lakes.",
-      bgColor: "bg-white"
-    },
-    {
-      icon: <Mountain className="h-12 w-12 text-emerald-700" />,
-      title: "Hiking Journeys",
-      description: "Conquering peaks and discovering breathtaking views.",
-      bgColor: "bg-white"
-    }
-  ];
 
   return (
     <section id="skills" className="py-20 bg-white">
@@ -138,26 +117,6 @@ const SkillsSection: React.FC = () => {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-
-        <div className="mt-20">
-          <h3 className="text-2xl font-semibold text-primary-blue mb-8 text-center">My Outdoor Adventures</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {adventureCards.map((card, index) => (
-              <div 
-                key={index} 
-                className={`${card.bgColor} rounded-xl p-6 shadow-sm border-t-4 ${
-                  index === 0 ? 'border-amber-700' : index === 1 ? 'border-blue-700' : 'border-emerald-700'
-                } hover:shadow-md transition-all duration-300 transform hover:scale-105`}
-              >
-                <div className="flex justify-center mb-4">
-                  {card.icon}
-                </div>
-                <h4 className="text-xl font-semibold text-center mb-2 text-primary-blue">{card.title}</h4>
-                <p className="text-center text-gray-700">{card.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
