@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
     <section className="min-h-[70vh] flex flex-col justify-center py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
-          {/* Fast-Track Success Section - Moved to the top */}
+          {/* Fast-Track Success Section */}
           <div className="bg-neutral-50 py-16 px-4 rounded-xl shadow-sm mb-10">
             <div className="relative mb-10">
               <h3 className="font-bold text-4xl md:text-6xl text-primary-blue">
@@ -31,48 +31,6 @@ const HeroSection: React.FC = () => {
                 Learn More <ChevronRight className="h-4 w-4" />
               </a>
             </Button>
-          </div>
-          
-          {/* Good Fit Section */}
-          <div className="py-10 px-0 bg-white">
-            <div className="max-w-5xl">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-10">
-                We're a good fit if...
-              </h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
-                    <p className="text-lg text-neutral-700">
-                      You Value Efficiency and Innovation seeking to enhance your development process with cutting-edge simulation.
-                    </p>
-                  </div>
-                  
-                  <div className="flex gap-4">
-                    <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
-                    <p className="text-lg text-neutral-700">
-                      You demand high-quality, reliable results with a focus on accuracy and precision, valuing partners who uphold integrity and accountability.
-                    </p>
-                  </div>
-                  
-                  <div className="flex gap-4">
-                    <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
-                    <p className="text-lg text-neutral-700">
-                      You require specialized technical expertise and value solutions that are adaptable to meet your unique challenges.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="rounded-xl overflow-hidden shadow-xl">
-                  <img 
-                    src="/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png" 
-                    alt="Mountain Hiking" 
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@ const AboutSection: React.FC = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-10 max-w-5xl mx-auto mb-16">
-          <div className="lg:w-1/4">
+          <div className="lg:w-1/5">
             <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500 max-w-xs mx-auto">
               <img 
                 src="/lovable-uploads/facda059-8389-4f17-9ba5-451ace3f9504.png" 
@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
               />
             </div>
           </div>
-          <div className="lg:w-3/4">
+          <div className="lg:w-4/5">
             <p className="text-lg text-gray-700 mb-6">
               I'm Mahaveer Satra, a Solutions Consultant specializing in Simulation, digital twin and Predictive Maintenance. I have a strong background in implementing complex engineering systems across various semiconductor equipment manufacturers, automotive, aerospace and robotics industry.
             </p>
@@ -53,7 +53,7 @@ const AboutSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {interestCards.map((card, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-gray-100 bg-gray-50 transform hover:scale-105 transition-all">
               <CardContent className="flex flex-col items-center text-center p-6">
@@ -65,6 +65,48 @@ const AboutSection: React.FC = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Good Fit Section */}
+        <div className="py-10 px-0 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-10">
+              We're a good fit if...
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
+                  <p className="text-lg text-neutral-700">
+                    You Value Efficiency and Innovation seeking to enhance your development process with cutting-edge simulation.
+                  </p>
+                </div>
+                
+                <div className="flex gap-4">
+                  <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
+                  <p className="text-lg text-neutral-700">
+                    You demand high-quality, reliable results with a focus on accuracy and precision, valuing partners who uphold integrity and accountability.
+                  </p>
+                </div>
+                
+                <div className="flex gap-4">
+                  <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
+                  <p className="text-lg text-neutral-700">
+                    You require specialized technical expertise and value solutions that are adaptable to meet your unique challenges.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="rounded-xl overflow-hidden shadow-xl">
+                <img 
+                  src="/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png" 
+                  alt="Mountain Hiking" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

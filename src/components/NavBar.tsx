@@ -36,14 +36,14 @@ const NavBar: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4">
-            <div className="h-24 w-24 relative">
+            <div className="h-28 w-28 relative">
               <img 
                 src="/lovable-uploads/128b7220-c3a4-4256-848c-311a57408fc1.png" 
                 alt="MS Logo" 
                 className="h-full w-full object-contain"
               />
             </div>
-            <h1 className="text-2xl font-medium text-primary-blue hidden md:block tracking-wide font-montserrat">
+            <h1 className="text-xl font-light text-primary-blue hidden md:block tracking-wider font-montserrat">
               Mahaveer Satra
             </h1>
           </Link>
@@ -68,7 +68,7 @@ const NavBar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
-            <h1 className="text-xl font-medium text-primary-blue">Mahaveer Satra</h1>
+            <h1 className="text-lg font-light text-primary-blue">Mahaveer Satra</h1>
             <Button variant="ghost" onClick={toggleMobileMenu} className="p-1">
               {isMobileMenuOpen ? <X className="h-6 w-6 text-primary-blue" /> : <Menu className="h-6 w-6 text-primary-blue" />}
             </Button>
