@@ -23,7 +23,7 @@ const AboutSection: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">About Me</h2>
@@ -31,8 +31,8 @@ const AboutSection: React.FC = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-10 max-w-5xl mx-auto mb-16">
-          <div className="lg:w-1/3">
-            <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500 max-w-sm">
+          <div className="lg:w-1/4">
+            <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500 max-w-xs mx-auto">
               <img 
                 src="/lovable-uploads/facda059-8389-4f17-9ba5-451ace3f9504.png" 
                 alt="Mahaveer Satra - Professional Headshot" 
@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
               />
             </div>
           </div>
-          <div className="lg:w-2/3">
+          <div className="lg:w-3/4">
             <p className="text-lg text-gray-700 mb-6">
               I'm Mahaveer Satra, a Solutions Consultant specializing in Simulation, digital twin and Predictive Maintenance. I have a strong background in implementing complex engineering systems across various semiconductor equipment manufacturers, automotive, aerospace and robotics industry.
             </p>

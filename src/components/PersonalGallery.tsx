@@ -3,11 +3,11 @@ import React from 'react';
 
 const PersonalGallery: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="vibrant-heading">Life Beyond Work</h2>
-          <div className="section-divider"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">Life Beyond Work</h2>
+          <div className="h-1 w-24 bg-accent-yellow mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
             Embracing adventure and creating memories outside the professional world
           </p>

@@ -33,11 +33,6 @@ const HeroSection: React.FC = () => {
             </Button>
           </div>
           
-          {/* Professional Introduction */}
-          <h2 className="text-xl md:text-2xl text-secondary-green mb-8 font-light fade-up delay-100 mt-10">
-            Solutions Consultant — Industrial Automation & Semiconductor Manufacturing Expert
-          </h2>
-          
           {/* Good Fit Section */}
           <div className="py-10 px-0 bg-white">
             <div className="max-w-5xl">
@@ -45,26 +40,36 @@ const HeroSection: React.FC = () => {
                 We're a good fit if...
               </h3>
               
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
-                  <p className="text-lg text-neutral-700">
-                    You Value Efficiency and Innovation seeking to enhance your development process with cutting-edge simulation.
-                  </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
+                    <p className="text-lg text-neutral-700">
+                      You Value Efficiency and Innovation seeking to enhance your development process with cutting-edge simulation.
+                    </p>
+                  </div>
+                  
+                  <div className="flex gap-4">
+                    <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
+                    <p className="text-lg text-neutral-700">
+                      You demand high-quality, reliable results with a focus on accuracy and precision, valuing partners who uphold integrity and accountability.
+                    </p>
+                  </div>
+                  
+                  <div className="flex gap-4">
+                    <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
+                    <p className="text-lg text-neutral-700">
+                      You require specialized technical expertise and value solutions that are adaptable to meet your unique challenges.
+                    </p>
+                  </div>
                 </div>
                 
-                <div className="flex gap-4">
-                  <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
-                  <p className="text-lg text-neutral-700">
-                    You demand high-quality, reliable results with a focus on accuracy and precision, valuing partners who uphold integrity and accountability.
-                  </p>
-                </div>
-                
-                <div className="flex gap-4">
-                  <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
-                  <p className="text-lg text-neutral-700">
-                    You require specialized technical expertise and value solutions that are adaptable to meet your unique challenges.
-                  </p>
+                <div className="rounded-xl overflow-hidden shadow-xl">
+                  <img 
+                    src="/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png" 
+                    alt="Mountain Hiking" 
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
             </div>

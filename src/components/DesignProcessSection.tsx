@@ -6,34 +6,34 @@ import { Button } from '@/components/ui/button';
 const DesignProcessSection: React.FC = () => {
   const steps = [
     {
-      icon: <Search className="h-10 w-10 text-emerald-700" />,
+      icon: <Search className="h-10 w-10 text-primary-blue" />,
       title: "Discovery & Requirements",
       description: "We start with a deep dive into your needs, understanding your challenges, goals, and workflows to make sure we're solving the right problem."
     },
     {
-      icon: <Lightbulb className="h-10 w-10 text-amber-600" />,
+      icon: <Lightbulb className="h-10 w-10 text-highlight-orange" />,
       title: "Conceptualization",
       description: "We create the model architecture and mathematical foundation, building the conceptual framework for your simulation solution."
     },
     {
-      icon: <Code className="h-10 w-10 text-blue-700" />,
+      icon: <Code className="h-10 w-10 text-primary-blue" />,
       title: "Implementation",
       description: "Our team develops the models using industry-standard tools, integrating the mathematical framework into a functional simulation."
     },
     {
-      icon: <Activity className="h-10 w-10 text-rose-600" />,
+      icon: <Activity className="h-10 w-10 text-highlight-orange" />,
       title: "Validation & Testing",
       description: "We rigorously test the model against real-world data to ensure accuracy, reliability, and performance under various conditions."
     },
     {
-      icon: <Award className="h-10 w-10 text-indigo-700" />,
+      icon: <Award className="h-10 w-10 text-primary-blue" />,
       title: "Deployment & Training",
       description: "We integrate the solution into your workflows, provide comprehensive documentation, and train your team to get maximum value."
     }
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6 text-center">

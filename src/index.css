@@ -100,33 +100,38 @@
   }
 
   .minimalist-divider {
-    @apply w-16 h-0.5 bg-amber-500 my-8;
+    @apply w-16 h-0.5 bg-accent-yellow my-8;
   }
 
   .minimalist-section {
     @apply py-20 border-t border-gray-100;
   }
   
-  /* Inspired by Kate Little's website */
+  /* Consistent heading styles */
   .vibrant-heading {
     @apply text-3xl md:text-4xl font-bold text-primary-blue mb-6;
     letter-spacing: -0.5px;
   }
   
   .vibrant-subheading {
-    @apply text-xl md:text-2xl text-emerald-700 mb-3 font-medium;
+    @apply text-xl md:text-2xl text-secondary-green mb-3 font-medium;
   }
   
   .section-divider {
-    @apply h-1 w-24 bg-amber-500 mx-auto my-6;
+    @apply h-1 w-24 bg-accent-yellow mx-auto my-6;
   }
   
   .vibrant-card {
-    @apply bg-white border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-all duration-300;
+    @apply bg-white border-l-4 border-accent-yellow shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  /* Font consistency */
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
-/* Custom animations inspired by Kate Little's site */
+/* Custom animations */
 @keyframes fadeUp {
   from {
     opacity: 0;

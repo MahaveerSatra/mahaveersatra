@@ -36,14 +36,16 @@ const NavBar: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4">
-            <div className="h-20 w-20 relative">
+            <div className="h-24 w-24 relative">
               <img 
                 src="/lovable-uploads/128b7220-c3a4-4256-848c-311a57408fc1.png" 
                 alt="MS Logo" 
                 className="h-full w-full object-contain"
               />
             </div>
-            <h1 className="text-3xl font-medium text-primary-blue hidden md:block tracking-wide">Mahaveer Satra</h1>
+            <h1 className="text-2xl font-medium text-primary-blue hidden md:block tracking-wide font-montserrat">
+              Mahaveer Satra
+            </h1>
           </Link>
           
           {/* Desktop Menu */}
