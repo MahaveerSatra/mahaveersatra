@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,7 +32,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -109,16 +108,16 @@
   
   /* Consistent heading styles */
   .vibrant-heading {
-    @apply text-3xl md:text-4xl font-bold text-primary-blue mb-6;
+    @apply text-3xl font-bold text-primary-blue mb-4;
     letter-spacing: -0.5px;
   }
   
   .vibrant-subheading {
-    @apply text-xl md:text-2xl text-secondary-green mb-3 font-medium;
+    @apply text-xl text-secondary-green mb-3 font-medium;
   }
   
   .section-divider {
-    @apply h-1 w-24 bg-accent-yellow mx-auto my-6;
+    @apply h-1 w-24 bg-accent-yellow mx-auto mb-6;
   }
   
   .vibrant-card {

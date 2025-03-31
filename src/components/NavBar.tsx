@@ -36,25 +36,22 @@ const NavBar: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4">
-            <div className="h-28 w-28 relative">
+            <div className="h-20 w-20 relative">
               <img 
                 src="/lovable-uploads/128b7220-c3a4-4256-848c-311a57408fc1.png" 
                 alt="MS Logo" 
                 className="h-full w-full object-contain"
               />
             </div>
-            <h1 className="text-xl font-light text-primary-blue hidden md:block tracking-wider font-montserrat">
-              Mahaveer Satra
-            </h1>
           </Link>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-10 items-center">
-            <a href="#about" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm">About</a>
-            <a href="#experience" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm">Experience</a>
-            <a href="#skills" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm">Skills</a>
-            <a href="#blog" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm">Blog</a>
-            <a href="#contact" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm">Contact</a>
+            <a href="#about" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm font-medium">About</a>
+            <a href="#experience" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm font-medium">Experience</a>
+            <a href="#skills" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm font-medium">Skills</a>
+            <a href="#blog" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm font-medium">Blog</a>
+            <a href="#contact" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm font-medium">Contact</a>
           </div>
 
           <div className="hidden md:flex space-x-4 items-center">
@@ -67,8 +64,7 @@ const NavBar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-4">
-            <h1 className="text-lg font-light text-primary-blue">Mahaveer Satra</h1>
+          <div className="md:hidden flex items-center">
             <Button variant="ghost" onClick={toggleMobileMenu} className="p-1">
               {isMobileMenuOpen ? <X className="h-6 w-6 text-primary-blue" /> : <Menu className="h-6 w-6 text-primary-blue" />}
             </Button>
@@ -80,11 +76,11 @@ const NavBar: React.FC = () => {
       {isMobile && isMobileMenuOpen && (
         <div className="fixed inset-0 top-[60px] bg-white/95 backdrop-blur-sm z-40 flex flex-col pt-5 px-6">
           <div className="flex flex-col space-y-6 py-8">
-            <a href="#about" className="text-primary-blue py-2 text-xl" onClick={toggleMobileMenu}>About</a>
-            <a href="#experience" className="text-primary-blue py-2 text-xl" onClick={toggleMobileMenu}>Experience</a>
-            <a href="#skills" className="text-primary-blue py-2 text-xl" onClick={toggleMobileMenu}>Skills</a>
-            <a href="#blog" className="text-primary-blue py-2 text-xl" onClick={toggleMobileMenu}>Blog</a>
-            <a href="#contact" className="text-primary-blue py-2 text-xl" onClick={toggleMobileMenu}>Contact</a>
+            <a href="#about" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>About</a>
+            <a href="#experience" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>Experience</a>
+            <a href="#skills" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>Skills</a>
+            <a href="#blog" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>Blog</a>
+            <a href="#contact" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>Contact</a>
             
             <div className="flex space-x-6 py-6">
               <a href="https://www.linkedin.com/in/mahaveer-satra" target="_blank" rel="noopener noreferrer">

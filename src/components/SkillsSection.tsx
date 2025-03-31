@@ -3,7 +3,7 @@ import React from 'react';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { Cpu, TrendingUp, HeartHandshake } from 'lucide-react';
+import { Cpu, TrendingUp } from 'lucide-react';
 
 interface Skill {
   name: string;
@@ -43,8 +43,8 @@ const SkillsSection: React.FC = () => {
     <section id="skills" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="vibrant-heading">My Skills</h2>
-          <div className="section-divider"></div>
+          <h2 className="text-3xl font-bold text-primary-blue mb-4">My Skills</h2>
+          <div className="h-1 w-24 bg-accent-yellow mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
             I've developed a diverse set of technical and business skills throughout my career in Industrial Automation and Semiconductor Manufacturing.
           </p>
@@ -87,8 +87,8 @@ const SkillsSection: React.FC = () => {
         </div>
 
         <div className="mt-16">
-          <h3 className="text-2xl font-semibold text-primary-blue mb-8 text-center flex items-center justify-center">
-            <HeartHandshake className="mr-2 h-6 w-6 text-amber-700" /> Professional Expertise
+          <h3 className="text-2xl font-semibold text-primary-blue mb-8 text-center">
+            Professional Expertise
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="border-t-4 border-emerald-700 shadow-sm hover:shadow-md transition-all">
