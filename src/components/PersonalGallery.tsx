@@ -17,11 +17,11 @@ const PersonalGallery: React.FC = () => {
           <div className="group relative rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <img 
               src="/lovable-uploads/e948e758-6f0c-4ef7-8d11-54a9b859c177.png" 
-              alt="Hiking at Canyon" 
+              alt="Family Time" 
               className="w-full h-80 object-cover"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-              <h3 className="text-white text-lg font-medium">Canyon Adventure</h3>
+              <h3 className="text-white text-lg font-medium">Family Time</h3>
             </div>
           </div>
           

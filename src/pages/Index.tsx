@@ -9,6 +9,7 @@ import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 import FooterSection from '@/components/FooterSection';
 import PersonalGallery from '@/components/PersonalGallery';
+import DesignProcessSection from '@/components/DesignProcessSection';
 
 const Index: React.FC = () => {
   return (
@@ -17,10 +18,11 @@ const Index: React.FC = () => {
       <HeroSection />
       <div className="max-w-6xl mx-auto px-4">
         <AboutSection />
+        <DesignProcessSection />
         <ExperienceSection />
-        <PersonalGallery />
         <SkillsSection />
         <BlogSection />
+        <PersonalGallery />
         <ContactSection />
       </div>
       <FooterSection />
