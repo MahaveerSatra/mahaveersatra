@@ -69,8 +69,20 @@ export default {
 				sunshine: '#FBBF24', // Using accent-yellow for sunshine
 				coral: '#F97316', // Using highlight-orange for coral
 				azure: '#1E3A8A', // Using primary-blue as azure
-				teal: '#34D399', // Using secondary-green as teal
-				liverpool: '#F97316', // Using highlight-orange for liverpool
+				/**teal: '#34D399', // Using secondary-green as teal**/
+				teal: {
+			          50: '#f0fdfa',
+			          100: '#ccfbf1',
+			          200: '#99f6e4',
+			          300: '#5eead4',
+			          400: '#2dd4bf',
+			          500: '#14b8a6',
+			          600: '#0d9488',
+			          700: '#0f766e',
+			          800: '#115e59',
+			          900: '#134e4a',
+			        },
+        			liverpool: '#F97316', // Using highlight-orange for liverpool
 				mathworks: '#0076A8', // A blue color for MathWorks references
 				// Updated color scheme based on the provided brand colors
 				'primary-blue': '#1E3A8A', // Deep Blue - Primary Color
