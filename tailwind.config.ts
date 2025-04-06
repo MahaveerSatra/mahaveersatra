@@ -82,6 +82,10 @@ export default {
 			          800: '#115e59',
 			          900: '#134e4a',
 			        },
+				aqua: {
+			          500: '#00d4ff',
+			          600: '#00a3cc'
+				}
         			liverpool: '#F97316', // Using highlight-orange for liverpool
 				mathworks: '#0076A8', // A blue color for MathWorks references
 				// Updated color scheme based on the provided brand colors
