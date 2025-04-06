@@ -15,50 +15,52 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-white font-montserrat">
       <NavBar />
-      <HeroSection />
-      <div className="mx-auto">
-        <section className="bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <AboutSection />
-          </div>
-        </section>
-        
-        <section className="bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4">
-            <DesignProcessSection />
-          </div>
-        </section>
-        
-        <section className="bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <ExperienceSection />
-          </div>
-        </section>
-        
-        <section className="bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4">
-            <SkillsSection />
-          </div>
-        </section>
-        
-        <section className="bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <BlogSection />
-          </div>
-        </section>
-        
-        <section className="bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4">
-            <ContactSection />
-          </div>
-        </section>
-        
-        <section className="bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <PersonalGallery />
-          </div>
-        </section>
-      </div>
+      <main className="pt-28">
+        <HeroSection />
+        <div className="mx-auto">
+          <section id="about" className="bg-white">
+            <div className="section-container">
+              <AboutSection />
+            </div>
+          </section>
+          
+          <section id="process" className="bg-gray-50">
+            <div className="section-container">
+              <DesignProcessSection />
+            </div>
+          </section>
+          
+          <section id="experience" className="bg-white">
+            <div className="section-container">
+              <ExperienceSection />
+            </div>
+          </section>
+          
+          <section id="skills" className="bg-gray-50">
+            <div className="section-container">
+              <SkillsSection />
+            </div>
+          </section>
+          
+          <section id="blog" className="bg-white">
+            <div className="section-container">
+              <BlogSection />
+            </div>
+          </section>
+          
+          <section id="contact" className="bg-gray-50">
+            <div className="section-container">
+              <ContactSection />
+            </div>
+          </section>
+          
+          <section className="bg-white">
+            <div className="section-container">
+              <PersonalGallery />
+            </div>
+          </section>
+        </div>
+      </main>
       <FooterSection />
     </div>
   );

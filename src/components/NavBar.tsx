@@ -30,16 +30,16 @@ const NavBar: React.FC = () => {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 shadow-sm' : 'bg-transparent py-6'
+        isScrolled ? 'bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 shadow-sm' : 'bg-white py-6'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4">
-            <div className="h-20 w-20 relative">
+            <div className="h-28 w-28 relative">
               <img 
                 src="/lovable-uploads/128b7220-c3a4-4256-848c-311a57408fc1.png" 
-                alt="MS Logo" 
+                alt="Logo" 
                 className="h-full w-full object-contain"
               />
             </div>
@@ -74,7 +74,7 @@ const NavBar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobile && isMobileMenuOpen && (
-        <div className="fixed inset-0 top-[60px] bg-white/95 backdrop-blur-sm z-40 flex flex-col pt-5 px-6">
+        <div className="fixed inset-0 top-[80px] bg-white/95 backdrop-blur-sm z-40 flex flex-col pt-5 px-6">
           <div className="flex flex-col space-y-6 py-8">
             <a href="#about" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>About</a>
             <a href="#experience" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>Experience</a>

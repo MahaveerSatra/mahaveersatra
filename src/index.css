@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -94,12 +95,12 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-normal tracking-tight;
+    @apply font-medium tracking-tight;
     font-family: 'Montserrat', sans-serif;
   }
 
   .minimalist-divider {
-    @apply w-16 h-0.5 bg-accent-yellow my-8;
+    @apply w-20 h-0.5 bg-accent-yellow my-8 mx-auto;
   }
 
   .minimalist-section {
@@ -108,12 +109,12 @@
   
   /* Consistent heading styles */
   .vibrant-heading {
-    @apply text-3xl font-bold text-primary-blue mb-4;
+    @apply text-3xl md:text-4xl font-bold text-primary-blue mb-4;
     letter-spacing: -0.5px;
   }
   
   .vibrant-subheading {
-    @apply text-xl text-secondary-green mb-3 font-medium;
+    @apply text-xl md:text-2xl text-secondary-green mb-3 font-medium;
   }
   
   .section-divider {
@@ -127,6 +128,24 @@
   /* Font consistency */
   .font-montserrat {
     font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Highlighted text */
+  .highlight {
+    @apply font-semibold text-secondary-green;
+  }
+  
+  /* Section styles */
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-12;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl text-neutral-600 text-center max-w-3xl mx-auto mb-16;
   }
 }
 
