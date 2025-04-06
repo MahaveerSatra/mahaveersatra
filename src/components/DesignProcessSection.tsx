@@ -6,29 +6,34 @@ import { Button } from '@/components/ui/button';
 const DesignProcessSection: React.FC = () => {
   const steps = [
     {
-      icon: <Search className="h-12 w-12 text-primary-blue" />,
+      icon: <Search className="h-12 w-12 text-white" />,
       title: "Discovery & Requirements",
-      description: "We start with a deep dive into your needs, understanding your challenges, goals, and workflows to make sure we're solving the right problem."
+      description: "We start with a deep dive into your needs, understanding your challenges, goals, and workflows to make sure we're solving the right problem.",
+      color: "bg-gradient-to-r from-blue-500 to-blue-600"
     },
     {
-      icon: <Lightbulb className="h-12 w-12 text-accent-yellow" />,
+      icon: <Lightbulb className="h-12 w-12 text-white" />,
       title: "Conceptualization",
-      description: "We create the model architecture and mathematical foundation, building the conceptual framework for your simulation solution."
+      description: "We create the model architecture and mathematical foundation, building the conceptual framework for your simulation solution.",
+      color: "bg-gradient-to-r from-amber-500 to-amber-600"
     },
     {
-      icon: <Cpu className="h-12 w-12 text-highlight-orange" />,
+      icon: <Cpu className="h-12 w-12 text-white" />,
       title: "Implementation",
-      description: "Our team develops the models using industry-standard tools, integrating the mathematical framework into a functional simulation."
+      description: "Our team develops the models using industry-standard tools, integrating the mathematical framework into a functional simulation.",
+      color: "bg-gradient-to-r from-teal-500 to-teal-600"
     },
     {
-      icon: <BarChart className="h-12 w-12 text-secondary-green" />,
+      icon: <BarChart className="h-12 w-12 text-white" />,
       title: "Validation & Testing",
-      description: "We rigorously test the model against real-world data to ensure accuracy, reliability, and performance under various conditions."
+      description: "We rigorously test the model against real-world data to ensure accuracy, reliability, and performance under various conditions.",
+      color: "bg-gradient-to-r from-purple-500 to-purple-600"
     },
     {
-      icon: <Award className="h-12 w-12 text-indigo" />,
+      icon: <Award className="h-12 w-12 text-white" />,
       title: "Deployment & Training",
-      description: "We integrate the solution into your workflows, provide comprehensive documentation, and train your team to get maximum value."
+      description: "We integrate the solution into your workflows, provide comprehensive documentation, and train your team to get maximum value.",
+      color: "bg-gradient-to-r from-rose-500 to-rose-600"
     }
   ];
 
@@ -47,7 +52,7 @@ const DesignProcessSection: React.FC = () => {
           <div className="space-y-12 mt-16">
             {steps.map((step, index) => (
               <div key={index} className="flex flex-col md:flex-row gap-6 items-start group">
-                <div className="flex-shrink-0 bg-white p-5 rounded-full shadow-md border border-slate-100 group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-110">
+                <div className={`flex-shrink-0 ${step.color} p-5 rounded-full shadow-md group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-110`}>
                   {step.icon}
                 </div>
                 <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-accent-yellow flex-1 hover:shadow-md transition-all duration-300">
