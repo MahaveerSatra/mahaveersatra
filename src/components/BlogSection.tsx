@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink, X } from 'lucide-react';
@@ -54,6 +53,11 @@ const BlogSection: React.FC = () => {
       content: `
         <h2>Control Systems in Everyday Life</h2>
         <p>Control systems are an integral part of modern life, governing everything from the temperature in our homes to the flight of commercial aircraft. These systems monitor and adjust variables to maintain desired conditions or achieve specific goals.</p>
+        
+        <div class="mb-6">
+          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Control Systems Team" class="w-full h-auto rounded-lg mb-4">
+          <p class="text-sm text-gray-500 italic">Modern control systems require collaboration between engineers across disciplines.</p>
+        </div>
         
         <h3>Common Examples of Control Systems</h3>
         <p>Here are some everyday examples of control systems:</p>

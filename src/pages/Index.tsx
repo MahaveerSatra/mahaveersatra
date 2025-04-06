@@ -9,6 +9,7 @@ import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 import FooterSection from '@/components/FooterSection';
 import DesignProcessSection from '@/components/DesignProcessSection';
+import PersonalGallery from '@/components/PersonalGallery';
 
 const Index: React.FC = () => {
   return (
@@ -44,6 +45,12 @@ const Index: React.FC = () => {
           <section id="blog" className="bg-slate-50">
             <div className="section-container">
               <BlogSection />
+            </div>
+          </section>
+          
+          <section id="personal" className="bg-slate-100">
+            <div className="section-container">
+              <PersonalGallery />
             </div>
           </section>
           
