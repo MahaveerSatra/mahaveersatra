@@ -30,13 +30,13 @@ const NavBar: React.FC = () => {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 shadow-sm' : 'bg-white py-6'
+        isScrolled ? 'bg-gradient-to-r from-slate-50 to-slate-100 backdrop-blur-sm border-b border-gray-100 py-4 shadow-sm' : 'bg-gradient-to-r from-slate-50 to-slate-100 py-6'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4">
-            <div className="h-28 w-28 relative">
+            <div className="h-32 w-32 relative">
               <img 
                 src="/lovable-uploads/128b7220-c3a4-4256-848c-311a57408fc1.png" 
                 alt="Logo" 
@@ -47,19 +47,19 @@ const NavBar: React.FC = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-10 items-center">
-            <a href="#about" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm font-medium">About</a>
-            <a href="#experience" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm font-medium">Experience</a>
-            <a href="#skills" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm font-medium">Skills</a>
-            <a href="#blog" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm font-medium">Blog</a>
-            <a href="#contact" className="text-primary-blue hover:text-highlight-orange transition-colors text-sm font-medium">Contact</a>
+            <a href="#about" className="text-primary-blue hover:text-highlight-orange transition-colors text-base font-medium">About</a>
+            <a href="#experience" className="text-primary-blue hover:text-highlight-orange transition-colors text-base font-medium">Experience</a>
+            <a href="#skills" className="text-primary-blue hover:text-highlight-orange transition-colors text-base font-medium">Skills</a>
+            <a href="#blog" className="text-primary-blue hover:text-highlight-orange transition-colors text-base font-medium">Blog</a>
+            <a href="#contact" className="text-primary-blue hover:text-highlight-orange transition-colors text-base font-medium">Contact</a>
           </div>
 
-          <div className="hidden md:flex space-x-4 items-center">
+          <div className="hidden md:flex space-x-6 items-center">
             <a href="https://www.linkedin.com/in/mahaveer-satra" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="h-5 w-5 text-primary-blue hover:text-highlight-orange transition-colors" />
+              <Linkedin className="h-6 w-6 text-primary-blue hover:text-highlight-orange transition-colors" />
             </a>
             <a href="https://mahaveersatra.medium.com/" target="_blank" rel="noopener noreferrer">
-              <FileText className="h-5 w-5 text-primary-blue hover:text-highlight-orange transition-colors" />
+              <FileText className="h-6 w-6 text-primary-blue hover:text-highlight-orange transition-colors" />
             </a>
           </div>
 

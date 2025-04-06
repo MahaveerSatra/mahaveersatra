@@ -1,29 +1,32 @@
 
 import React from 'react';
-import { Lightbulb, Briefcase, Puzzle } from 'lucide-react';
+import { Lightbulb, Briefcase, Puzzle, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const AboutSection: React.FC = () => {
   const interestCards = [
     {
-      icon: <Lightbulb className="h-10 w-10 text-primary-blue" />,
+      icon: <Lightbulb className="h-10 w-10 text-white" />,
       title: "Digital Twins Expert",
       description: "Specialized in developing advanced digital twin solutions for complex engineering systems in the Semiconductor Manufacturing industry.",
+      bgColor: "bg-gradient-to-br from-blue-500 to-blue-600"
     },
     {
-      icon: <Briefcase className="h-10 w-10 text-primary-blue" />,
+      icon: <Briefcase className="h-10 w-10 text-white" />,
       title: "Solutions Consultant",
       description: "Experienced consultant helping clients optimize their Industrial Automation processes and implement innovative technologies.",
+      bgColor: "bg-gradient-to-br from-teal-500 to-teal-600"
     },
     {
-      icon: <Puzzle className="h-10 w-10 text-primary-blue" />,
+      icon: <Puzzle className="h-10 w-10 text-white" />,
       title: "Problem Solver",
       description: "Quick learner with strong analytical skills and a passion for solving complex technical and business challenges.",
+      bgColor: "bg-gradient-to-br from-amber-500 to-amber-600"
     }
   ];
 
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-20 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">About Me</h2>
@@ -55,43 +58,49 @@ const AboutSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {interestCards.map((card, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-gray-100 bg-gray-50 transform hover:scale-105 transition-all">
-              <CardContent className="flex flex-col items-center text-center p-6">
-                <div className="rounded-full bg-white p-4 shadow-sm mb-4">
+            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-none overflow-hidden transform hover:scale-105 transition-all">
+              <CardContent className={`flex flex-col items-center text-center p-6 ${card.bgColor} text-white`}>
+                <div className="rounded-full bg-white/20 p-4 shadow-sm mb-4 backdrop-blur-sm">
                   {card.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-primary-blue mb-2">{card.title}</h3>
-                <p className="text-gray-600">{card.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{card.title}</h3>
+                <p className="text-white/90">{card.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
         {/* Good Fit Section */}
-        <div className="py-10 px-0 bg-white">
+        <div className="py-10 px-0 bg-white rounded-xl shadow-sm">
           <div className="max-w-5xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-10 text-center">
               We're a good fit if...
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
+                <div className="flex gap-4 items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <CheckCircle className="h-7 w-7 text-secondary-green" />
+                  </div>
                   <p className="text-lg text-neutral-700">
                     You Value Efficiency and Innovation seeking to enhance your development process with cutting-edge simulation.
                   </p>
                 </div>
                 
-                <div className="flex gap-4">
-                  <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
+                <div className="flex gap-4 items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <CheckCircle className="h-7 w-7 text-secondary-green" />
+                  </div>
                   <p className="text-lg text-neutral-700">
                     You demand high-quality, reliable results with a focus on accuracy and precision, valuing partners who uphold integrity and accountability.
                   </p>
                 </div>
                 
-                <div className="flex gap-4">
-                  <div className="h-6 w-6 text-secondary-green flex-shrink-0 mt-1">✓</div>
+                <div className="flex gap-4 items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <CheckCircle className="h-7 w-7 text-secondary-green" />
+                  </div>
                   <p className="text-lg text-neutral-700">
                     You require specialized technical expertise and value solutions that are adaptable to meet your unique challenges.
                   </p>
