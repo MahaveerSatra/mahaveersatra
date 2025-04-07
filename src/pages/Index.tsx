@@ -15,51 +15,15 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 font-montserrat">
       <NavBar />
-      <main className="pt-28">
+      <main>
         <HeroSection />
-        <div className="mx-auto">
-          <section id="about">
-            <div className="section-container">
-              <AboutSection />
-            </div>
-          </section>
-          
-          <section id="process" className="bg-white">
-            <div className="section-container">
-              <DesignProcessSection />
-            </div>
-          </section>
-          
-          <section id="experience" className="bg-slate-100">
-            <div className="section-container">
-              <ExperienceSection />
-            </div>
-          </section>
-          
-          <section id="skills" className="bg-white">
-            <div className="section-container">
-              <SkillsSection />
-            </div>
-          </section>
-          
-          <section id="blog" className="bg-slate-50">
-            <div className="section-container">
-              <BlogSection />
-            </div>
-          </section>
-          
-          <section id="personal" className="bg-slate-100">
-            <div className="section-container">
-              <PersonalGallery />
-            </div>
-          </section>
-          
-          <section id="contact" className="bg-slate-100">
-            <div className="section-container">
-              <ContactSection />
-            </div>
-          </section>
-        </div>
+        <AboutSection />
+        <DesignProcessSection />
+        <ExperienceSection />
+        <SkillsSection />
+        <BlogSection />
+        <PersonalGallery />
+        <ContactSection />
       </main>
       <FooterSection />
     </div>

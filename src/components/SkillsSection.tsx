@@ -100,7 +100,7 @@ const SkillsSection: React.FC = () => {
               </CardContent>
             </Card>
             
-            <Card className="border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all bg-slate-100">
+            <Card className="border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-indigo mb-3">Solution Consultant</h3>
                 <p className="text-gray-700">
@@ -109,7 +109,7 @@ const SkillsSection: React.FC = () => {
               </CardContent>
             </Card>
             
-            <Card className="border-t-4 border-purple-600 shadow-sm hover:shadow-md transition-all">
+            <Card className="border-t-4 border-violet-600 shadow-sm hover:shadow-md transition-all">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-indigo mb-3">Problem Solver</h3>
                 <p className="text-gray-700">
