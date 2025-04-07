@@ -77,6 +77,14 @@ export default {
 					500: '#10B981',
 					600: '#059669'
 				},
+				slate: {
+					50: '#f8fafc',
+					100: '#f1f5f9',
+					200: '#e2e8f0', // Defining a darker slate for navbar
+					300: '#cbd5e1',
+					400: '#94a3b8',
+					500: '#64748b'
+				},
 				// Updated color scheme based on the provided brand colors
 				'primary-blue': '#1E3A8A', // Deep Blue - Primary Color
 				'secondary-green': '#34D399', // Vibrant Green - Secondary Color

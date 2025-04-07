@@ -30,7 +30,7 @@ const NavBar: React.FC = () => {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-gradient-to-r from-slate-50 to-slate-100 backdrop-blur-sm border-b border-gray-100 py-3 shadow-sm' : 'bg-gradient-to-r from-slate-50 to-slate-100 py-4'
+        isScrolled ? 'bg-slate-200 backdrop-blur-sm border-b border-gray-200 py-3 shadow-sm' : 'bg-slate-200 py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
