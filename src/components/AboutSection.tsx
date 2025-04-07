@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
       icon: <Briefcase className="h-10 w-10 text-white" />,
       title: "Solutions Consultant",
       description: "Experienced consultant helping clients optimize their Industrial Automation processes and implement innovative technologies.",
-      bgColor: "bg-gradient-to-br from-teal-500 to-teal-600"
+      bgColor: "bg-gradient-to-br from-aqua-500 to-aqua-600"
     },
     {
       icon: <Puzzle className="h-10 w-10 text-white" />,
