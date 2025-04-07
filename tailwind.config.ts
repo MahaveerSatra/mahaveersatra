@@ -73,6 +73,10 @@ export default {
 				liverpool: '#F97316', // Using highlight-orange for liverpool
 				mathworks: '#0076A8', // A blue color for MathWorks references
 				aqua: '#38B2AC', // Adding aqua color
+				emerald: {
+					500: '#10B981',
+					600: '#059669'
+				},
 				// Updated color scheme based on the provided brand colors
 				'primary-blue': '#1E3A8A', // Deep Blue - Primary Color
 				'secondary-green': '#34D399', // Vibrant Green - Secondary Color

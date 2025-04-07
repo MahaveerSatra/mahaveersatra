@@ -30,13 +30,13 @@ const NavBar: React.FC = () => {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-gradient-to-r from-slate-50 to-slate-100 backdrop-blur-sm border-b border-gray-100 py-4 shadow-sm' : 'bg-gradient-to-r from-slate-50 to-slate-100 py-6'
+        isScrolled ? 'bg-gradient-to-r from-slate-50 to-slate-100 backdrop-blur-sm border-b border-gray-100 py-3 shadow-sm' : 'bg-gradient-to-r from-slate-50 to-slate-100 py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4">
-            <div className="h-32 w-32 relative">
+            <div className="h-20 w-20 relative">
               <img 
                 src="/lovable-uploads/128b7220-c3a4-4256-848c-311a57408fc1.png" 
                 alt="Logo" 
@@ -47,11 +47,11 @@ const NavBar: React.FC = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-10 items-center">
-            <a href="#about" className="text-primary-blue hover:text-highlight-orange transition-colors text-base font-medium">About</a>
-            <a href="#experience" className="text-primary-blue hover:text-highlight-orange transition-colors text-base font-medium">Experience</a>
-            <a href="#skills" className="text-primary-blue hover:text-highlight-orange transition-colors text-base font-medium">Skills</a>
-            <a href="#blog" className="text-primary-blue hover:text-highlight-orange transition-colors text-base font-medium">Blog</a>
-            <a href="#contact" className="text-primary-blue hover:text-highlight-orange transition-colors text-base font-medium">Contact</a>
+            <a href="#about" className="text-primary-blue hover:text-highlight-orange transition-colors text-lg font-medium">About</a>
+            <a href="#experience" className="text-primary-blue hover:text-highlight-orange transition-colors text-lg font-medium">Experience</a>
+            <a href="#skills" className="text-primary-blue hover:text-highlight-orange transition-colors text-lg font-medium">Skills</a>
+            <a href="#blog" className="text-primary-blue hover:text-highlight-orange transition-colors text-lg font-medium">Blog</a>
+            <a href="#contact" className="text-primary-blue hover:text-highlight-orange transition-colors text-lg font-medium">Contact</a>
           </div>
 
           <div className="hidden md:flex space-x-6 items-center">

@@ -6,31 +6,31 @@ import { Button } from '@/components/ui/button';
 const DesignProcessSection: React.FC = () => {
   const steps = [
     {
-      icon: <Search className="h-12 w-12 text-white" />,
+      icon: <Search className="h-10 w-10 text-white" />,
       title: "Discovery & Requirements",
       description: "We start with a deep dive into your needs, understanding your challenges, goals, and workflows to make sure we're solving the right problem.",
       color: "bg-gradient-to-br from-indigo-600 to-blue-700"
     },
     {
-      icon: <Lightbulb className="h-12 w-12 text-white" />,
+      icon: <Lightbulb className="h-10 w-10 text-white" />,
       title: "Conceptualization",
       description: "We create the model architecture and mathematical foundation, building the conceptual framework for your simulation solution.",
       color: "bg-gradient-to-br from-amber-500 to-orange-600"
     },
     {
-      icon: <Cpu className="h-12 w-12 text-white" />,
+      icon: <Cpu className="h-10 w-10 text-white" />,
       title: "Implementation",
       description: "Our team develops the models using industry-standard tools, integrating the mathematical framework into a functional simulation.",
       color: "bg-gradient-to-br from-emerald-500 to-teal-600"
     },
     {
-      icon: <BarChart className="h-12 w-12 text-white" />,
+      icon: <BarChart className="h-10 w-10 text-white" />,
       title: "Validation & Testing",
       description: "We rigorously test the model against real-world data to ensure accuracy, reliability, and performance under various conditions.",
       color: "bg-gradient-to-br from-violet-500 to-purple-700"
     },
     {
-      icon: <Award className="h-12 w-12 text-white" />,
+      icon: <Award className="h-10 w-10 text-white" />,
       title: "Deployment & Training",
       description: "We integrate the solution into your workflows, provide comprehensive documentation, and train your team to get maximum value.",
       color: "bg-gradient-to-br from-pink-500 to-rose-600"
@@ -52,10 +52,10 @@ const DesignProcessSection: React.FC = () => {
           <div className="space-y-12 mt-16">
             {steps.map((step, index) => (
               <div key={index} className="flex flex-col md:flex-row gap-6 items-start group">
-                <div className={`flex-shrink-0 ${step.color} p-5 rounded-full shadow-md group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-110`}>
+                <div className={`flex-shrink-0 ${step.color} p-4 rounded-full shadow-md group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-110 mx-auto md:mx-0 flex items-center justify-center`}>
                   {step.icon}
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-accent-yellow flex-1 hover:shadow-md transition-all duration-300">
+                <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-accent-yellow flex-1 hover:shadow-md transition-all duration-300 mt-4 md:mt-0">
                   <h3 className="text-2xl font-semibold text-primary-blue mb-3">{step.title}</h3>
                   <p className="text-gray-700">{step.description}</p>
                 </div>

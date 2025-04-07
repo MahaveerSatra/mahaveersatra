@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-20 bg-gradient-to-b from-slate-50 to-slate-100">
+    <section className="pt-36 pb-20 bg-gradient-to-b from-slate-50 to-slate-100 min-h-[80vh] flex flex-col justify-center">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Fast-Track Success Section */}

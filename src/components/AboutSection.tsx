@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
       icon: <Briefcase className="h-10 w-10 text-white" />,
       title: "Solutions Consultant",
       description: "Experienced consultant helping clients optimize their Industrial Automation processes and implement innovative technologies.",
-      bgColor: "bg-gradient-to-br from-teal-500 to-teal-600"
+      bgColor: "bg-gradient-to-br from-emerald-500 to-emerald-600"
     },
     {
       icon: <Puzzle className="h-10 w-10 text-white" />,
@@ -34,7 +34,7 @@ const AboutSection: React.FC = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-10 max-w-5xl mx-auto mb-16">
-          <div className="lg:w-1/5">
+          <div className="lg:w-1/3">
             <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500 max-w-xs mx-auto">
               <img 
                 src="/lovable-uploads/facda059-8389-4f17-9ba5-451ace3f9504.png" 
@@ -43,7 +43,7 @@ const AboutSection: React.FC = () => {
               />
             </div>
           </div>
-          <div className="lg:w-4/5">
+          <div className="lg:w-2/3">
             <p className="text-lg text-gray-700 mb-6">
               I'm Mahaveer Satra, a Solutions Consultant specializing in Simulation, digital twin and Predictive Maintenance. I have a strong background in implementing complex engineering systems across various semiconductor equipment manufacturers, automotive, aerospace and robotics industry.
             </p>
@@ -58,8 +58,8 @@ const AboutSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {interestCards.map((card, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-none overflow-hidden transform hover:scale-105 transition-all">
-              <CardContent className={`flex flex-col items-center text-center p-6 ${card.bgColor} text-white`}>
+            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-none overflow-hidden transform hover:scale-105 transition-all h-full">
+              <CardContent className={`flex flex-col items-center text-center p-6 ${card.bgColor} text-white h-full`}>
                 <div className="rounded-full bg-white/20 p-4 shadow-sm mb-4 backdrop-blur-sm">
                   {card.icon}
                 </div>
