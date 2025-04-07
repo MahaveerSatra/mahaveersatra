@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 const DesignProcessSection: React.FC = () => {
   const steps = [
     {
-      icon: <Search className="h-9 w-9 text-white" />,
+      icon: <Search className="h-10 w-10 text-white" />,
       title: "Discovery & Requirements",
       description: "We start with a deep dive into your needs, understanding your challenges, goals, and workflows to make sure we're solving the right problem.",
       color: "bg-gradient-to-br from-indigo-600 to-blue-700"
