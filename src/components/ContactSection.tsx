@@ -6,7 +6,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Linkedin, Mail, Send, MapPin } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
-import { HandDrawnUnderline, HighlightedText } from '@/components/FunElements';
+import FunAnnotation from '@/components/FunAnnotation';
+import HighlightedText from '@/components/HighlightedText';
 
 const ContactSection: React.FC = () => {
   const { toast } = useToast();
@@ -25,9 +26,7 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="vibrant-heading">
-            Get In Touch
-          </h2>
+          <h2 className="vibrant-heading">Get In Touch</h2>
           <div className="section-divider"></div>
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
             Feel free to contact me for any questions, collaborations, or just to say hello!
@@ -72,15 +71,19 @@ const ContactSection: React.FC = () => {
                     <p className="text-gray-700">Plano, Texas</p>
                   </div>
                 </CardContent>
-                <span className="absolute -right-4 -bottom-4 text-base font-playfair text-annotation-green transform rotate-[1deg]">
-                  Howdy, y'all! 🤠
-                </span>
+                <div className="absolute -bottom-14 right-0 z-10">
+                  <div className="bg-marker-green/20 rounded-lg p-2 border-2 border-marker-green">
+                    <p className="font-handwritten text-lg text-primary-blue">
+                      Where everything is bigger, including ideas!
+                    </p>
+                  </div>
+                </div>
               </Card>
             </div>
           </div>
           
           <div className="lg:col-span-3">
-            <Card className="border-t-4 border-sunshine shadow-md">
+            <Card className="border-t-4 border-sunshine shadow-md relative">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-indigo mb-6">
                   Send Me a Message
@@ -145,6 +148,13 @@ const ContactSection: React.FC = () => {
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
                 </form>
+                <div className="absolute -top-16 left-10 transform -rotate-6 hidden md:block">
+                  <div className="bg-marker-coral/20 rounded-lg p-2 border-2 border-marker-coral">
+                    <p className="font-handwritten text-lg text-primary-blue">
+                      I reply faster than my cat runs to dinner!
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
