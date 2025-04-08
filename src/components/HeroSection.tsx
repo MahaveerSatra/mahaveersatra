@@ -24,8 +24,12 @@ const HeroSection: React.FC = () => {
               <div className="h-1 w-32 bg-accent-yellow mx-auto mb-6"></div>
             </div>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Streamline your development process with <HandDrawnUnderline color="orange"><span className="font-semibold text-highlight-orange">cutting-edge simulation models</span></HandDrawnUnderline> that enhance analysis, 
-              design, and testing, while <HighlightedText color="green"><span className="font-semibold text-highlight-orange">saving time and cost</span></HighlightedText>.
+              Streamline your development process with <HandDrawnUnderline color="orange">
+                <span className="font-semibold text-highlight-orange">cutting-edge simulation models</span>
+              </HandDrawnUnderline> that enhance analysis, 
+              design, and testing, while <HighlightedText color="green">
+                <span className="font-semibold text-highlight-orange">saving time and cost</span>
+              </HighlightedText>.
             </p>
             
             <div className="relative inline-block">

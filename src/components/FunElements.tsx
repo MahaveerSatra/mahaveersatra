@@ -51,7 +51,6 @@ export const Annotation: React.FC<AnnotationProps> = ({
           )}
         </span>
       </div>
-      <slot></slot>
     </div>
   );
 };
@@ -60,18 +59,20 @@ interface HandDrawnUnderlineProps {
   color?: 'orange' | 'blue' | 'green' | 'yellow' | 'red' | 'purple';
   width?: 'full' | 'auto';
   className?: string;
+  children: React.ReactNode; // Add children prop
 }
 
 export const HandDrawnUnderline: React.FC<HandDrawnUnderlineProps> = ({ 
   color = 'yellow',
   width = 'auto',
-  className = ''
+  className = '',
+  children
 }) => {
   return (
     <div className={`relative inline-block ${className}`}>
       <div className={`absolute bottom-0 left-0 h-1 bg-annotation-${color} rounded-full ${width === 'full' ? 'w-full' : 'w-[80%] mx-[10%]'} opacity-60`} 
         style={{ transform: 'rotate(-0.5deg)' }}></div>
-      <slot></slot>
+      {children}
     </div>
   );
 };

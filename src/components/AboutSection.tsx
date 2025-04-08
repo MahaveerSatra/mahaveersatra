@@ -60,7 +60,9 @@ const AboutSection: React.FC = () => {
               With a knack for <HighlightedText color="blue">quickly grasping technical concepts</HighlightedText>, I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.
             </p>
             <p className="text-lg text-gray-700 relative">
-              Outside of work, I'm an avid outdoor enthusiast who enjoys cycling, hiking, kayaking, and seeking new adventures. I'm also a <HandDrawnUnderline color="red"><span className="font-semibold">dedicated Liverpool FC fan</span></HandDrawnUnderline> and bring the same passion to both my professional work and personal interests.
+              Outside of work, I'm an avid outdoor enthusiast who enjoys cycling, hiking, kayaking, and seeking new adventures. I'm also a <HandDrawnUnderline color="red">
+                <span className="font-semibold">dedicated Liverpool FC fan</span>
+              </HandDrawnUnderline> and bring the same passion to both my professional work and personal interests.
               <span className="absolute -right-5 -bottom-8 font-handwritten text-annotation-red transform rotate-[-5deg]">
                 YNWA!
               </span>
