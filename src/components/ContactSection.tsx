@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Linkedin, Mail, Send, MapPin } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import { HandDrawnUnderline, HighlightedText } from '@/components/FunElements';
 
 const ContactSection: React.FC = () => {
   const { toast } = useToast();
@@ -24,7 +25,12 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="vibrant-heading">Get In Touch</h2>
+          <h2 className="vibrant-heading">
+            Get In Touch
+            <span className="ml-3 text-lg font-handwritten text-annotation-blue inline-block transform rotate-[5deg]">
+              Let's chat!
+            </span>
+          </h2>
           <div className="section-divider"></div>
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
             Feel free to contact me for any questions, collaborations, or just to say hello!
@@ -61,7 +67,7 @@ const ContactSection: React.FC = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-t-4 border-teal shadow-sm hover:shadow-md transition-all">
+              <Card className="border-t-4 border-teal shadow-sm hover:shadow-md transition-all relative">
                 <CardContent className="p-6 flex items-start">
                   <MapPin className="h-10 w-10 text-teal mr-4 flex-shrink-0" />
                   <div>
@@ -69,6 +75,9 @@ const ContactSection: React.FC = () => {
                     <p className="text-gray-700">Plano, Texas</p>
                   </div>
                 </CardContent>
+                <span className="absolute -right-4 -bottom-4 font-handwritten text-base text-annotation-green transform rotate-[8deg]">
+                  Howdy, y'all! 🤠
+                </span>
               </Card>
             </div>
           </div>
@@ -76,7 +85,12 @@ const ContactSection: React.FC = () => {
           <div className="lg:col-span-3">
             <Card className="border-t-4 border-sunshine shadow-md">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold text-indigo mb-6">Send Me a Message</h3>
+                <h3 className="text-2xl font-semibold text-indigo mb-6">
+                  Send Me a Message
+                  <span className="ml-2 text-base font-handwritten text-annotation-orange inline-block transform rotate-[3deg]">
+                    I promise to reply!
+                  </span>
+                </h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>

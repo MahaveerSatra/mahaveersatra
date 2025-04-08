@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'handwritten': ['Caveat', 'cursive'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -63,7 +66,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Adding missing colors that are used in the classes
 				indigo: {
 				          50: '#eef2ff',
 				          100: '#e0e7ff',
@@ -87,14 +89,14 @@ export default {
 				          700: '#1d4ed8',
 				          800: '#1e40af',
 				},
-				navy: '#1E3A8A', // Same as primary-blue for consistency
-				sunshine: '#FBBF24', // Using accent-yellow for sunshine
-				coral: '#F97316', // Using highlight-orange for coral
-				azure: '#1E3A8A', // Using primary-blue as azure
-				teal: '#34D399', // Using secondary-green as teal
-				liverpool: '#F97316', // Using highlight-orange for liverpool
-				mathworks: '#0076A8', // A blue color for MathWorks references
-				aqua: '#38B2AC', // Adding aqua color
+				navy: '#1E3A8A',
+				sunshine: '#FBBF24',
+				coral: '#F97316',
+				azure: '#1E3A8A',
+				teal: '#34D399',
+				liverpool: '#F97316',
+				mathworks: '#0076A8',
+				aqua: '#38B2AC',
 				emerald: {
 					500: '#10B981',
 					600: '#059669'
@@ -102,17 +104,24 @@ export default {
 				slate: {
 					50: '#f8fafc',
 					100: '#f1f5f9',
-					200: '#e2e8f0', // Defining a darker slate for navbar
+					200: '#e2e8f0',
 					300: '#cbd5e1',
 					400: '#94a3b8',
 					500: '#64748b'
 				},
-				// Updated color scheme based on the provided brand colors
-				'primary-blue': '#1E3A8A', // Deep Blue - Primary Color
-				'secondary-green': '#34D399', // Vibrant Green - Secondary Color
-				'accent-yellow': '#FBBF24', // Bright Yellow - Accent Color
-				'neutral-gray': '#D1D5DB', // Soft Gray - Supporting Color
-				'highlight-orange': '#F97316', // Warm Orange - Highlight Color
+				'primary-blue': '#1E3A8A',
+				'secondary-green': '#34D399',
+				'accent-yellow': '#FBBF24',
+				'neutral-gray': '#D1D5DB',
+				'highlight-orange': '#F97316',
+				annotation: {
+					orange: '#F97316',
+					blue: '#3B82F6',
+					green: '#10B981',
+					yellow: '#FBBF24',
+					red: '#EF4444',
+					purple: '#8B5CF6',
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -151,6 +160,11 @@ export default {
 				bounce: {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				squiggle: {
+					'0%': { transform: 'translateX(0)' },
+					'50%': { transform: 'translateX(10px)' },
+					'100%': { transform: 'translateX(0)' }
 				}
 			},
 			animation: {
@@ -159,7 +173,8 @@ export default {
 				'fade-in': 'fadeIn 0.5s ease-out forwards',
 				'slide-in-left': 'slideInFromLeft 0.5s ease-out forwards',
 				'slide-in-right': 'slideInFromRight 0.5s ease-out forwards',
-				'bounce': 'bounce 2s ease-in-out infinite'
+				'bounce': 'bounce 2s ease-in-out infinite',
+				'squiggle': 'squiggle 1s ease-in-out infinite'
 			}
 		}
 	},

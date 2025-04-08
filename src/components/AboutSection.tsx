@@ -2,6 +2,7 @@
 import React from 'react';
 import { Lightbulb, Briefcase, Puzzle, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { HandDrawnUnderline, HighlightedText } from '@/components/FunElements';
 
 const AboutSection: React.FC = () => {
   const interestCards = [
@@ -29,18 +30,26 @@ const AboutSection: React.FC = () => {
     <section id="about" className="py-20 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+            About Me
+            <span className="ml-2 text-lg font-handwritten text-annotation-purple inline-block transform rotate-[-3deg]">
+              The good, the bad & the geeky
+            </span>
+          </h2>
           <div className="h-1 w-20 bg-accent-yellow mx-auto"></div>
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-10 max-w-5xl mx-auto mb-16">
           <div className="lg:w-1/3">
-            <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500 max-w-xs mx-auto">
+            <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500 max-w-xs mx-auto relative">
               <img 
                 src="/lovable-uploads/facda059-8389-4f17-9ba5-451ace3f9504.png" 
                 alt="Mahaveer Satra - Professional Headshot" 
                 className="w-full h-auto"
               />
+              <span className="absolute -right-8 bottom-12 font-handwritten text-lg text-annotation-green transform rotate-[8deg]">
+                That's me! 👋
+              </span>
             </div>
           </div>
           <div className="lg:w-2/3">
@@ -48,10 +57,13 @@ const AboutSection: React.FC = () => {
               I'm Mahaveer Satra, a Solutions Consultant specializing in Simulation, digital twin and Predictive Maintenance. I have a strong background in implementing complex engineering systems across various semiconductor equipment manufacturers, automotive, aerospace and robotics industry.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              With a knack for quickly grasping technical concepts, I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.
+              With a knack for <HighlightedText color="blue">quickly grasping technical concepts</HighlightedText>, I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.
             </p>
-            <p className="text-lg text-gray-700">
-              Outside of work, I'm an avid outdoor enthusiast who enjoys cycling, hiking, kayaking, and seeking new adventures. I'm also a dedicated Liverpool FC fan and bring the same passion to both my professional work and personal interests.
+            <p className="text-lg text-gray-700 relative">
+              Outside of work, I'm an avid outdoor enthusiast who enjoys cycling, hiking, kayaking, and seeking new adventures. I'm also a <HandDrawnUnderline color="red"><span className="font-semibold">dedicated Liverpool FC fan</span></HandDrawnUnderline> and bring the same passion to both my professional work and personal interests.
+              <span className="absolute -right-5 -bottom-8 font-handwritten text-annotation-red transform rotate-[-5deg]">
+                YNWA!
+              </span>
             </p>
           </div>
         </div>
@@ -73,8 +85,11 @@ const AboutSection: React.FC = () => {
         {/* Good Fit Section */}
         <div className="py-10 px-0 bg-white rounded-xl shadow-sm">
           <div className="max-w-5xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-10 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-10 text-center relative">
               We're a good fit if...
+              <span className="absolute -right-20 top-0 font-handwritten text-lg text-annotation-green transform rotate-[5deg]">
+                Let's see if we click! ✨
+              </span>
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -107,12 +122,15 @@ const AboutSection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="rounded-xl overflow-hidden shadow-xl">
+              <div className="rounded-xl overflow-hidden shadow-xl relative">
                 <img 
                   src="/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png" 
                   alt="Mountain Hiking" 
                   className="w-full h-auto object-cover"
                 />
+                <span className="absolute left-4 bottom-4 font-handwritten text-xl text-white bg-black/30 p-2 rounded transform rotate-[-3deg]">
+                  Work hard, hike harder!
+                </span>
               </div>
             </div>
           </div>
