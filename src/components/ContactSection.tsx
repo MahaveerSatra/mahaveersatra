@@ -6,6 +6,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Linkedin, Mail, Send, MapPin } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import FunAnnotation from '@/components/FunAnnotation';
+import HighlightedText from '@/components/HighlightedText';
 
 const ContactSection: React.FC = () => {
   const { toast } = useToast();
@@ -61,7 +63,7 @@ const ContactSection: React.FC = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-t-4 border-teal shadow-sm hover:shadow-md transition-all">
+              <Card className="border-t-4 border-teal shadow-sm hover:shadow-md transition-all relative">
                 <CardContent className="p-6 flex items-start">
                   <MapPin className="h-10 w-10 text-teal mr-4 flex-shrink-0" />
                   <div>
@@ -69,14 +71,23 @@ const ContactSection: React.FC = () => {
                     <p className="text-gray-700">Plano, Texas</p>
                   </div>
                 </CardContent>
+                <div className="absolute -bottom-14 right-0 z-10">
+                  <div className="bg-marker-green/20 rounded-lg p-2 border-2 border-marker-green">
+                    <p className="font-handwritten text-lg text-primary-blue">
+                      Where everything is bigger, including ideas!
+                    </p>
+                  </div>
+                </div>
               </Card>
             </div>
           </div>
           
           <div className="lg:col-span-3">
-            <Card className="border-t-4 border-sunshine shadow-md">
+            <Card className="border-t-4 border-sunshine shadow-md relative">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold text-indigo mb-6">Send Me a Message</h3>
+                <h3 className="text-2xl font-semibold text-indigo mb-6">
+                  Send Me a Message
+                </h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -137,6 +148,13 @@ const ContactSection: React.FC = () => {
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
                 </form>
+                <div className="absolute -top-16 left-10 transform -rotate-6 hidden md:block">
+                  <div className="bg-marker-coral/20 rounded-lg p-2 border-2 border-marker-coral">
+                    <p className="font-handwritten text-lg text-primary-blue">
+                      I reply faster than my cat runs to dinner!
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
