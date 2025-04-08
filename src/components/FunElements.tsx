@@ -19,10 +19,10 @@ export const Annotation: React.FC<AnnotationProps> = ({
   fontSize = 'base'
 }) => {
   const positionClasses = {
-    top: '-top-10 left-1/2 transform -translate-x-1/2',
-    right: 'top-1/2 -right-40 transform -translate-y-1/2',
-    bottom: '-bottom-10 left-1/2 transform -translate-x-1/2',
-    left: 'top-1/2 -left-40 transform -translate-y-1/2',
+    top: '-top-8 left-1/2 transform -translate-x-1/2',
+    right: 'top-1/2 -right-32 transform -translate-y-1/2',
+    bottom: '-bottom-8 left-1/2 transform -translate-x-1/2',
+    left: 'top-1/2 -left-32 transform -translate-y-1/2',
   };
 
   const arrowClasses = {
@@ -42,7 +42,7 @@ export const Annotation: React.FC<AnnotationProps> = ({
   return (
     <div className={`relative inline-block ${className}`}>
       <div className={`absolute z-10 ${positionClasses[position]} whitespace-nowrap`}>
-        <span className={`font-handwritten ${sizeClasses[fontSize]} text-annotation-${color} transform -rotate-3`}>
+        <span className={`font-playfair ${sizeClasses[fontSize]} text-annotation-${color} transform -rotate-1`}>
           {text}
           {withArrow && (
             <svg className={`w-6 h-6 absolute ${arrowClasses[position]} text-annotation-${color} fill-current`} viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ interface HandDrawnUnderlineProps {
   color?: 'orange' | 'blue' | 'green' | 'yellow' | 'red' | 'purple';
   width?: 'full' | 'auto';
   className?: string;
-  children: React.ReactNode; // Add children prop
+  children: React.ReactNode;
 }
 
 export const HandDrawnUnderline: React.FC<HandDrawnUnderlineProps> = ({ 
@@ -70,8 +70,9 @@ export const HandDrawnUnderline: React.FC<HandDrawnUnderlineProps> = ({
 }) => {
   return (
     <div className={`relative inline-block ${className}`}>
-      <div className={`absolute bottom-0 left-0 h-1 bg-annotation-${color} rounded-full ${width === 'full' ? 'w-full' : 'w-[80%] mx-[10%]'} opacity-60`} 
-        style={{ transform: 'rotate(-0.5deg)' }}></div>
+      {/* Improved underline style with better appearance */}
+      <div className={`absolute bottom-1 left-0 h-[3px] bg-annotation-${color} ${width === 'full' ? 'w-full' : 'w-[95%] mx-[2.5%]'} opacity-40`} 
+        style={{ transform: 'rotate(-0.2deg)' }}></div>
       {children}
     </div>
   );
@@ -91,7 +92,7 @@ export const HighlightedText: React.FC<HighlightedTextProps> = ({
   return (
     <span className={`relative inline-block ${className}`}>
       <span className={`relative z-10`}>{children}</span>
-      <span className={`absolute bottom-0 left-0 right-0 h-3 bg-annotation-${color} opacity-20 transform rotate-[-0.5deg]`}></span>
+      <span className={`absolute bottom-0 left-0 right-0 h-[6px] bg-annotation-${color} opacity-25 transform rotate-[-0.2deg]`}></span>
     </span>
   );
 };

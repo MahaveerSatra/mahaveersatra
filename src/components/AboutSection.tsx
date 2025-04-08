@@ -32,9 +32,6 @@ const AboutSection: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
             About Me
-            <span className="ml-2 text-lg font-handwritten text-annotation-purple inline-block transform rotate-[-3deg]">
-              The good, the bad & the geeky
-            </span>
           </h2>
           <div className="h-1 w-20 bg-accent-yellow mx-auto"></div>
         </div>
@@ -47,8 +44,8 @@ const AboutSection: React.FC = () => {
                 alt="Mahaveer Satra - Professional Headshot" 
                 className="w-full h-auto"
               />
-              <span className="absolute -right-8 bottom-12 font-handwritten text-lg text-annotation-green transform rotate-[8deg]">
-                That's me! 👋
+              <span className="absolute -right-10 bottom-16 text-lg font-playfair text-annotation-green transform rotate-2">
+                Yes, I smile this much in real life too! 😊
               </span>
             </div>
           </div>
@@ -57,13 +54,13 @@ const AboutSection: React.FC = () => {
               I'm Mahaveer Satra, a Solutions Consultant specializing in Simulation, digital twin and Predictive Maintenance. I have a strong background in implementing complex engineering systems across various semiconductor equipment manufacturers, automotive, aerospace and robotics industry.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              With a knack for <HighlightedText color="blue">quickly grasping technical concepts</HighlightedText>, I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.
+              With a knack for <HighlightedText color="blue">quickly grasping technical concepts</HighlightedText> I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.
             </p>
             <p className="text-lg text-gray-700 relative">
               Outside of work, I'm an avid outdoor enthusiast who enjoys cycling, hiking, kayaking, and seeking new adventures. I'm also a <HandDrawnUnderline color="red">
                 <span className="font-semibold">dedicated Liverpool FC fan</span>
               </HandDrawnUnderline> and bring the same passion to both my professional work and personal interests.
-              <span className="absolute -right-5 -bottom-8 font-handwritten text-annotation-red transform rotate-[-5deg]">
+              <span className="absolute -right-5 -bottom-8 text-lg font-playfair text-annotation-red transform rotate-[-2deg]">
                 YNWA!
               </span>
             </p>
@@ -89,9 +86,6 @@ const AboutSection: React.FC = () => {
           <div className="max-w-5xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-10 text-center relative">
               We're a good fit if...
-              <span className="absolute -right-20 top-0 font-handwritten text-lg text-annotation-green transform rotate-[5deg]">
-                Let's see if we click! ✨
-              </span>
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -130,7 +124,7 @@ const AboutSection: React.FC = () => {
                   alt="Mountain Hiking" 
                   className="w-full h-auto object-cover"
                 />
-                <span className="absolute left-4 bottom-4 font-handwritten text-xl text-white bg-black/30 p-2 rounded transform rotate-[-3deg]">
+                <span className="absolute left-4 bottom-4 text-xl font-playfair text-white bg-black/30 p-2 rounded transform rotate-[-1deg]">
                   Work hard, hike harder!
                 </span>
               </div>

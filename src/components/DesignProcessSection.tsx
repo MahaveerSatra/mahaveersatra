@@ -17,8 +17,7 @@ const DesignProcessSection: React.FC = () => {
       icon: <Lightbulb className="h-8 w-8 text-white" />,
       title: "Conceptualization",
       description: "We create the model architecture and mathematical foundation, building the conceptual framework for your simulation solution.",
-      color: "bg-gradient-to-br from-amber-500 to-orange-600",
-      note: "Where the magic happens!"
+      color: "bg-gradient-to-br from-amber-500 to-orange-600"
     },
     {
       icon: <Cpu className="h-8 w-8 text-white" />,
@@ -31,15 +30,13 @@ const DesignProcessSection: React.FC = () => {
       icon: <BarChart className="h-8 w-8 text-white" />,
       title: "Validation & Testing",
       description: "We rigorously test the model against real-world data to ensure accuracy, reliability, and performance under various conditions.",
-      color: "bg-gradient-to-br from-violet-500 to-purple-700",
-      note: "Trust but verify!"
+      color: "bg-gradient-to-br from-violet-500 to-purple-700"
     },
     {
       icon: <Award className="h-8 w-8 text-white" />,
       title: "Deployment & Training",
       description: "We integrate the solution into your workflows, provide comprehensive documentation, and train your team to get maximum value.",
-      color: "bg-gradient-to-br from-pink-500 to-rose-600",
-      note: "Mission accomplished 🚀"
+      color: "bg-gradient-to-br from-pink-500 to-rose-600"
     }
   ];
 
@@ -60,13 +57,13 @@ const DesignProcessSection: React.FC = () => {
               <div key={index} className="flex flex-col md:flex-row gap-6 items-center group">
                 <div className={`flex-shrink-0 ${step.color} p-4 rounded-full shadow-md group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-110 mx-auto md:mx-0 flex items-center justify-center relative`}>
                   {step.icon}
-                  {index % 2 === 0 && (
-                    <span className="absolute -left-28 top-0 font-handwritten text-sm text-annotation-blue transform rotate-[-8deg] hidden md:block">
+                  {index === 0 && (
+                    <span className="absolute -left-32 top-0 text-base font-playfair text-annotation-blue transform rotate-[-1deg] hidden md:block">
                       {step.note}
                     </span>
                   )}
-                  {index % 2 !== 0 && (
-                    <span className="absolute -right-28 top-0 font-handwritten text-sm text-annotation-orange transform rotate-[8deg] hidden md:block">
+                  {index === 2 && (
+                    <span className="absolute -right-32 top-0 text-base font-playfair text-annotation-orange transform rotate-[1deg] hidden md:block">
                       {step.note}
                     </span>
                   )}
@@ -90,7 +87,7 @@ const DesignProcessSection: React.FC = () => {
                   Get in Touch <Check className="h-5 w-5" />
                 </a>
               </Button>
-              <span className="absolute -right-16 bottom-16 font-handwritten text-lg text-annotation-green transform rotate-[10deg] hidden md:block">
+              <span className="absolute -right-20 bottom-16 text-lg font-playfair text-annotation-green transform rotate-[1deg] hidden md:block">
                 Let's create something amazing!
               </span>
             </div>

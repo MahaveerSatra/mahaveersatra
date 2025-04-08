@@ -27,9 +27,6 @@ const ContactSection: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="vibrant-heading">
             Get In Touch
-            <span className="ml-3 text-lg font-handwritten text-annotation-blue inline-block transform rotate-[5deg]">
-              Let's chat!
-            </span>
           </h2>
           <div className="section-divider"></div>
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -75,7 +72,7 @@ const ContactSection: React.FC = () => {
                     <p className="text-gray-700">Plano, Texas</p>
                   </div>
                 </CardContent>
-                <span className="absolute -right-4 -bottom-4 font-handwritten text-base text-annotation-green transform rotate-[8deg]">
+                <span className="absolute -right-4 -bottom-4 text-base font-playfair text-annotation-green transform rotate-[1deg]">
                   Howdy, y'all! 🤠
                 </span>
               </Card>
@@ -87,9 +84,6 @@ const ContactSection: React.FC = () => {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-indigo mb-6">
                   Send Me a Message
-                  <span className="ml-2 text-base font-handwritten text-annotation-orange inline-block transform rotate-[3deg]">
-                    I promise to reply!
-                  </span>
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

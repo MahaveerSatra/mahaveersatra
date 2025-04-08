@@ -17,8 +17,8 @@ const HeroSection: React.FC = () => {
               </h2>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 relative">
                 with <span className="text-secondary-green">Insightful Simulations</span>
-                <span className="absolute -right-10 top-0 text-lg font-handwritten text-annotation-orange transform rotate-12">
-                  That's what I do!
+                <span className="absolute -right-12 top-0 text-xl font-playfair text-annotation-orange transform rotate-3">
+                  That's my specialty!
                 </span>
               </h2>
               <div className="h-1 w-32 bg-accent-yellow mx-auto mb-6"></div>
@@ -38,9 +38,6 @@ const HeroSection: React.FC = () => {
                   Learn More <ChevronRight className="h-4 w-4" />
                 </a>
               </Button>
-              <span className="absolute -right-24 bottom-0 font-handwritten text-annotation-blue transform rotate-[-5deg]">
-                Click me, I don't bite!
-              </span>
             </div>
           </div>
         </div>
