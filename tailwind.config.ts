@@ -19,9 +19,6 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				'handwritten': ['Caveat', 'cursive'],
-			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -116,11 +113,6 @@ export default {
 				'accent-yellow': '#FBBF24', // Bright Yellow - Accent Color
 				'neutral-gray': '#D1D5DB', // Soft Gray - Supporting Color
 				'highlight-orange': '#F97316', // Warm Orange - Highlight Color
-				// Fun annotation colors
-				'marker-yellow': '#FFD600',
-				'marker-coral': '#FF6B6B',
-				'marker-blue': '#4DABF7',
-				'marker-green': '#51CF66',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -159,10 +151,6 @@ export default {
 				bounce: {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
-				},
-				wiggle: {
-					'0%, 100%': { transform: 'rotate(-3deg)' },
-					'50%': { transform: 'rotate(3deg)' }
 				}
 			},
 			animation: {
@@ -171,8 +159,7 @@ export default {
 				'fade-in': 'fadeIn 0.5s ease-out forwards',
 				'slide-in-left': 'slideInFromLeft 0.5s ease-out forwards',
 				'slide-in-right': 'slideInFromRight 0.5s ease-out forwards',
-				'bounce': 'bounce 2s ease-in-out infinite',
-				'wiggle': 'wiggle 1s ease-in-out infinite'
+				'bounce': 'bounce 2s ease-in-out infinite'
 			}
 		}
 	},

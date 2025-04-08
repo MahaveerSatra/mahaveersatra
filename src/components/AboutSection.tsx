@@ -2,8 +2,6 @@
 import React from 'react';
 import { Lightbulb, Briefcase, Puzzle, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import FunAnnotation from '@/components/FunAnnotation';
-import HighlightedText from '@/components/HighlightedText';
 
 const AboutSection: React.FC = () => {
   const interestCards = [
@@ -36,7 +34,7 @@ const AboutSection: React.FC = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-10 max-w-5xl mx-auto mb-16">
-          <div className="lg:w-1/3 relative">
+          <div className="lg:w-1/3">
             <div className="rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500 max-w-xs mx-auto">
               <img 
                 src="/lovable-uploads/facda059-8389-4f17-9ba5-451ace3f9504.png" 
@@ -44,28 +42,16 @@ const AboutSection: React.FC = () => {
                 className="w-full h-auto"
               />
             </div>
-            <div className="absolute -bottom-10 -right-10 z-10 transform rotate-6">
-              <div className="bg-marker-blue/20 rounded-lg p-2 border-2 border-marker-blue">
-                <p className="font-handwritten text-lg text-primary-blue">
-                  Yes, I smile like this all the time!
-                </p>
-              </div>
-            </div>
           </div>
           <div className="lg:w-2/3">
             <p className="text-lg text-gray-700 mb-6">
               I'm Mahaveer Satra, a Solutions Consultant specializing in Simulation, digital twin and Predictive Maintenance. I have a strong background in implementing complex engineering systems across various semiconductor equipment manufacturers, automotive, aerospace and robotics industry.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              With a knack for <HighlightedText color="blue">quickly grasping technical concepts</HighlightedText>, I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.
+              With a knack for quickly grasping technical concepts, I pride myself on being a solution-oriented consultant who can bridge the gap between technical innovation and business strategy.
             </p>
-            <p className="text-lg text-gray-700 relative">
+            <p className="text-lg text-gray-700">
               Outside of work, I'm an avid outdoor enthusiast who enjoys cycling, hiking, kayaking, and seeking new adventures. I'm also a dedicated Liverpool FC fan and bring the same passion to both my professional work and personal interests.
-              <FunAnnotation 
-                text="You'll Never Walk Alone!" 
-                position="bottom-right"
-                color="coral"
-              />
             </p>
           </div>
         </div>
@@ -85,30 +71,25 @@ const AboutSection: React.FC = () => {
         </div>
 
         {/* Good Fit Section */}
-        <div className="py-10 px-0 bg-white rounded-xl shadow-sm relative">
+        <div className="py-10 px-0 bg-white rounded-xl shadow-sm">
           <div className="max-w-5xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-10 text-center relative">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary-blue mb-10 text-center">
               We're a good fit if...
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-3">
-                <svg className="w-full h-full" viewBox="0 0 160 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 10C40 -2 120 -2 158 10" stroke="#FFD600" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="space-y-6">
-                <div className="flex gap-4 items-start group">
-                  <div className="flex-shrink-0 mt-1 transform group-hover:rotate-12 transition-transform">
+                <div className="flex gap-4 items-start">
+                  <div className="flex-shrink-0 mt-1">
                     <CheckCircle className="h-7 w-7 text-secondary-green" />
                   </div>
                   <p className="text-lg text-neutral-700">
-                    You Value <HighlightedText color="yellow">Efficiency and Innovation</HighlightedText> seeking to enhance your development process with cutting-edge simulation.
+                    You Value Efficiency and Innovation seeking to enhance your development process with cutting-edge simulation.
                   </p>
                 </div>
                 
-                <div className="flex gap-4 items-start group">
-                  <div className="flex-shrink-0 mt-1 transform group-hover:rotate-12 transition-transform">
+                <div className="flex gap-4 items-start">
+                  <div className="flex-shrink-0 mt-1">
                     <CheckCircle className="h-7 w-7 text-secondary-green" />
                   </div>
                   <p className="text-lg text-neutral-700">
@@ -116,18 +97,13 @@ const AboutSection: React.FC = () => {
                   </p>
                 </div>
                 
-                <div className="flex gap-4 items-start group relative">
-                  <div className="flex-shrink-0 mt-1 transform group-hover:rotate-12 transition-transform">
+                <div className="flex gap-4 items-start">
+                  <div className="flex-shrink-0 mt-1">
                     <CheckCircle className="h-7 w-7 text-secondary-green" />
                   </div>
                   <p className="text-lg text-neutral-700">
                     You require specialized technical expertise and value solutions that are adaptable to meet your unique challenges.
                   </p>
-                  <FunAnnotation 
-                    text="That's me! Always up for a challenge!" 
-                    position="bottom-right"
-                    color="green"
-                  />
                 </div>
               </div>
               
