@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Linkedin, FileText, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FooterSection: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -51,11 +52,13 @@ const FooterSection: React.FC = () => {
             
             <div className="mt-4 md:mt-0">
               <nav className="flex flex-wrap justify-center gap-8">
-                <a href="#about" className="text-gray-500 hover:text-navy text-sm">About</a>
-                <a href="#experience" className="text-gray-500 hover:text-navy text-sm">Experience</a>
-                <a href="#skills" className="text-gray-500 hover:text-navy text-sm">Skills</a>
-                <a href="#blog" className="text-gray-500 hover:text-navy text-sm">Blog</a>
-                <a href="#contact" className="text-gray-500 hover:text-navy text-sm">Contact</a>
+                <Link to="/about" className="text-gray-500 hover:text-navy text-sm">About</Link>
+                <Link to="/experience" className="text-gray-500 hover:text-navy text-sm">Experience</Link>
+                <Link to="/skills" className="text-gray-500 hover:text-navy text-sm">Skills</Link>
+                <Link to="/process" className="text-gray-500 hover:text-navy text-sm">Process</Link>
+                <Link to="/blog" className="text-gray-500 hover:text-navy text-sm">Blog</Link>
+                <Link to="/personal" className="text-gray-500 hover:text-navy text-sm">Personal</Link>
+                <Link to="/contact" className="text-gray-500 hover:text-navy text-sm">Contact</Link>
               </nav>
             </div>
           </div>

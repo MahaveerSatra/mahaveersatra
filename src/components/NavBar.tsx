@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Linkedin, FileText } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -9,6 +9,7 @@ const NavBar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,8 +24,17 @@ const NavBar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Close mobile menu when changing pages
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const isActive = (path: string) => {
+    return location.pathname === path ? 'text-highlight-orange' : 'text-primary-blue';
   };
 
   return (
@@ -47,11 +57,13 @@ const NavBar: React.FC = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-10 items-center">
-            <a href="#about" className="text-primary-blue hover:text-highlight-orange transition-colors text-lg font-medium">About</a>
-            <a href="#experience" className="text-primary-blue hover:text-highlight-orange transition-colors text-lg font-medium">Experience</a>
-            <a href="#skills" className="text-primary-blue hover:text-highlight-orange transition-colors text-lg font-medium">Skills</a>
-            <a href="#blog" className="text-primary-blue hover:text-highlight-orange transition-colors text-lg font-medium">Blog</a>
-            <a href="#contact" className="text-primary-blue hover:text-highlight-orange transition-colors text-lg font-medium">Contact</a>
+            <Link to="/about" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/about')}`}>About</Link>
+            <Link to="/experience" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/experience')}`}>Experience</Link>
+            <Link to="/skills" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/skills')}`}>Skills</Link>
+            <Link to="/process" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/process')}`}>Process</Link>
+            <Link to="/blog" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/blog')}`}>Blog</Link>
+            <Link to="/personal" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/personal')}`}>Personal</Link>
+            <Link to="/contact" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/contact')}`}>Contact</Link>
           </div>
 
           <div className="hidden md:flex space-x-6 items-center">
@@ -76,11 +88,13 @@ const NavBar: React.FC = () => {
       {isMobile && isMobileMenuOpen && (
         <div className="fixed inset-0 top-[80px] bg-white/95 backdrop-blur-sm z-40 flex flex-col pt-5 px-6">
           <div className="flex flex-col space-y-6 py-8">
-            <a href="#about" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>About</a>
-            <a href="#experience" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>Experience</a>
-            <a href="#skills" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>Skills</a>
-            <a href="#blog" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>Blog</a>
-            <a href="#contact" className="text-primary-blue py-2 text-lg font-medium" onClick={toggleMobileMenu}>Contact</a>
+            <Link to="/about" className={`py-2 text-lg font-medium ${isActive('/about')}`}>About</Link>
+            <Link to="/experience" className={`py-2 text-lg font-medium ${isActive('/experience')}`}>Experience</Link>
+            <Link to="/skills" className={`py-2 text-lg font-medium ${isActive('/skills')}`}>Skills</Link>
+            <Link to="/process" className={`py-2 text-lg font-medium ${isActive('/process')}`}>Process</Link>
+            <Link to="/blog" className={`py-2 text-lg font-medium ${isActive('/blog')}`}>Blog</Link>
+            <Link to="/personal" className={`py-2 text-lg font-medium ${isActive('/personal')}`}>Personal</Link>
+            <Link to="/contact" className={`py-2 text-lg font-medium ${isActive('/contact')}`}>Contact</Link>
             
             <div className="flex space-x-6 py-6">
               <a href="https://www.linkedin.com/in/mahaveer-satra" target="_blank" rel="noopener noreferrer">

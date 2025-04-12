@@ -1,19 +1,19 @@
 
 import React from 'react';
 import NavBar from '@/components/NavBar';
-import HeroSection from '@/components/HeroSection';
+import BlogSection from '@/components/BlogSection';
 import FooterSection from '@/components/FooterSection';
 
-const Index: React.FC = () => {
+const BlogPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 font-montserrat">
       <NavBar />
-      <main>
-        <HeroSection />
+      <main className="pt-20">
+        <BlogSection />
       </main>
       <FooterSection />
     </div>
   );
 };
 
-export default Index;
+export default BlogPage;

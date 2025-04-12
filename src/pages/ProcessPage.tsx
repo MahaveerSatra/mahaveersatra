@@ -1,19 +1,19 @@
 
 import React from 'react';
 import NavBar from '@/components/NavBar';
-import HeroSection from '@/components/HeroSection';
+import DesignProcessSection from '@/components/DesignProcessSection';
 import FooterSection from '@/components/FooterSection';
 
-const Index: React.FC = () => {
+const ProcessPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 font-montserrat">
       <NavBar />
-      <main>
-        <HeroSection />
+      <main className="pt-20">
+        <DesignProcessSection />
       </main>
       <FooterSection />
     </div>
   );
 };
 
-export default Index;
+export default ProcessPage;

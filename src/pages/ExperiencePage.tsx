@@ -1,19 +1,19 @@
 
 import React from 'react';
 import NavBar from '@/components/NavBar';
-import HeroSection from '@/components/HeroSection';
+import ExperienceSection from '@/components/ExperienceSection';
 import FooterSection from '@/components/FooterSection';
 
-const Index: React.FC = () => {
+const ExperiencePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 font-montserrat">
       <NavBar />
-      <main>
-        <HeroSection />
+      <main className="pt-20">
+        <ExperienceSection />
       </main>
       <FooterSection />
     </div>
   );
 };
 
-export default Index;
+export default ExperiencePage;

@@ -2,6 +2,7 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   return (
@@ -25,9 +26,9 @@ const HeroSection: React.FC = () => {
             </p>
             
             <Button className="bg-accent-yellow hover:bg-accent-yellow/90 text-primary-blue font-medium px-8 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 mx-auto">
-              <a href="#contact" className="flex items-center gap-2">
+              <Link to="/contact" className="flex items-center gap-2">
                 Learn More <ChevronRight className="h-4 w-4" />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
