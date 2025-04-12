@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Linkedin, FileText, MapPin } from 'lucide-react';
+import { Linkedin, FileText, MapPin, Github, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FooterSection: React.FC = () => {
@@ -42,6 +42,24 @@ const FooterSection: React.FC = () => {
               >
                 <FileText className="h-5 w-5" />
               </a>
+              <a 
+                href="https://github.com/MahaveerSatra" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-navy transition-colors"
+                aria-label="GitHub Profile"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@mahaveersatra9619/featured" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-navy transition-colors"
+                aria-label="YouTube Channel"
+              >
+                <Youtube className="h-5 w-5" />
+              </a>
             </div>
           </div>
           
@@ -52,10 +70,10 @@ const FooterSection: React.FC = () => {
             
             <div className="mt-4 md:mt-0">
               <nav className="flex flex-wrap justify-center gap-8">
-                <Link to="/about" className="text-gray-500 hover:text-navy text-sm">About</Link>
                 <Link to="/experience" className="text-gray-500 hover:text-navy text-sm">Experience</Link>
                 <Link to="/skills" className="text-gray-500 hover:text-navy text-sm">Skills</Link>
                 <Link to="/process" className="text-gray-500 hover:text-navy text-sm">Process</Link>
+                <Link to="/projects" className="text-gray-500 hover:text-navy text-sm">Projects</Link>
                 <Link to="/blog" className="text-gray-500 hover:text-navy text-sm">Blog</Link>
                 <Link to="/personal" className="text-gray-500 hover:text-navy text-sm">Personal</Link>
                 <Link to="/contact" className="text-gray-500 hover:text-navy text-sm">Contact</Link>
