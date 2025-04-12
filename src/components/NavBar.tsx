@@ -27,6 +27,9 @@ const NavBar: React.FC = () => {
   useEffect(() => {
     // Close mobile menu when changing pages
     setIsMobileMenuOpen(false);
+    
+    // Scroll to top when route changes
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const toggleMobileMenu = () => {
