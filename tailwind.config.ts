@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,7 +62,47 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Adding missing colors that are used in the classes
+				// Our defined color scheme - Just 3 main colors and their variations
+				// Deep Blue (Primary)
+				'deep-blue': {
+					DEFAULT: '#1E3A8A',
+					light: '#2B4BAA',
+					dark: '#14295F',
+				},
+				// Teal (Secondary)
+				'teal': {
+					DEFAULT: '#0D9488',
+					light: '#14B8AB',
+					dark: '#0A766D',
+				},
+				// Amber (Accent/Tertiary)
+				'amber': {
+					DEFAULT: '#FBBF24',
+					light: '#FCD34D',
+					dark: '#F59E0B',
+				},
+				// Keep some neutral colors
+				'neutral': {
+					50: '#fafafa',
+					100: '#f5f5f5',
+					200: '#e5e5e5',
+					300: '#d4d4d4',
+					400: '#a3a3a3',
+					500: '#737373',
+					600: '#525252',
+					700: '#404040',
+					800: '#262626',
+					900: '#171717',
+				},
+				// Remove all other custom colors and keep only the ones we need
+				slate: {
+					50: '#f8fafc',
+					100: '#f1f5f9',
+					200: '#e2e8f0',
+					300: '#cbd5e1',
+					400: '#94a3b8',
+					500: '#64748b'
+				},
 				indigo: {
 				          50: '#eef2ff',
 				          100: '#e0e7ff',
@@ -87,32 +126,17 @@ export default {
 				          700: '#1d4ed8',
 				          800: '#1e40af',
 				},
-				navy: '#1E3A8A', // Same as primary-blue for consistency
-				sunshine: '#FBBF24', // Using accent-yellow for sunshine
-				coral: '#F97316', // Using highlight-orange for coral
-				azure: '#1E3A8A', // Using primary-blue as azure
-				teal: '#34D399', // Using secondary-green as teal
-				liverpool: '#F97316', // Using highlight-orange for liverpool
+				navy: '#1E3A8A', // Same as deep-blue for consistency
+				sunshine: '#FBBF24', // Using amber for sunshine
+				coral: '#F97316', // A warm orange color
+				azure: '#1E3A8A', // Using deep-blue as azure
+				liverpool: '#F97316', // Using coral for liverpool
 				mathworks: '#0076A8', // A blue color for MathWorks references
 				aqua: '#38B2AC', // Adding aqua color
 				emerald: {
 					500: '#10B981',
 					600: '#059669'
 				},
-				slate: {
-					50: '#f8fafc',
-					100: '#f1f5f9',
-					200: '#e2e8f0', // Defining a darker slate for navbar
-					300: '#cbd5e1',
-					400: '#94a3b8',
-					500: '#64748b'
-				},
-				// Updated color scheme based on the provided brand colors
-				'primary-blue': '#1E3A8A', // Deep Blue - Primary Color
-				'secondary-green': '#34D399', // Vibrant Green - Secondary Color
-				'accent-yellow': '#FBBF24', // Bright Yellow - Accent Color
-				'neutral-gray': '#D1D5DB', // Soft Gray - Supporting Color
-				'highlight-orange': '#F97316', // Warm Orange - Highlight Color
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
