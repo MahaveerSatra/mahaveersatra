@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -62,22 +63,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'primary-blue': '#1E3A8A',
-				'secondary-green': '#34A29E',
-				'accent-amber': '#F59E0B',
-				'neutral-gray': '#D1D5DB',
-				slate: {
-					50: '#f8fafc',
-					100: '#f1f5f9',
-					200: '#e2e8f0',
-					300: '#cbd5e1',
-					400: '#94a3b8',
-					500: '#64748b'
-				},
-				'highlight-orange': '#F59E0B',
-				'accent-yellow': '#F59E0B',
-				navy: '#1E3A8A',
-				mathworks: '#0076A8',
+				// Adding missing colors that are used in the classes
 				indigo: {
 				          50: '#eef2ff',
 				          100: '#e0e7ff',
@@ -101,16 +87,32 @@ export default {
 				          700: '#1d4ed8',
 				          800: '#1e40af',
 				},
+				navy: '#1E3A8A', // Same as primary-blue for consistency
+				sunshine: '#FBBF24', // Using accent-yellow for sunshine
+				coral: '#F97316', // Using highlight-orange for coral
+				azure: '#1E3A8A', // Using primary-blue as azure
+				teal: '#34D399', // Using secondary-green as teal
+				liverpool: '#F97316', // Using highlight-orange for liverpool
+				mathworks: '#0076A8', // A blue color for MathWorks references
+				aqua: '#38B2AC', // Adding aqua color
 				emerald: {
 					500: '#10B981',
 					600: '#059669'
 				},
-				sunshine: '#F59E0B',
-				coral: '#F59E0B',
-				azure: '#1E3A8A',
-				teal: '#34A29E',
-				liverpool: '#F59E0B',
-				aqua: '#34A29E',
+				slate: {
+					50: '#f8fafc',
+					100: '#f1f5f9',
+					200: '#e2e8f0', // Defining a darker slate for navbar
+					300: '#cbd5e1',
+					400: '#94a3b8',
+					500: '#64748b'
+				},
+				// Updated color scheme based on the provided brand colors
+				'primary-blue': '#1E3A8A', // Deep Blue - Primary Color
+				'secondary-green': '#34D399', // Vibrant Green - Secondary Color
+				'accent-yellow': '#FBBF24', // Bright Yellow - Accent Color
+				'neutral-gray': '#D1D5DB', // Soft Gray - Supporting Color
+				'highlight-orange': '#F97316', // Warm Orange - Highlight Color
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

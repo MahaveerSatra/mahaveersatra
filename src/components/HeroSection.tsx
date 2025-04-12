@@ -18,15 +18,14 @@ const HeroSection: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 with <span className="text-secondary-green">Insightful Simulations</span>
               </h2>
-              <div className="h-1 w-32 bg-accent-amber mx-auto mb-6"></div>
-              <p className="text-slate-500 italic mt-4">"Simulating reality, one model at a time — because trial and error is so last century."</p>
+              <div className="h-1 w-32 bg-accent-yellow mx-auto mb-6"></div>
             </div>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Streamline your development process with <span className="font-semibold text-accent-amber">cutting-edge simulation models</span> that enhance analysis, 
-              design, and testing, while <span className="font-semibold text-accent-amber">saving time and cost</span>.
+              Streamline your development process with <span className="font-semibold text-highlight-orange">cutting-edge simulation models</span> that enhance analysis, 
+              design, and testing, while <span className="font-semibold text-highlight-orange">saving time and cost</span>.
             </p>
             
-            <Button className="bg-accent-amber hover:bg-accent-amber/90 text-primary-blue font-medium px-8 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 mx-auto">
+            <Button className="bg-accent-yellow hover:bg-accent-yellow/90 text-primary-blue font-medium px-8 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 mx-auto">
               <Link to="/contact" className="flex items-center gap-2">
                 Learn More <ChevronRight className="h-4 w-4" />
               </Link>
