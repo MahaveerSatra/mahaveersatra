@@ -37,7 +37,7 @@ const NavBar: React.FC = () => {
   };
 
   const isActive = (path: string) => {
-    return location.pathname === path ? 'text-highlight-orange' : 'text-primary-blue';
+    return location.pathname === path ? 'text-accent-amber' : 'text-primary-blue';
   };
 
   return (
@@ -60,33 +60,33 @@ const NavBar: React.FC = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-10 items-center">
-            <Link to="/experience" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/experience')}`}>Experience</Link>
-            <Link to="/skills" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/skills')}`}>Skills</Link>
-            <Link to="/process" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/process')}`}>Process</Link>
-            <Link to="/projects" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/projects')}`}>Projects</Link>
-            <Link to="/blog" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/blog')}`}>Blog</Link>
-            <Link to="/personal" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/personal')}`}>Personal</Link>
-            <Link to="/contact" className={`hover:text-highlight-orange transition-colors text-lg font-medium ${isActive('/contact')}`}>Contact</Link>
+            <Link to="/experience" className={`hover:text-accent-amber transition-colors text-lg font-medium ${isActive('/experience')}`}>Experience</Link>
+            <Link to="/skills" className={`hover:text-accent-amber transition-colors text-lg font-medium ${isActive('/skills')}`}>Skills</Link>
+            <Link to="/process" className={`hover:text-accent-amber transition-colors text-lg font-medium ${isActive('/process')}`}>Process</Link>
+            <Link to="/projects" className={`hover:text-accent-amber transition-colors text-lg font-medium ${isActive('/projects')}`}>Projects</Link>
+            <Link to="/blog" className={`hover:text-accent-amber transition-colors text-lg font-medium ${isActive('/blog')}`}>Blog</Link>
+            <Link to="/personal" className={`hover:text-accent-amber transition-colors text-lg font-medium ${isActive('/personal')}`}>Personal</Link>
+            <Link to="/contact" className={`hover:text-accent-amber transition-colors text-lg font-medium ${isActive('/contact')}`}>Contact</Link>
           </div>
 
           <div className="hidden md:flex space-x-6 items-center">
-            <a href="https://www.linkedin.com/in/mahaveer-satra" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="h-6 w-6 text-primary-blue hover:text-highlight-orange transition-colors" />
+            <a href="https://www.linkedin.com/in/mahaveer-satra" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <Linkedin className="h-6 w-6 text-primary-blue hover:text-accent-amber transition-colors" />
             </a>
-            <a href="https://mahaveersatra.medium.com/" target="_blank" rel="noopener noreferrer">
-              <FileText className="h-6 w-6 text-primary-blue hover:text-highlight-orange transition-colors" />
+            <a href="https://mahaveersatra.medium.com/" target="_blank" rel="noopener noreferrer" aria-label="Medium Blog">
+              <FileText className="h-6 w-6 text-primary-blue hover:text-accent-amber transition-colors" />
             </a>
-            <a href="https://github.com/MahaveerSatra" target="_blank" rel="noopener noreferrer">
-              <Github className="h-6 w-6 text-primary-blue hover:text-highlight-orange transition-colors" />
+            <a href="https://github.com/MahaveerSatra" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <Github className="h-6 w-6 text-primary-blue hover:text-accent-amber transition-colors" />
             </a>
-            <a href="https://www.youtube.com/@mahaveersatra9619/featured" target="_blank" rel="noopener noreferrer">
-              <Youtube className="h-6 w-6 text-primary-blue hover:text-highlight-orange transition-colors" />
+            <a href="https://www.youtube.com/@mahaveersatra9619/featured" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <Youtube className="h-6 w-6 text-primary-blue hover:text-accent-amber transition-colors" />
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
-            <Button variant="ghost" onClick={toggleMobileMenu} className="p-1">
+            <Button variant="ghost" onClick={toggleMobileMenu} className="p-1" aria-label="Toggle menu">
               {isMobileMenuOpen ? <X className="h-6 w-6 text-primary-blue" /> : <Menu className="h-6 w-6 text-primary-blue" />}
             </Button>
           </div>
@@ -106,17 +106,17 @@ const NavBar: React.FC = () => {
             <Link to="/contact" className={`py-2 text-lg font-medium ${isActive('/contact')}`}>Contact</Link>
             
             <div className="flex space-x-6 py-6">
-              <a href="https://www.linkedin.com/in/mahaveer-satra" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-6 w-6 text-primary-blue hover:text-highlight-orange transition-colors" />
+              <a href="https://www.linkedin.com/in/mahaveer-satra" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Linkedin className="h-6 w-6 text-primary-blue hover:text-accent-amber transition-colors" />
               </a>
-              <a href="https://mahaveersatra.medium.com/" target="_blank" rel="noopener noreferrer">
-                <FileText className="h-6 w-6 text-primary-blue hover:text-highlight-orange transition-colors" />
+              <a href="https://mahaveersatra.medium.com/" target="_blank" rel="noopener noreferrer" aria-label="Medium Blog">
+                <FileText className="h-6 w-6 text-primary-blue hover:text-accent-amber transition-colors" />
               </a>
-              <a href="https://github.com/MahaveerSatra" target="_blank" rel="noopener noreferrer">
-                <Github className="h-6 w-6 text-primary-blue hover:text-highlight-orange transition-colors" />
+              <a href="https://github.com/MahaveerSatra" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Github className="h-6 w-6 text-primary-blue hover:text-accent-amber transition-colors" />
               </a>
-              <a href="https://www.youtube.com/@mahaveersatra9619/featured" target="_blank" rel="noopener noreferrer">
-                <Youtube className="h-6 w-6 text-primary-blue hover:text-highlight-orange transition-colors" />
+              <a href="https://www.youtube.com/@mahaveersatra9619/featured" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <Youtube className="h-6 w-6 text-primary-blue hover:text-accent-amber transition-colors" />
               </a>
             </div>
           </div>
