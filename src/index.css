@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -109,11 +110,8 @@
   
   /* Consistent heading styles */
   .vibrant-heading {
-    @apply text-3xl md:text-4xl font-bold text-deep-blue relative inline-block;
-  }
-  
-  .vibrant-heading:after {
-    @apply content-[''] absolute -bottom-2 left-0 w-12 h-1 bg-amber;
+    @apply text-3xl md:text-4xl font-bold text-deep-blue mb-4;
+    letter-spacing: -0.5px;
   }
   
   .vibrant-subheading {
@@ -125,7 +123,7 @@
   }
   
   .vibrant-card {
-    @apply bg-white border-l-2 border-deep-blue shadow-sm hover:shadow-md transition-all duration-300;
+    @apply bg-white border-l-4 border-amber shadow-sm hover:shadow-md transition-all duration-300;
   }
 
   /* Font consistency */
@@ -135,7 +133,7 @@
   
   /* Highlighted text */
   .highlight {
-    @apply font-medium text-teal;
+    @apply font-semibold text-teal;
   }
   
   /* Section styles */
@@ -144,29 +142,16 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center mb-12 text-deep-blue;
+    @apply text-3xl md:text-4xl font-bold text-center mb-12;
   }
   
   .section-subtitle {
-    @apply text-lg md:text-xl text-slate-600 text-center max-w-3xl mx-auto mb-16;
-  }
-  
-  /* Link hover underline animation */
-  .hover-underline {
-    @apply relative;
-  }
-  
-  .hover-underline:after {
-    @apply content-[''] absolute left-0 bottom-0 w-0 h-0.5 bg-teal transition-all duration-300;
-  }
-  
-  .hover-underline:hover:after {
-    @apply w-full;
+    @apply text-lg md:text-xl text-neutral-600 text-center max-w-3xl mx-auto mb-16;
   }
 }
 
 /* Custom animations */
-@keyframes fadeIn {
+@keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -177,41 +162,8 @@
   }
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes floatDelayed {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeIn 0.7s ease-out forwards;
-}
-
-.animate-float {
-  animation: float 8s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: floatDelayed 10s ease-in-out infinite;
-  animation-delay: 1s;
+.fade-up {
+  animation: fadeUp 0.7s ease-out forwards;
 }
 
 .delay-100 {

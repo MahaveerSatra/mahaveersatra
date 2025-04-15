@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Card } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -16,91 +16,82 @@ const ContactSection: React.FC = () => {
       title: "Message sent!",
       description: "Thank you for your message. I'll get back to you soon.",
     });
+    // In a real implementation, you would send the form data to a server
     (e.target as HTMLFormElement).reset();
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-50 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-teal/5 animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-deep-blue/5 animate-float-delayed"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+    <section id="contact" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <p className="text-teal uppercase tracking-widest text-sm font-medium mb-2">Get In Touch</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-deep-blue mb-4 relative inline-block">
-            Contact Me
-            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-amber"></span>
-          </h2>
-          <p className="text-slate-600 mt-6 max-w-2xl mx-auto">
-            Have a project in mind or just want to say hello? I'm always open to discussing new opportunities.
+          <h2 className="vibrant-heading">Get In Touch</h2>
+          <div className="section-divider"></div>
+          <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+            Feel free to contact me for any questions, collaborations, or just to say hello!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          {/* Contact Info Column */}
-          <div className="lg:col-span-1 space-y-6">
-            <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all p-6 border-l-2 border-deep-blue">
-              <div className="flex items-center mb-4">
-                <Mail className="h-5 w-5 text-deep-blue mr-3" />
-                <h3 className="text-lg font-medium text-deep-blue">Email</h3>
-              </div>
-              <a href="mailto:mahaveersatra@gmail.com" className="text-slate-600 hover:text-teal transition-colors group">
-                mahaveersatra@gmail.com
-                <span className="block h-0.5 w-0 group-hover:w-full bg-teal transition-all duration-300 mt-1"></span>
-              </a>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all p-6 border-l-2 border-teal">
-              <div className="flex items-center mb-4">
-                <Linkedin className="h-5 w-5 text-teal mr-3" />
-                <h3 className="text-lg font-medium text-deep-blue">LinkedIn</h3>
-              </div>
-              <a 
-                href="https://www.linkedin.com/in/mahaveer-satra" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-600 hover:text-teal transition-colors group"
-              >
-                linkedin.com/in/mahaveer-satra
-                <span className="block h-0.5 w-0 group-hover:w-full bg-teal transition-all duration-300 mt-1"></span>
-              </a>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all p-6 border-l-2 border-amber">
-              <div className="flex items-center mb-4">
-                <MapPin className="h-5 w-5 text-amber mr-3" />
-                <h3 className="text-lg font-medium text-deep-blue">Location</h3>
-              </div>
-              <p className="text-slate-600">Plano, Texas</p>
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+          <div className="lg:col-span-2">
+            <div className="space-y-6">
+              <Card className="border-t-4 border-coral shadow-sm hover:shadow-md transition-all">
+                <CardContent className="p-6 flex items-start">
+                  <Mail className="h-10 w-10 text-coral mr-4 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-indigo mb-1">Email</h3>
+                    <p className="text-gray-700">mahaveersatra@gmail.com</p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-t-4 border-azure shadow-sm hover:shadow-md transition-all">
+                <CardContent className="p-6 flex items-start">
+                  <Linkedin className="h-10 w-10 text-azure mr-4 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-indigo mb-1">LinkedIn</h3>
+                    <a 
+                      href="https://www.linkedin.com/in/mahaveer-satra" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 hover:text-coral transition-colors"
+                    >
+                      linkedin.com/in/mahaveer-satra
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-t-4 border-teal shadow-sm hover:shadow-md transition-all">
+                <CardContent className="p-6 flex items-start">
+                  <MapPin className="h-10 w-10 text-teal mr-4 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-indigo mb-1">Location</h3>
+                    <p className="text-gray-700">Plano, Texas</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
           
-          {/* Contact Form Column */}
-          <div className="lg:col-span-2">
-            <Card className="border-0 shadow-md bg-white overflow-hidden">
-              <div className="p-8">
-                <h3 className="text-xl font-semibold text-deep-blue mb-6 relative inline-block">
-                  Send Me a Message
-                  <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-amber"></span>
-                </h3>
+          <div className="lg:col-span-3">
+            <Card className="border-t-4 border-sunshine shadow-md">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-semibold text-indigo mb-6">Send Me a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                         Your Name
                       </label>
                       <Input 
                         id="name" 
                         placeholder="John Doe" 
                         required 
-                        className="w-full border border-slate-200 focus:border-deep-blue focus:ring-1 focus:ring-deep-blue"
+                        className="w-full border-sunshine focus:border-sunshine focus:ring-sunshine"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                         Your Email
                       </label>
                       <Input 
@@ -108,25 +99,25 @@ const ContactSection: React.FC = () => {
                         type="email" 
                         placeholder="john@example.com" 
                         required 
-                        className="w-full border border-slate-200 focus:border-deep-blue focus:ring-1 focus:ring-deep-blue"
+                        className="w-full border-sunshine focus:border-sunshine focus:ring-sunshine"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-1">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                       Subject
                     </label>
                     <Input 
                       id="subject" 
                       placeholder="How can I help you?" 
                       required 
-                      className="w-full border border-slate-200 focus:border-deep-blue focus:ring-1 focus:ring-deep-blue"
+                      className="w-full border-sunshine focus:border-sunshine focus:ring-sunshine"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Your Message
                     </label>
                     <Textarea 
@@ -134,19 +125,19 @@ const ContactSection: React.FC = () => {
                       placeholder="Your message here..." 
                       rows={5} 
                       required 
-                      className="w-full border border-slate-200 focus:border-deep-blue focus:ring-1 focus:ring-deep-blue"
+                      className="w-full border-sunshine focus:border-sunshine focus:ring-sunshine"
                     />
                   </div>
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-deep-blue hover:bg-deep-blue/90 text-white font-medium py-2.5 px-4 rounded-md shadow-sm hover:shadow-md transition-all flex items-center justify-center"
+                    className="w-full bg-sunshine hover:bg-sunshine/90 text-indigo font-medium flex items-center justify-center rounded-full shadow-sm"
                   >
                     Send Message
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
                 </form>
-              </div>
+              </CardContent>
             </Card>
           </div>
         </div>
