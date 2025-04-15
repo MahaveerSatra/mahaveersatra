@@ -62,80 +62,53 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Our defined color scheme - Just 3 main colors and their variations
-				// Deep Blue (Primary)
-				'deep-blue': {
-					DEFAULT: '#1E3A8A',
-					light: '#2B4BAA',
-					dark: '#14295F',
-				},
-				// Teal (Secondary)
-				'teal': {
-					DEFAULT: '#0D9488',
-					light: '#14B8AB',
-					dark: '#0A766D',
-				},
-				// Amber (Accent/Tertiary)
-				'amber': {
-					DEFAULT: '#FBBF24',
-					light: '#FCD34D',
-					dark: '#F59E0B',
-				},
-				// Keep some neutral colors
-				'neutral': {
-					50: '#fafafa',
-					100: '#f5f5f5',
-					200: '#e5e5e5',
-					300: '#d4d4d4',
-					400: '#a3a3a3',
-					500: '#737373',
-					600: '#525252',
-					700: '#404040',
-					800: '#262626',
-					900: '#171717',
-				},
-				// Remove all other custom colors and keep only the ones we need
-				slate: {
-					50: '#f8fafc',
-					100: '#f1f5f9',
-					200: '#e2e8f0',
-					300: '#cbd5e1',
-					400: '#94a3b8',
-					500: '#64748b'
-				},
-				indigo: {
-				          50: '#eef2ff',
-				          100: '#e0e7ff',
-				          200: '#c7d2fe',
-				          300: '#a5b4fc',
-				          400: '#818cf8',
-				          500: '#6366f1',
-				          600: '#4f46e5',
-				          700: '#4338ca',
-				          800: '#3730a3',
-				          900: '#312e81',
-				},
 				blue: {
-				          50: '#eff6ff',
-				          100: '#dbeafe',
-				          200: '#bfdbfe',
-				          300: '#93c5fd',
-				          400: '#60a5fa',
-				          500: '#3b82f6',
-				          600: '#2563eb',
-				          700: '#1d4ed8',
-				          800: '#1e40af',
+					50: '#EBF5FF',
+					100: '#E1EFFE',
+					200: '#C3DDFD',
+					300: '#A4CAFE',
+					400: '#76A9FA',
+					500: '#3F83F8',
+					600: '#1C64F2',
+					700: '#1A56DB',
+					800: '#1E429F',
+					900: '#233876',
 				},
-				navy: '#1E3A8A', // Same as deep-blue for consistency
-				sunshine: '#FBBF24', // Using amber for sunshine
-				coral: '#F97316', // A warm orange color
-				azure: '#1E3A8A', // Using deep-blue as azure
-				liverpool: '#F97316', // Using coral for liverpool
-				mathworks: '#0076A8', // A blue color for MathWorks references
-				aqua: '#38B2AC', // Adding aqua color
-				emerald: {
-					500: '#10B981',
-					600: '#059669'
+				teal: {
+					50: '#EDFAFA',
+					100: '#D5F5F6',
+					200: '#AFECEF',
+					300: '#7EDCE2',
+					400: '#16BDCA',
+					500: '#0694A2',
+					600: '#047481',
+					700: '#036672',
+					800: '#05505C',
+					900: '#014451',
+				},
+				amber: {
+					50: '#FFF8E1',
+					100: '#FFECB3',
+					200: '#FFE082',
+					300: '#FFD54F',
+					400: '#FFCA28',
+					500: '#FFC107',
+					600: '#FFB300',
+					700: '#FFA000',
+					800: '#FF8F00',
+					900: '#FF6F00',
+				},
+				gray: {
+					50: '#F9FAFB',
+					100: '#F3F4F6',
+					200: '#E5E7EB',
+					300: '#D1D5DB',
+					400: '#9CA3AF',
+					500: '#6B7280',
+					600: '#4B5563',
+					700: '#374151',
+					800: '#1F2937',
+					900: '#111827',
 				},
 			},
 			borderRadius: {
@@ -175,6 +148,14 @@ export default {
 				bounce: {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				pulse: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
 				}
 			},
 			animation: {
@@ -183,7 +164,9 @@ export default {
 				'fade-in': 'fadeIn 0.5s ease-out forwards',
 				'slide-in-left': 'slideInFromLeft 0.5s ease-out forwards',
 				'slide-in-right': 'slideInFromRight 0.5s ease-out forwards',
-				'bounce': 'bounce 2s ease-in-out infinite'
+				'bounce': 'bounce 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'pulse': 'pulse 2s ease-in-out infinite'
 			}
 		}
 	},

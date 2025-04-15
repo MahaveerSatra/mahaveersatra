@@ -14,13 +14,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 220 73% 33%; /* Deep Blue */
+    --primary: 220 100% 50%; /* Blue */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 174 84% 32%; /* Teal */
+    --secondary: 172 100% 40%; /* Teal */
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 42 96% 56%; /* Amber */
+    --accent: 45 100% 60%; /* Amber */
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -55,13 +55,13 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 220 73% 33%; /* Deep Blue */
-    --primary-foreground: 0 0% 100%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 174 84% 32%; /* Teal */
+    --secondary: 172 100% 40%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 42 96% 56%; /* Amber */
+    --accent: 45 100% 60%;
     --accent-foreground: 0 0% 100%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -91,7 +91,7 @@
   }
 
   body {
-    @apply bg-slate-50 text-foreground font-light;
+    @apply bg-blue-50 text-foreground font-light;
     font-family: 'Montserrat', sans-serif;
   }
 
@@ -101,7 +101,7 @@
   }
 
   .minimalist-divider {
-    @apply w-20 h-0.5 bg-amber my-8 mx-auto;
+    @apply w-20 h-0.5 bg-amber-400 my-8 mx-auto;
   }
 
   .minimalist-section {
@@ -110,20 +110,20 @@
   
   /* Consistent heading styles */
   .vibrant-heading {
-    @apply text-3xl md:text-4xl font-bold text-deep-blue mb-4;
+    @apply text-3xl md:text-4xl font-bold text-blue-600 mb-4;
     letter-spacing: -0.5px;
   }
   
   .vibrant-subheading {
-    @apply text-xl md:text-2xl text-teal mb-3 font-medium;
+    @apply text-xl md:text-2xl text-teal-500 mb-3 font-medium;
   }
   
   .section-divider {
-    @apply h-1 w-24 bg-amber mx-auto mb-6;
+    @apply h-1 w-24 bg-amber-400 mx-auto mb-6;
   }
   
   .vibrant-card {
-    @apply bg-white border-l-4 border-amber shadow-sm hover:shadow-md transition-all duration-300;
+    @apply bg-white border-l-4 border-amber-400 shadow-sm hover:shadow-md transition-all duration-300;
   }
 
   /* Font consistency */
@@ -133,7 +133,7 @@
   
   /* Highlighted text */
   .highlight {
-    @apply font-semibold text-teal;
+    @apply font-semibold text-teal-500;
   }
   
   /* Section styles */
@@ -142,7 +142,7 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center mb-12;
+    @apply text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600;
   }
   
   .section-subtitle {
@@ -162,8 +162,56 @@
   }
 }
 
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-15px) translateX(15px);
+  }
+  50% {
+    transform: translateY(0) translateX(30px);
+  }
+  75% {
+    transform: translateY(15px) translateX(15px);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-20px) translateX(-20px);
+  }
+  66% {
+    transform: translateY(10px) translateX(-10px);
+  }
+}
+
+@keyframes float-fast {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-25px) translateX(25px);
+  }
+}
+
 .fade-up {
   animation: fadeUp 0.7s ease-out forwards;
+}
+
+.animate-float-slow {
+  animation: float-slow 20s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 15s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float-fast 10s ease-in-out infinite;
 }
 
 .delay-100 {
@@ -181,4 +229,14 @@
 /* Playful cursor */
 .cursor-sunshine {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23FBBF24'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E"), auto;
+}
+
+/* Hover animations */
+.hover-underline {
+  @apply relative inline-block after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-amber-400 after:transition-all after:duration-300 hover:after:w-full;
+}
+
+/* Card hover effects */
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
 }
