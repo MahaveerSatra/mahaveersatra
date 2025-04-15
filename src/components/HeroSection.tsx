@@ -16,8 +16,8 @@ const HeroSection: React.FC = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Handwritten note */}
-          <div className="handwritten-note mx-auto mb-8 transform rotate-1">
+          {/* Handwritten note with paper clip effect */}
+          <div className="handwritten-note paper-clip mx-auto mb-8 transform rotate-1 max-w-sm">
             This is how you can get your design and development right!
           </div>
           
@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
               
               {/* Handwritten arrow comment */}
               <div className="relative inline-block mx-auto">
-                <span className="handwritten handwritten-arrow absolute -right-24 top-12">
+                <span className="handwritten handwritten-arrow absolute -right-16 top-12">
                   Magic happens here!
                 </span>
               </div>
