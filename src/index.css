@@ -110,7 +110,7 @@
   
   /* Consistent heading styles */
   .vibrant-heading {
-    @apply text-3xl md:text-4xl font-bold text-blue-600 mb-4;
+    @apply text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500;
     letter-spacing: -0.5px;
   }
   
@@ -142,7 +142,7 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600;
+    @apply text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500;
   }
   
   .section-subtitle {
@@ -239,4 +239,27 @@
 /* Card hover effects */
 .hover-lift {
   @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500;
+}
+
+/* Gradient buttons */
+.gradient-button {
+  @apply bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white;
+}
+
+/* Card gradients */
+.card-gradient-blue {
+  @apply bg-gradient-to-r from-blue-50 to-white;
+}
+
+.card-gradient-teal {
+  @apply bg-gradient-to-r from-teal-50 to-white;
+}
+
+.card-gradient-amber {
+  @apply bg-gradient-to-r from-amber-50 to-white;
 }
