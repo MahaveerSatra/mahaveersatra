@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -25,7 +24,6 @@ interface ExperienceItem {
 }
 
 const ExperienceSection: React.FC = () => {
-  // Track expanded items
   const [expandedItems, setExpandedItems] = useState<Record<number, boolean>>({});
 
   const toggleItem = (index: number) => {
@@ -33,6 +31,19 @@ const ExperienceSection: React.FC = () => {
       ...prev,
       [index]: !prev[index]
     }));
+  };
+
+  const getIconStyles = (type: string) => {
+    switch(type) {
+      case 'work':
+        return '#1EAEDB'; // Bright Blue
+      case 'publication':
+        return '#33C3F0'; // Sky Blue
+      case 'education':
+        return '#8B5CF6'; // Vivid Purple
+      default:
+        return '#1EAEDB';
+    }
   };
 
   const experiences: ExperienceItem[] = [
@@ -178,12 +189,10 @@ const ExperienceSection: React.FC = () => {
     }
   ];
 
-  // Sort experiences in reverse chronological order (newest first)
   const sortedExperiences = [...experiences].sort((a, b) => {
-    // Extract years for comparison
     const aEndYear = parseInt(a.date.split(' - ')[1]?.split(' ')[a.date.split(' - ')[1]?.split(' ').length - 1] || a.date.split(' ')[a.date.split(' ').length - 1]);
     const bEndYear = parseInt(b.date.split(' - ')[1]?.split(' ')[b.date.split(' - ')[1]?.split(' ').length - 1] || b.date.split(' ')[b.date.split(' ').length - 1]);
-    return bEndYear - aEndYear; // Sort in descending order
+    return bEndYear - aEndYear;
   });
 
   return (
@@ -198,99 +207,49 @@ const ExperienceSection: React.FC = () => {
         </div>
 
         <div className="hidden md:block">
-          <VerticalTimeline lineColor="#9b87f5">
-            {sortedExperiences.map((exp, index) => (
-              <VerticalTimelineElement
-                key={index}
-                className="vertical-timeline-element"
-                contentStyle={{ 
-                  background: '#fff', 
-                  color: '#073B4C', 
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.07)', 
-                  borderRadius: '12px',
-                  borderLeft: `4px solid ${exp.iconBackground}`,
-                  padding: expandedItems[index] ? '1.5rem' : '1rem'
-                }}
-                contentArrowStyle={{ borderRight: '7px solid #fff' }}
-                date={exp.date}
-                iconStyle={{ background: exp.iconBackground, color: '#fff' }}
-                icon={exp.icon}
-              >
-                <Collapsible open={expandedItems[index]} onOpenChange={() => toggleItem(index)}>
-                  <div className="flex justify-between items-start">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold">{exp.title}</h3>
-                      <h4 className="text-lg text-teal-600">
-                        {exp.companyUrl ? (
-                          <a 
-                            href={exp.companyUrl} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="hover:text-coral transition-colors"
-                          >
-                            {exp.company}
-                          </a>
-                        ) : (
-                          exp.company
-                        )}
-                      </h4>
-                      {exp.location && (
-                        <p className="text-sm text-azure flex items-center mt-1">
-                          <MapPin className="h-4 w-4 mr-1" /> {exp.location}
-                        </p>
-                      )}
-                    </div>
-                    <CollapsibleTrigger asChild>
-                      <Button variant="ghost" size="sm" className="p-0 h-8 w-8">
-                        {expandedItems[index] ? (
-                          <ChevronUp className="h-4 w-4" />
-                        ) : (
-                          <ChevronDown className="h-4 w-4" />
-                        )}
-                      </Button>
-                    </CollapsibleTrigger>
-                  </div>
-                  
-                  <CollapsibleContent>
-                    {exp.imageSrc && (
-                      <div className="mt-4 mb-4 w-full rounded-lg overflow-hidden">
-                        <AspectRatio ratio={16/9} className="bg-muted">
-                          <img
-                            src={exp.imageSrc}
-                            alt={exp.imageAlt || exp.title}
-                            className="object-cover w-full h-full rounded-lg"
-                          />
-                        </AspectRatio>
-                      </div>
-                    )}
-                    <ul className="mt-4 list-disc list-inside space-y-2">
-                      {exp.description.map((item, i) => (
-                        <li key={i} className="text-gray-700">{item}</li>
-                      ))}
-                    </ul>
-                  </CollapsibleContent>
-                </Collapsible>
-              </VerticalTimelineElement>
-            ))}
-          </VerticalTimeline>
-        </div>
+          <VerticalTimeline lineColor="#8B5CF6">
+            {sortedExperiences.map((exp, index) => {
+              const iconBgColor = exp.icon === <GraduationCap className="w-full h-full" /> 
+                ? getIconStyles('education')
+                : exp.icon === <Award className="w-full h-full" />
+                ? getIconStyles('publication')
+                : getIconStyles('work');
 
-        <div className="md:hidden space-y-6">
-          {sortedExperiences.map((exp, index) => (
-            <Card key={index} className="border-l-4 shadow-sm hover:shadow-md transition-all" style={{ borderColor: exp.iconBackground }}>
-              <CardContent className="p-4">
-                <Collapsible open={expandedItems[index]} onOpenChange={() => toggleItem(index)}>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div 
-                        className="w-10 h-10 rounded-full flex items-center justify-center" 
-                        style={{ backgroundColor: exp.iconBackground }}
-                      >
-                        {React.cloneElement(exp.icon as React.ReactElement, { className: "w-5 h-5 text-white" })}
-                      </div>
-                      <div className="ml-4">
-                        <h3 className="text-lg font-bold text-indigo">{exp.title}</h3>
-                        <p className="text-sm text-teal-600">
+              return (
+                <VerticalTimelineElement
+                  key={index}
+                  className="vertical-timeline-element"
+                  contentStyle={{ 
+                    background: '#fff', 
+                    color: '#073B4C', 
+                    boxShadow: '0 4px 20px rgba(0,0,0,0.07)', 
+                    borderRadius: '12px',
+                    borderLeft: `4px solid ${iconBgColor}`,
+                    padding: expandedItems[index] ? '1.5rem' : '1rem'
+                  }}
+                  contentArrowStyle={{ borderRight: '7px solid #fff' }}
+                  date={exp.date}
+                  iconStyle={{ 
+                    background: iconBgColor,
+                    color: '#fff',
+                    boxShadow: `0 0 0 4px ${iconBgColor}30`
+                  }}
+                  icon={exp.icon}
+                >
+                  {exp.imageSrc && (
+                    <div className="absolute -left-24 top-0 w-16 h-16 rounded-full overflow-hidden border-2" style={{ borderColor: iconBgColor }}>
+                      <img
+                        src={exp.imageSrc}
+                        alt={exp.imageAlt || exp.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+                  <Collapsible open={expandedItems[index]} onOpenChange={() => toggleItem(index)}>
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold">{exp.title}</h3>
+                        <h4 className="text-lg text-teal-600">
                           {exp.companyUrl ? (
                             <a 
                               href={exp.companyUrl} 
@@ -302,48 +261,108 @@ const ExperienceSection: React.FC = () => {
                             </a>
                           ) : (
                             exp.company
-                          )} • {exp.date}
-                        </p>
+                          )}
+                        </h4>
                         {exp.location && (
-                          <p className="text-xs text-azure flex items-center mt-1">
-                            <MapPin className="h-3 w-3 mr-1" /> {exp.location}
+                          <p className="text-sm text-gray-500 flex items-center mt-1">
+                            <MapPin className="h-4 w-4 mr-1" /> {exp.location}
                           </p>
                         )}
                       </div>
+                      <CollapsibleTrigger asChild>
+                        <Button variant="ghost" size="sm" className="p-0 h-8 w-8">
+                          {expandedItems[index] ? (
+                            <ChevronUp className="h-4 w-4" />
+                          ) : (
+                            <ChevronDown className="h-4 w-4" />
+                          )}
+                        </Button>
+                      </CollapsibleTrigger>
                     </div>
-                    <CollapsibleTrigger asChild>
-                      <Button variant="ghost" size="sm" className="p-0 h-8 w-8">
-                        {expandedItems[index] ? (
-                          <ChevronUp className="h-4 w-4" />
-                        ) : (
-                          <ChevronDown className="h-4 w-4" />
+                    
+                    <CollapsibleContent>
+                      <ul className="mt-4 list-disc list-inside space-y-2">
+                        {exp.description.map((item, i) => (
+                          <li key={i} className="text-gray-700">{item}</li>
+                        ))}
+                      </ul>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </VerticalTimelineElement>
+              );
+            })}
+          </VerticalTimeline>
+        </div>
+
+        <div className="md:hidden space-y-6">
+          {sortedExperiences.map((exp, index) => {
+            const iconBgColor = exp.icon === <GraduationCap className="w-full h-full" />
+              ? getIconStyles('education')
+              : exp.icon === <Award className="w-full h-full" />
+              ? getIconStyles('publication')
+              : getIconStyles('work');
+
+            return (
+              <Card key={index} className="border-l-4 shadow-sm hover:shadow-md transition-all" style={{ borderColor: iconBgColor }}>
+                <CardContent className="p-4">
+                  <Collapsible open={expandedItems[index]} onOpenChange={() => toggleItem(index)}>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        {exp.imageSrc && (
+                          <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2" style={{ borderColor: iconBgColor }}>
+                            <img
+                              src={exp.imageSrc}
+                              alt={exp.imageAlt || exp.title}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
                         )}
-                      </Button>
-                    </CollapsibleTrigger>
-                  </div>
-                  
-                  <CollapsibleContent>
-                    {exp.imageSrc && (
-                      <div className="mt-4 mb-4 w-full rounded-lg overflow-hidden">
-                        <AspectRatio ratio={16/9} className="bg-muted">
-                          <img
-                            src={exp.imageSrc}
-                            alt={exp.imageAlt || exp.title}
-                            className="object-cover w-full h-full rounded-lg"
-                          />
-                        </AspectRatio>
+                        <div className="ml-4">
+                          <h3 className="text-lg font-bold">{exp.title}</h3>
+                          <p className="text-sm text-teal-600">
+                            {exp.companyUrl ? (
+                              <a 
+                                href={exp.companyUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="hover:text-coral transition-colors"
+                              >
+                                {exp.company}
+                              </a>
+                            ) : (
+                              exp.company
+                            )} • {exp.date}
+                          </p>
+                          {exp.location && (
+                            <p className="text-xs text-gray-500 flex items-center mt-1">
+                              <MapPin className="h-3 w-3 mr-1" /> {exp.location}
+                            </p>
+                          )}
+                        </div>
                       </div>
-                    )}
-                    <ul className="list-disc list-inside space-y-2 mt-4 pl-4">
-                      {exp.description.map((item, i) => (
-                        <li key={i} className="text-sm text-gray-700">{item}</li>
-                      ))}
-                    </ul>
-                  </CollapsibleContent>
-                </Collapsible>
-              </CardContent>
-            </Card>
-          ))}
+                      <CollapsibleTrigger asChild>
+                        <Button variant="ghost" size="sm" className="p-0 h-8 w-8">
+                          {expandedItems[index] ? (
+                            <ChevronUp className="h-4 w-4" />
+                          ) : (
+                            <ChevronDown className="h-4 w-4" />
+                          )}
+                        </Button>
+                      </CollapsibleTrigger>
+                    </div>
+                    
+                    <CollapsibleContent>
+                      <ul className="list-disc list-inside space-y-2 mt-4 pl-4">
+                        {exp.description.map((item, i) => (
+                          <li key={i} className="text-sm text-gray-700">{item}</li>
+                        ))}
+                      </ul>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         <div className="text-center mt-12">
