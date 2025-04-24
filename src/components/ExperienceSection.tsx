@@ -9,6 +9,7 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 import { Briefcase, Award, GraduationCap, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 interface ExperienceItem {
   title: string;
@@ -19,6 +20,8 @@ interface ExperienceItem {
   description: string[];
   icon: React.ReactNode;
   iconBackground: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 const ExperienceSection: React.FC = () => {
@@ -44,8 +47,10 @@ const ExperienceSection: React.FC = () => {
         "Delivered a comprehensive workshop on \"AI with Model-Based Design\" focusing on training machine learning models for virtual sensors and code generation for embedded AI applications in Industrial Automation.",
         "Created a \"No-Meeting\" cross-functional community of practice to connect Industry experts to enhance presence in the Semiconductor Equipment Manufacturing Industry."
       ],
-      icon: <Briefcase className="w-full h-full text-white" />,
-      iconBackground: "#0076A8" // MathWorks blue
+      icon: <Briefcase className="w-full h-full" />,
+      iconBackground: "#9b87f5", // Primary Purple
+      imageSrc: "/lovable-uploads/e948e758-6f0c-4ef7-8d11-54a9b859c177.png",
+      imageAlt: "MathWorks industrial automation visualization"
     },
     {
       title: "Application Engineer",
@@ -58,8 +63,10 @@ const ExperienceSection: React.FC = () => {
         "Acted as a technical advisor for aerospace clients, guiding them through the integration of flight management systems with existing infrastructure.",
         "Built customer relationships through technical presentations and workshops on system modeling applications."
       ],
-      icon: <Briefcase className="w-full h-full text-white" />,
-      iconBackground: "#0076A8" // MathWorks blue
+      icon: <Briefcase className="w-full h-full" />,
+      iconBackground: "#9b87f5", // Primary Purple
+      imageSrc: "/lovable-uploads/56db6a2e-4bee-45d5-aea7-9793b41bb7e2.png",
+      imageAlt: "Neural network visualization"
     },
     {
       title: "System Modeling & Controls Team Lead",
@@ -72,8 +79,10 @@ const ExperienceSection: React.FC = () => {
         "Performed HIL testing for validation and verification of controller and V2X algorithms on dSPACE simulator.",
         "Directed a 5-member system safety work group, ensuring the safe operation of the project vehicle."
       ],
-      icon: <Briefcase className="w-full h-full text-white" />,
-      iconBackground: "#BB0000" // Ohio State scarlet
+      icon: <Briefcase className="w-full h-full" />,
+      iconBackground: "#7E69AB", // Secondary Purple
+      imageSrc: "/lovable-uploads/de98bd37-1565-41b6-a54f-2095cc8d7e10.png",
+      imageAlt: "Automotive systems engineering"
     },
     {
       title: "Senior Design Engineer",
@@ -86,8 +95,10 @@ const ExperienceSection: React.FC = () => {
         "Designed simulations and experiments to validate the firing valve of the launcher and to determine its discharge coefficient.",
         "Led a cross-functional team to implement manufacturing improvements that reduced production time by 15%."
       ],
-      icon: <Briefcase className="w-full h-full text-white" />,
-      iconBackground: "#0066CC" // L&T blue
+      icon: <Briefcase className="w-full h-full" />,
+      iconBackground: "#7E69AB", // Secondary Purple
+      imageSrc: "/lovable-uploads/128b7220-c3a4-4256-848c-311a57408fc1.png",
+      imageAlt: "Engineering design visualization"
     },
     {
       title: "Intern - Design and Engineering Centre",
@@ -100,8 +111,10 @@ const ExperienceSection: React.FC = () => {
         "Developed the complete solar tracker for a 50W panel under $100, yielding a theoretical increase in energy output by over 35% in a day compared to a fixed solar panel.",
         "Collaborated with manufacturing team to prototype and test the solar tracking system."
       ],
-      icon: <Briefcase className="w-full h-full text-white" />,
-      iconBackground: "#4CAF50" // Green
+      icon: <Briefcase className="w-full h-full" />,
+      iconBackground: "#7E69AB", // Secondary Purple
+      imageSrc: "/lovable-uploads/facda059-8389-4f17-9ba5-451ace3f9504.png",
+      imageAlt: "Solar tracking system"
     },
     {
       title: "Publication - SAE Technical Paper",
@@ -112,8 +125,10 @@ const ExperienceSection: React.FC = () => {
       description: [
         "Kuwabara, K., Karl-DeFrain, J., Midlam-Mohler, S., Satra, M. et al., \"Model-Based Design of a Hybrid Powertrain Architecture with Connected and Automated Technologies for Fuel Economy Improvements,\" SAE Technical Paper 2020-01-1438, 2020."
       ],
-      icon: <Award className="w-full h-full text-white" />,
-      iconBackground: "#9C27B0" // Purple
+      icon: <Award className="w-full h-full" />,
+      iconBackground: "#6E59A5", // Tertiary Purple
+      imageSrc: "/lovable-uploads/c2d6bdeb-b82c-4bbd-894c-938f8aaa8882.png",
+      imageAlt: "Technical publication visualization"
     },
     {
       title: "Publication - Conference Paper",
@@ -124,8 +139,10 @@ const ExperienceSection: React.FC = () => {
       description: [
         "Satra, M., & Shetty, S. (2017). Design Optimization and Manufacturing of Quadcopter using 3D Printing. International Conference on Advances in Thermal System, Materials and Design Engineering (ATSMDE)."
       ],
-      icon: <Award className="w-full h-full text-white" />,
-      iconBackground: "#9C27B0" // Purple
+      icon: <Award className="w-full h-full" />,
+      iconBackground: "#6E59A5", // Tertiary Purple
+      imageSrc: "/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png",
+      imageAlt: "3D printing and design optimization"
     },
     {
       title: "Master of Science - Mechanical Engineering",
@@ -138,8 +155,10 @@ const ExperienceSection: React.FC = () => {
         "GPA: 4.0",
         "Awarded J.N. Tata Endowment Scholarship for exceptional academic merit and professional experience."
       ],
-      icon: <GraduationCap className="w-full h-full text-white" />,
-      iconBackground: "#BB0000" // Ohio State scarlet
+      icon: <GraduationCap className="w-full h-full" />,
+      iconBackground: "#E5DEFF", // Soft Purple
+      imageSrc: "/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png",
+      imageAlt: "Ohio State University campus"
     },
     {
       title: "Bachelor of Technology - Mechanical Engineering",
@@ -152,8 +171,10 @@ const ExperienceSection: React.FC = () => {
         "Active member of the Robotics Club",
         "Participated in multiple national-level engineering competitions"
       ],
-      icon: <GraduationCap className="w-full h-full text-white" />,
-      iconBackground: "#1F3A93" // VJTI blue
+      icon: <GraduationCap className="w-full h-full" />,
+      iconBackground: "#E5DEFF", // Soft Purple
+      imageSrc: "/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png",
+      imageAlt: "VJTI campus"
     }
   ];
 
@@ -177,7 +198,7 @@ const ExperienceSection: React.FC = () => {
         </div>
 
         <div className="hidden md:block">
-          <VerticalTimeline lineColor="#FFD166">
+          <VerticalTimeline lineColor="#9b87f5">
             {sortedExperiences.map((exp, index) => (
               <VerticalTimelineElement
                 key={index}
@@ -187,17 +208,17 @@ const ExperienceSection: React.FC = () => {
                   color: '#073B4C', 
                   boxShadow: '0 4px 20px rgba(0,0,0,0.07)', 
                   borderRadius: '12px',
-                  borderLeft: '4px solid #FFD166',
+                  borderLeft: `4px solid ${exp.iconBackground}`,
                   padding: expandedItems[index] ? '1.5rem' : '1rem'
                 }}
                 contentArrowStyle={{ borderRight: '7px solid #fff' }}
                 date={exp.date}
-                iconStyle={{ background: exp.iconBackground, color: '#fff', boxShadow: '0 0 0 4px #FFD166' }}
+                iconStyle={{ background: exp.iconBackground, color: '#fff' }}
                 icon={exp.icon}
               >
                 <Collapsible open={expandedItems[index]} onOpenChange={() => toggleItem(index)}>
-                  <div className="flex justify-between items-center">
-                    <div>
+                  <div className="flex justify-between items-start">
+                    <div className="flex-1">
                       <h3 className="text-xl font-bold">{exp.title}</h3>
                       <h4 className="text-lg text-teal-600">
                         {exp.companyUrl ? (
@@ -213,9 +234,11 @@ const ExperienceSection: React.FC = () => {
                           exp.company
                         )}
                       </h4>
-                      {exp.location && <p className="text-sm text-azure flex items-center mt-1">
-                        <MapPin className="h-4 w-4 mr-1" /> {exp.location}
-                      </p>}
+                      {exp.location && (
+                        <p className="text-sm text-azure flex items-center mt-1">
+                          <MapPin className="h-4 w-4 mr-1" /> {exp.location}
+                        </p>
+                      )}
                     </div>
                     <CollapsibleTrigger asChild>
                       <Button variant="ghost" size="sm" className="p-0 h-8 w-8">
@@ -229,6 +252,17 @@ const ExperienceSection: React.FC = () => {
                   </div>
                   
                   <CollapsibleContent>
+                    {exp.imageSrc && (
+                      <div className="mt-4 mb-4 w-full rounded-lg overflow-hidden">
+                        <AspectRatio ratio={16/9} className="bg-muted">
+                          <img
+                            src={exp.imageSrc}
+                            alt={exp.imageAlt || exp.title}
+                            className="object-cover w-full h-full rounded-lg"
+                          />
+                        </AspectRatio>
+                      </div>
+                    )}
                     <ul className="mt-4 list-disc list-inside space-y-2">
                       {exp.description.map((item, i) => (
                         <li key={i} className="text-gray-700">{item}</li>
@@ -243,12 +277,15 @@ const ExperienceSection: React.FC = () => {
 
         <div className="md:hidden space-y-6">
           {sortedExperiences.map((exp, index) => (
-            <Card key={index} className="border-l-4 border-sunshine shadow-sm hover:shadow-md transition-all">
+            <Card key={index} className="border-l-4 shadow-sm hover:shadow-md transition-all" style={{ borderColor: exp.iconBackground }}>
               <CardContent className="p-4">
                 <Collapsible open={expandedItems[index]} onOpenChange={() => toggleItem(index)}>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: exp.iconBackground }}>
+                      <div 
+                        className="w-10 h-10 rounded-full flex items-center justify-center" 
+                        style={{ backgroundColor: exp.iconBackground }}
+                      >
                         {React.cloneElement(exp.icon as React.ReactElement, { className: "w-5 h-5 text-white" })}
                       </div>
                       <div className="ml-4">
@@ -267,9 +304,11 @@ const ExperienceSection: React.FC = () => {
                             exp.company
                           )} • {exp.date}
                         </p>
-                        {exp.location && <p className="text-xs text-azure flex items-center mt-1">
-                          <MapPin className="h-3 w-3 mr-1" /> {exp.location}
-                        </p>}
+                        {exp.location && (
+                          <p className="text-xs text-azure flex items-center mt-1">
+                            <MapPin className="h-3 w-3 mr-1" /> {exp.location}
+                          </p>
+                        )}
                       </div>
                     </div>
                     <CollapsibleTrigger asChild>
@@ -284,6 +323,17 @@ const ExperienceSection: React.FC = () => {
                   </div>
                   
                   <CollapsibleContent>
+                    {exp.imageSrc && (
+                      <div className="mt-4 mb-4 w-full rounded-lg overflow-hidden">
+                        <AspectRatio ratio={16/9} className="bg-muted">
+                          <img
+                            src={exp.imageSrc}
+                            alt={exp.imageAlt || exp.title}
+                            className="object-cover w-full h-full rounded-lg"
+                          />
+                        </AspectRatio>
+                      </div>
+                    )}
                     <ul className="list-disc list-inside space-y-2 mt-4 pl-4">
                       {exp.description.map((item, i) => (
                         <li key={i} className="text-sm text-gray-700">{item}</li>
