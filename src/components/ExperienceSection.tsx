@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
@@ -6,7 +7,8 @@ import {
   VerticalTimelineElement 
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { Briefcase, Award, GraduationCap, MapPin } from 'lucide-react';
+import { Briefcase, Award, GraduationCap, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 
 interface ExperienceItem {
   title: string;
@@ -20,6 +22,16 @@ interface ExperienceItem {
 }
 
 const ExperienceSection: React.FC = () => {
+  // Track expanded items
+  const [expandedItems, setExpandedItems] = useState<Record<number, boolean>>({});
+
+  const toggleItem = (index: number) => {
+    setExpandedItems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   const experiences: ExperienceItem[] = [
     {
       title: "Senior Application Engineer",
@@ -175,36 +187,55 @@ const ExperienceSection: React.FC = () => {
                   color: '#073B4C', 
                   boxShadow: '0 4px 20px rgba(0,0,0,0.07)', 
                   borderRadius: '12px',
-                  borderLeft: '4px solid #FFD166'
+                  borderLeft: '4px solid #FFD166',
+                  padding: expandedItems[index] ? '1.5rem' : '1rem'
                 }}
                 contentArrowStyle={{ borderRight: '7px solid #fff' }}
                 date={exp.date}
                 iconStyle={{ background: exp.iconBackground, color: '#fff', boxShadow: '0 0 0 4px #FFD166' }}
                 icon={exp.icon}
               >
-                <h3 className="text-xl font-bold">{exp.title}</h3>
-                <h4 className="text-lg text-teal-600">
-                  {exp.companyUrl ? (
-                    <a 
-                      href={exp.companyUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="hover:text-coral transition-colors"
-                    >
-                      {exp.company}
-                    </a>
-                  ) : (
-                    exp.company
-                  )}
-                </h4>
-                {exp.location && <p className="text-sm text-azure flex items-center mt-1">
-                  <MapPin className="h-4 w-4 mr-1" /> {exp.location}
-                </p>}
-                <ul className="mt-4 list-disc list-inside space-y-2">
-                  {exp.description.map((item, i) => (
-                    <li key={i} className="text-gray-700">{item}</li>
-                  ))}
-                </ul>
+                <Collapsible open={expandedItems[index]} onOpenChange={() => toggleItem(index)}>
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h3 className="text-xl font-bold">{exp.title}</h3>
+                      <h4 className="text-lg text-teal-600">
+                        {exp.companyUrl ? (
+                          <a 
+                            href={exp.companyUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:text-coral transition-colors"
+                          >
+                            {exp.company}
+                          </a>
+                        ) : (
+                          exp.company
+                        )}
+                      </h4>
+                      {exp.location && <p className="text-sm text-azure flex items-center mt-1">
+                        <MapPin className="h-4 w-4 mr-1" /> {exp.location}
+                      </p>}
+                    </div>
+                    <CollapsibleTrigger asChild>
+                      <Button variant="ghost" size="sm" className="p-0 h-8 w-8">
+                        {expandedItems[index] ? (
+                          <ChevronUp className="h-4 w-4" />
+                        ) : (
+                          <ChevronDown className="h-4 w-4" />
+                        )}
+                      </Button>
+                    </CollapsibleTrigger>
+                  </div>
+                  
+                  <CollapsibleContent>
+                    <ul className="mt-4 list-disc list-inside space-y-2">
+                      {exp.description.map((item, i) => (
+                        <li key={i} className="text-gray-700">{item}</li>
+                      ))}
+                    </ul>
+                  </CollapsibleContent>
+                </Collapsible>
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>
@@ -213,37 +244,53 @@ const ExperienceSection: React.FC = () => {
         <div className="md:hidden space-y-6">
           {sortedExperiences.map((exp, index) => (
             <Card key={index} className="border-l-4 border-sunshine shadow-sm hover:shadow-md transition-all">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: exp.iconBackground }}>
-                    {React.cloneElement(exp.icon as React.ReactElement, { className: "w-5 h-5 text-white" })}
+              <CardContent className="p-4">
+                <Collapsible open={expandedItems[index]} onOpenChange={() => toggleItem(index)}>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: exp.iconBackground }}>
+                        {React.cloneElement(exp.icon as React.ReactElement, { className: "w-5 h-5 text-white" })}
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-lg font-bold text-indigo">{exp.title}</h3>
+                        <p className="text-sm text-teal-600">
+                          {exp.companyUrl ? (
+                            <a 
+                              href={exp.companyUrl} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="hover:text-coral transition-colors"
+                            >
+                              {exp.company}
+                            </a>
+                          ) : (
+                            exp.company
+                          )} • {exp.date}
+                        </p>
+                        {exp.location && <p className="text-xs text-azure flex items-center mt-1">
+                          <MapPin className="h-3 w-3 mr-1" /> {exp.location}
+                        </p>}
+                      </div>
+                    </div>
+                    <CollapsibleTrigger asChild>
+                      <Button variant="ghost" size="sm" className="p-0 h-8 w-8">
+                        {expandedItems[index] ? (
+                          <ChevronUp className="h-4 w-4" />
+                        ) : (
+                          <ChevronDown className="h-4 w-4" />
+                        )}
+                      </Button>
+                    </CollapsibleTrigger>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-bold text-indigo">{exp.title}</h3>
-                    <p className="text-sm text-teal-600">
-                      {exp.companyUrl ? (
-                        <a 
-                          href={exp.companyUrl} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="hover:text-coral transition-colors"
-                        >
-                          {exp.company}
-                        </a>
-                      ) : (
-                        exp.company
-                      )} • {exp.date}
-                    </p>
-                    {exp.location && <p className="text-xs text-azure flex items-center mt-1">
-                      <MapPin className="h-3 w-3 mr-1" /> {exp.location}
-                    </p>}
-                  </div>
-                </div>
-                <ul className="list-disc list-inside space-y-2">
-                  {exp.description.map((item, i) => (
-                    <li key={i} className="text-sm text-gray-700">{item}</li>
-                  ))}
-                </ul>
+                  
+                  <CollapsibleContent>
+                    <ul className="list-disc list-inside space-y-2 mt-4 pl-4">
+                      {exp.description.map((item, i) => (
+                        <li key={i} className="text-sm text-gray-700">{item}</li>
+                      ))}
+                    </ul>
+                  </CollapsibleContent>
+                </Collapsible>
               </CardContent>
             </Card>
           ))}
