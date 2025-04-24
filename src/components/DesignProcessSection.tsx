@@ -46,9 +46,7 @@ const DesignProcessSection: React.FC = () => {
     <section className="py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="handwritten-note tape-edge mx-auto mb-10 text-center">
-            This is how you can get your design and development right!
-          </div>
+          {/* Removed handwritten note */}
           
           <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6 text-center">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500">
@@ -71,10 +69,7 @@ const DesignProcessSection: React.FC = () => {
                   <p className="text-gray-700">{step.description}</p>
                 </div>
                 
-                {/* Improved handwritten note */}
-                <div className="absolute -right-10 md:right-0 top-0 md:-right-24 transform rotate-3">
-                  <span className="handwritten">{step.note}</span>
-                </div>
+                {/* Removed handwritten note */}
               </div>
             ))}
           </div>
@@ -91,10 +86,7 @@ const DesignProcessSection: React.FC = () => {
                 </a>
               </Button>
               
-              {/* Improved handwritten arrow note */}
-              <div className="absolute -bottom-16 right-10">
-                <span className="handwritten handwritten-arrow">Click me, I don't bite!</span>
-              </div>
+              {/* Removed handwritten arrow note */}
             </div>
           </div>
         </div>

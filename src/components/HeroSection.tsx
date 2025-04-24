@@ -16,10 +16,7 @@ const HeroSection: React.FC = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Handwritten note with paper clip effect */}
-          <div className="handwritten-note paper-clip mx-auto mb-8 transform rotate-1 max-w-sm">
-            This is how you can get your design and development right!
-          </div>
+          {/* Removed handwritten note */}
           
           {/* Fast-Track Success Section */}
           <div className="bg-white/90 py-16 px-6 rounded-xl shadow-lg mb-10 backdrop-blur-sm border border-slate-100 transform transition-all duration-500 hover:shadow-xl">
@@ -33,12 +30,7 @@ const HeroSection: React.FC = () => {
               <div className="h-1 w-32 bg-amber-400 mx-auto mb-6"></div>
               <p className="text-sm text-blue-500 italic mb-2">— simplifying complexity since 2010 —</p>
               
-              {/* Handwritten arrow comment */}
-              <div className="relative inline-block mx-auto">
-                <span className="handwritten handwritten-arrow absolute -right-16 top-12">
-                  Magic happens here!
-                </span>
-              </div>
+              {/* Removed handwritten arrow comment */}
             </div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
               Streamline your development process with <span className="font-semibold text-teal-500">cutting-edge simulation models</span> that enhance analysis, 
