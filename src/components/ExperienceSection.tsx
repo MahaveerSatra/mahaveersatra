@@ -1,27 +1,11 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { 
-  VerticalTimeline, 
-  VerticalTimelineElement 
-} from 'react-vertical-timeline-component';
+import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { Briefcase, Award, GraduationCap, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-
-interface ExperienceItem {
-  title: string;
-  company: string;
-  companyUrl?: string;
-  location?: string;
-  date: string;
-  description: string[];
-  icon: React.ReactNode;
-  iconBackground: string;
-  imageSrc?: string;
-  imageAlt?: string;
-}
+import { experiences, sortExperiences } from '@/data/experiences';
+import { ExperienceTimelineElement } from './ExperienceTimelineElement';
+import { ExperienceMobileCard } from './ExperienceMobileCard';
 
 const ExperienceSection: React.FC = () => {
   const [expandedItems, setExpandedItems] = useState<Record<number, boolean>>({});
@@ -33,167 +17,7 @@ const ExperienceSection: React.FC = () => {
     }));
   };
 
-  const getIconStyles = (type: string) => {
-    switch(type) {
-      case 'work':
-        return '#1EAEDB'; // Bright Blue
-      case 'publication':
-        return '#33C3F0'; // Sky Blue
-      case 'education':
-        return '#8B5CF6'; // Vivid Purple
-      default:
-        return '#1EAEDB';
-    }
-  };
-
-  const experiences: ExperienceItem[] = [
-    {
-      title: "Senior Application Engineer",
-      company: "The MathWorks Inc.",
-      companyUrl: "https://www.mathworks.com/",
-      location: "Texas",
-      date: "October 2021 - Present",
-      description: [
-        "Led the account-level business strategy and planning across key enterprise accounts in the Semiconductor Manufacturing Industry, resulting in ~10% YoY growth and deeper adoption of technical tools.",
-        "Delivered a comprehensive workshop on \"AI with Model-Based Design\" focusing on training machine learning models for virtual sensors and code generation for embedded AI applications in Industrial Automation.",
-        "Created a \"No-Meeting\" cross-functional community of practice to connect Industry experts to enhance presence in the Semiconductor Equipment Manufacturing Industry."
-      ],
-      icon: <Briefcase className="w-full h-full" />,
-      iconBackground: "#9b87f5", // Primary Purple
-      imageSrc: "/lovable-uploads/e948e758-6f0c-4ef7-8d11-54a9b859c177.png",
-      imageAlt: "MathWorks industrial automation visualization"
-    },
-    {
-      title: "Application Engineer",
-      company: "The MathWorks Inc.",
-      companyUrl: "https://www.mathworks.com/",
-      location: "Massachusetts",
-      date: "September 2020 - October 2021",
-      description: [
-        "Developed an example to leverage our Graphical Neural Network deep learning workflows for node classification by processing and integrating the QM7-X dataset for chemistry.",
-        "Acted as a technical advisor for aerospace clients, guiding them through the integration of flight management systems with existing infrastructure.",
-        "Built customer relationships through technical presentations and workshops on system modeling applications."
-      ],
-      icon: <Briefcase className="w-full h-full" />,
-      iconBackground: "#9b87f5", // Primary Purple
-      imageSrc: "/lovable-uploads/56db6a2e-4bee-45d5-aea7-9793b41bb7e2.png",
-      imageAlt: "Neural network visualization"
-    },
-    {
-      title: "System Modeling & Controls Team Lead",
-      company: "Center for Automotive Research",
-      companyUrl: "https://car.osu.edu/",
-      location: "Ohio",
-      date: "August 2019 - August 2020",
-      description: [
-        "Led a multidisciplinary team of 12 engineers in the development, testing and deployment of Equivalent Consumption Minimization Strategy (ECMS) for hybrid electric vehicle.",
-        "Performed HIL testing for validation and verification of controller and V2X algorithms on dSPACE simulator.",
-        "Directed a 5-member system safety work group, ensuring the safe operation of the project vehicle."
-      ],
-      icon: <Briefcase className="w-full h-full" />,
-      iconBackground: "#7E69AB", // Secondary Purple
-      imageSrc: "/lovable-uploads/de98bd37-1565-41b6-a54f-2095cc8d7e10.png",
-      imageAlt: "Automotive systems engineering"
-    },
-    {
-      title: "Senior Design Engineer",
-      company: "Larsen & Toubro Defence",
-      companyUrl: "https://www.larsentoubro.com/",
-      location: "Mumbai",
-      date: "July 2016 - July 2018",
-      description: [
-        "Developed military qualified pneumatic launcher, from design conceptualization to the final production release.",
-        "Designed simulations and experiments to validate the firing valve of the launcher and to determine its discharge coefficient.",
-        "Led a cross-functional team to implement manufacturing improvements that reduced production time by 15%."
-      ],
-      icon: <Briefcase className="w-full h-full" />,
-      iconBackground: "#7E69AB", // Secondary Purple
-      imageSrc: "/lovable-uploads/128b7220-c3a4-4256-848c-311a57408fc1.png",
-      imageAlt: "Engineering design visualization"
-    },
-    {
-      title: "Intern - Design and Engineering Centre",
-      company: "Thinkphi",
-      companyUrl: "https://www.thinkphi.com/",
-      location: "Mumbai, India",
-      date: "May 2016 - July 2016",
-      description: [
-        "Designed a pressure-based single axis passive solar tracker by utilizing the change in vapor pressure.",
-        "Developed the complete solar tracker for a 50W panel under $100, yielding a theoretical increase in energy output by over 35% in a day compared to a fixed solar panel.",
-        "Collaborated with manufacturing team to prototype and test the solar tracking system."
-      ],
-      icon: <Briefcase className="w-full h-full" />,
-      iconBackground: "#7E69AB", // Secondary Purple
-      imageSrc: "/lovable-uploads/facda059-8389-4f17-9ba5-451ace3f9504.png",
-      imageAlt: "Solar tracking system"
-    },
-    {
-      title: "Publication - SAE Technical Paper",
-      company: "SAE International",
-      companyUrl: "https://doi.org/10.4271/2020-01-1438",
-      location: "",
-      date: "2020",
-      description: [
-        "Kuwabara, K., Karl-DeFrain, J., Midlam-Mohler, S., Satra, M. et al., \"Model-Based Design of a Hybrid Powertrain Architecture with Connected and Automated Technologies for Fuel Economy Improvements,\" SAE Technical Paper 2020-01-1438, 2020."
-      ],
-      icon: <Award className="w-full h-full" />,
-      iconBackground: "#6E59A5", // Tertiary Purple
-      imageSrc: "/lovable-uploads/c2d6bdeb-b82c-4bbd-894c-938f8aaa8882.png",
-      imageAlt: "Technical publication visualization"
-    },
-    {
-      title: "Publication - Conference Paper",
-      company: "ATSMDE Conference",
-      companyUrl: "",
-      location: "Mumbai, India",
-      date: "December 2017",
-      description: [
-        "Satra, M., & Shetty, S. (2017). Design Optimization and Manufacturing of Quadcopter using 3D Printing. International Conference on Advances in Thermal System, Materials and Design Engineering (ATSMDE)."
-      ],
-      icon: <Award className="w-full h-full" />,
-      iconBackground: "#6E59A5", // Tertiary Purple
-      imageSrc: "/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png",
-      imageAlt: "3D printing and design optimization"
-    },
-    {
-      title: "Master of Science - Mechanical Engineering",
-      company: "Ohio State University",
-      companyUrl: "https://www.osu.edu/",
-      location: "Columbus, Ohio",
-      date: "August 2018 - August 2020",
-      description: [
-        "Specialization in Automotive Systems and Mobility",
-        "GPA: 4.0",
-        "Awarded J.N. Tata Endowment Scholarship for exceptional academic merit and professional experience."
-      ],
-      icon: <GraduationCap className="w-full h-full" />,
-      iconBackground: "#E5DEFF", // Soft Purple
-      imageSrc: "/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png",
-      imageAlt: "Ohio State University campus"
-    },
-    {
-      title: "Bachelor of Technology - Mechanical Engineering",
-      company: "Veermata Jijabai Technological Institute (VJTI)",
-      companyUrl: "https://www.vjti.ac.in/",
-      location: "Mumbai, India",
-      date: "May 2012 - April 2016",
-      description: [
-        "CPI: 8.85/10",
-        "Active member of the Robotics Club",
-        "Participated in multiple national-level engineering competitions"
-      ],
-      icon: <GraduationCap className="w-full h-full" />,
-      iconBackground: "#E5DEFF", // Soft Purple
-      imageSrc: "/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png",
-      imageAlt: "VJTI campus"
-    }
-  ];
-
-  const sortedExperiences = [...experiences].sort((a, b) => {
-    const aEndYear = parseInt(a.date.split(' - ')[1]?.split(' ')[a.date.split(' - ')[1]?.split(' ').length - 1] || a.date.split(' ')[a.date.split(' ').length - 1]);
-    const bEndYear = parseInt(b.date.split(' - ')[1]?.split(' ')[b.date.split(' - ')[1]?.split(' ').length - 1] || b.date.split(' ')[b.date.split(' ').length - 1]);
-    return bEndYear - aEndYear;
-  });
+  const sortedExperiences = sortExperiences(experiences);
 
   return (
     <section id="experience" className="py-20 bg-gray-50">
@@ -208,161 +32,26 @@ const ExperienceSection: React.FC = () => {
 
         <div className="hidden md:block">
           <VerticalTimeline lineColor="#8B5CF6">
-            {sortedExperiences.map((exp, index) => {
-              const iconBgColor = exp.icon === <GraduationCap className="w-full h-full" /> 
-                ? getIconStyles('education')
-                : exp.icon === <Award className="w-full h-full" />
-                ? getIconStyles('publication')
-                : getIconStyles('work');
-
-              return (
-                <VerticalTimelineElement
-                  key={index}
-                  className="vertical-timeline-element"
-                  contentStyle={{ 
-                    background: '#fff', 
-                    color: '#073B4C', 
-                    boxShadow: '0 4px 20px rgba(0,0,0,0.07)', 
-                    borderRadius: '12px',
-                    borderLeft: `4px solid ${iconBgColor}`,
-                    padding: expandedItems[index] ? '1.5rem' : '1rem'
-                  }}
-                  contentArrowStyle={{ borderRight: '7px solid #fff' }}
-                  date={exp.date}
-                  iconStyle={{ 
-                    background: iconBgColor,
-                    color: '#fff',
-                    boxShadow: `0 0 0 4px ${iconBgColor}30`
-                  }}
-                  icon={exp.icon}
-                >
-                  {exp.imageSrc && (
-                    <div className="absolute -left-24 top-0 w-16 h-16 rounded-full overflow-hidden border-2" style={{ borderColor: iconBgColor }}>
-                      <img
-                        src={exp.imageSrc}
-                        alt={exp.imageAlt || exp.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
-                  <Collapsible open={expandedItems[index]} onOpenChange={() => toggleItem(index)}>
-                    <div className="flex justify-between items-start">
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold">{exp.title}</h3>
-                        <h4 className="text-lg text-teal-600">
-                          {exp.companyUrl ? (
-                            <a 
-                              href={exp.companyUrl} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="hover:text-coral transition-colors"
-                            >
-                              {exp.company}
-                            </a>
-                          ) : (
-                            exp.company
-                          )}
-                        </h4>
-                        {exp.location && (
-                          <p className="text-sm text-gray-500 flex items-center mt-1">
-                            <MapPin className="h-4 w-4 mr-1" /> {exp.location}
-                          </p>
-                        )}
-                      </div>
-                      <CollapsibleTrigger asChild>
-                        <Button variant="ghost" size="sm" className="p-0 h-8 w-8">
-                          {expandedItems[index] ? (
-                            <ChevronUp className="h-4 w-4" />
-                          ) : (
-                            <ChevronDown className="h-4 w-4" />
-                          )}
-                        </Button>
-                      </CollapsibleTrigger>
-                    </div>
-                    
-                    <CollapsibleContent>
-                      <ul className="mt-4 list-disc list-inside space-y-2">
-                        {exp.description.map((item, i) => (
-                          <li key={i} className="text-gray-700">{item}</li>
-                        ))}
-                      </ul>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </VerticalTimelineElement>
-              );
-            })}
+            {sortedExperiences.map((exp, index) => (
+              <ExperienceTimelineElement
+                key={index}
+                experience={exp}
+                isExpanded={expandedItems[index]}
+                onToggle={() => toggleItem(index)}
+              />
+            ))}
           </VerticalTimeline>
         </div>
 
         <div className="md:hidden space-y-6">
-          {sortedExperiences.map((exp, index) => {
-            const iconBgColor = exp.icon === <GraduationCap className="w-full h-full" />
-              ? getIconStyles('education')
-              : exp.icon === <Award className="w-full h-full" />
-              ? getIconStyles('publication')
-              : getIconStyles('work');
-
-            return (
-              <Card key={index} className="border-l-4 shadow-sm hover:shadow-md transition-all" style={{ borderColor: iconBgColor }}>
-                <CardContent className="p-4">
-                  <Collapsible open={expandedItems[index]} onOpenChange={() => toggleItem(index)}>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        {exp.imageSrc && (
-                          <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2" style={{ borderColor: iconBgColor }}>
-                            <img
-                              src={exp.imageSrc}
-                              alt={exp.imageAlt || exp.title}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        )}
-                        <div className="ml-4">
-                          <h3 className="text-lg font-bold">{exp.title}</h3>
-                          <p className="text-sm text-teal-600">
-                            {exp.companyUrl ? (
-                              <a 
-                                href={exp.companyUrl} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="hover:text-coral transition-colors"
-                              >
-                                {exp.company}
-                              </a>
-                            ) : (
-                              exp.company
-                            )} • {exp.date}
-                          </p>
-                          {exp.location && (
-                            <p className="text-xs text-gray-500 flex items-center mt-1">
-                              <MapPin className="h-3 w-3 mr-1" /> {exp.location}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                      <CollapsibleTrigger asChild>
-                        <Button variant="ghost" size="sm" className="p-0 h-8 w-8">
-                          {expandedItems[index] ? (
-                            <ChevronUp className="h-4 w-4" />
-                          ) : (
-                            <ChevronDown className="h-4 w-4" />
-                          )}
-                        </Button>
-                      </CollapsibleTrigger>
-                    </div>
-                    
-                    <CollapsibleContent>
-                      <ul className="list-disc list-inside space-y-2 mt-4 pl-4">
-                        {exp.description.map((item, i) => (
-                          <li key={i} className="text-sm text-gray-700">{item}</li>
-                        ))}
-                      </ul>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </CardContent>
-              </Card>
-            );
-          })}
+          {sortedExperiences.map((exp, index) => (
+            <ExperienceMobileCard
+              key={index}
+              experience={exp}
+              isExpanded={expandedItems[index]}
+              onToggle={() => toggleItem(index)}
+            />
+          ))}
         </div>
 
         <div className="text-center mt-12">
