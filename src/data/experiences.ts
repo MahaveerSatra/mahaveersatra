@@ -13,7 +13,7 @@ export const experiences: ExperienceItem[] = [
       "Delivered a comprehensive workshop on \"AI with Model-Based Design\" focusing on training machine learning models for virtual sensors and code generation for embedded AI applications in Industrial Automation.",
       "Created a \"No-Meeting\" cross-functional community of practice to connect Industry experts to enhance presence in the Semiconductor Equipment Manufacturing Industry."
     ],
-    icon: <Briefcase className="w-full h-full" />,
+    icon: <Briefcase size={24} strokeWidth={2} />,
     iconBackground: "#9b87f5",
     imageSrc: "/lovable-uploads/e948e758-6f0c-4ef7-8d11-54a9b859c177.png",
     imageAlt: "MathWorks industrial automation visualization"
@@ -29,8 +29,8 @@ export const experiences: ExperienceItem[] = [
       "Acted as a technical advisor for aerospace clients, guiding them through the integration of flight management systems with existing infrastructure.",
       "Built customer relationships through technical presentations and workshops on system modeling applications."
     ],
-    icon: <Briefcase className="w-full h-full" />,
-    iconBackground: "#9b87f5", // Primary Purple
+    icon: <Briefcase size={24} strokeWidth={2} />,
+    iconBackground: "#9b87f5",
     imageSrc: "/lovable-uploads/56db6a2e-4bee-45d5-aea7-9793b41bb7e2.png",
     imageAlt: "Neural network visualization"
   },
@@ -45,8 +45,8 @@ export const experiences: ExperienceItem[] = [
       "Performed HIL testing for validation and verification of controller and V2X algorithms on dSPACE simulator.",
       "Directed a 5-member system safety work group, ensuring the safe operation of the project vehicle."
     ],
-    icon: <Briefcase className="w-full h-full" />,
-    iconBackground: "#7E69AB", // Secondary Purple
+    icon: <Briefcase size={24} strokeWidth={2} />,
+    iconBackground: "#7E69AB",
     imageSrc: "/lovable-uploads/de98bd37-1565-41b6-a54f-2095cc8d7e10.png",
     imageAlt: "Automotive systems engineering"
   },
@@ -61,8 +61,8 @@ export const experiences: ExperienceItem[] = [
       "Designed simulations and experiments to validate the firing valve of the launcher and to determine its discharge coefficient.",
       "Led a cross-functional team to implement manufacturing improvements that reduced production time by 15%."
     ],
-    icon: <Briefcase className="w-full h-full" />,
-    iconBackground: "#7E69AB", // Secondary Purple
+    icon: <Briefcase size={24} strokeWidth={2} />,
+    iconBackground: "#7E69AB",
     imageSrc: "/lovable-uploads/128b7220-c3a4-4256-848c-311a57408fc1.png",
     imageAlt: "Engineering design visualization"
   },
@@ -77,8 +77,8 @@ export const experiences: ExperienceItem[] = [
       "Developed the complete solar tracker for a 50W panel under $100, yielding a theoretical increase in energy output by over 35% in a day compared to a fixed solar panel.",
       "Collaborated with manufacturing team to prototype and test the solar tracking system."
     ],
-    icon: <Briefcase className="w-full h-full" />,
-    iconBackground: "#7E69AB", // Secondary Purple
+    icon: <Briefcase size={24} strokeWidth={2} />,
+    iconBackground: "#7E69AB",
     imageSrc: "/lovable-uploads/facda059-8389-4f17-9ba5-451ace3f9504.png",
     imageAlt: "Solar tracking system"
   },
@@ -91,8 +91,8 @@ export const experiences: ExperienceItem[] = [
     description: [
       "Kuwabara, K., Karl-DeFrain, J., Midlam-Mohler, S., Satra, M. et al., \"Model-Based Design of a Hybrid Powertrain Architecture with Connected and Automated Technologies for Fuel Economy Improvements,\" SAE Technical Paper 2020-01-1438, 2020."
     ],
-    icon: <Award className="w-full h-full" />,
-    iconBackground: "#6E59A5", // Tertiary Purple
+    icon: <Award size={24} strokeWidth={2} />,
+    iconBackground: "#6E59A5",
     imageSrc: "/lovable-uploads/c2d6bdeb-b82c-4bbd-894c-938f8aaa8882.png",
     imageAlt: "Technical publication visualization"
   },
@@ -105,8 +105,8 @@ export const experiences: ExperienceItem[] = [
     description: [
       "Satra, M., & Shetty, S. (2017). Design Optimization and Manufacturing of Quadcopter using 3D Printing. International Conference on Advances in Thermal System, Materials and Design Engineering (ATSMDE)."
     ],
-    icon: <Award className="w-full h-full" />,
-    iconBackground: "#6E59A5", // Tertiary Purple
+    icon: <Award size={24} strokeWidth={2} />,
+    iconBackground: "#6E59A5",
     imageSrc: "/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png",
     imageAlt: "3D printing and design optimization"
   },
@@ -121,8 +121,8 @@ export const experiences: ExperienceItem[] = [
       "GPA: 4.0",
       "Awarded J.N. Tata Endowment Scholarship for exceptional academic merit and professional experience."
     ],
-    icon: <GraduationCap className="w-full h-full" />,
-    iconBackground: "#E5DEFF", // Soft Purple
+    icon: <GraduationCap size={24} strokeWidth={2} />,
+    iconBackground: "#E5DEFF",
     imageSrc: "/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png",
     imageAlt: "Ohio State University campus"
   },
@@ -137,8 +137,8 @@ export const experiences: ExperienceItem[] = [
       "Active member of the Robotics Club",
       "Participated in multiple national-level engineering competitions"
     ],
-    icon: <GraduationCap className="w-full h-full" />,
-    iconBackground: "#E5DEFF", // Soft Purple
+    icon: <GraduationCap size={24} strokeWidth={2} />,
+    iconBackground: "#E5DEFF",
     imageSrc: "/lovable-uploads/e2158f8d-13e3-41f3-abd5-b38cf23fa7ab.png",
     imageAlt: "VJTI campus"
   }
