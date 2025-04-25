@@ -6,7 +6,7 @@ export interface ExperienceItem {
   location?: string;
   date: string;
   description: string[];
-  icon: React.ReactNode;
+  icon: () => React.ReactNode; // Changed from React.ReactNode to a function returning React.ReactNode
   iconBackground: string;
   imageSrc?: string;
   imageAlt?: string;
